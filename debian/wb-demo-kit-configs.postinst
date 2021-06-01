@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#DEBHELPER#
+
+# restart services
+invoke-rc.d wb-mqtt-serial restart
+invoke-rc.d wb-rules restart

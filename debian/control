@@ -1,0 +1,11 @@
+Source: wb-demo-kit-configs
+Section: config
+Priority: extra
+Maintainer: Boris <b.marochkin@wirenboard.ru>
+Build-Depends: debhelper (>= 9), config-package-dev (>= 5.0)
+Standards-Version: 3.9.4
+
+Package: wb-demo-kit-configs
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Default common config files for Wiren Board demo kit

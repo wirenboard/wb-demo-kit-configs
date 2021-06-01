@@ -1,0 +1,4 @@
+wb_move /etc/wb-rules
+wb_move /etc/wb-hardware.conf
+wb_move /etc/wb-mqtt-serial.conf
+wb_move /etc/wb-webui.conf

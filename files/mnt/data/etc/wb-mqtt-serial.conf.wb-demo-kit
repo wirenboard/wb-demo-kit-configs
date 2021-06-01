@@ -1,0 +1,280 @@
+{
+  "debug" : false,
+  "ports" : 
+  [
+    {
+      "baud_rate" : 115200,
+      "data_bits" : 8,
+      "devices" : 
+      [
+        {
+          "device_type" : "WB-MR6C",
+          "enabled" : true,
+          "slave_id" : "46"
+        },
+        {
+          "device_type" : "WB-MDM3",
+          "enabled" : true,
+          "setup" : 
+          [
+            {
+              "address" : 60,
+              "title" : "edge_ch1",
+              "value" : 1
+            },
+            {
+              "address" : 61,
+              "title" : "edge_ch2",
+              "value" : 0
+            },
+            {
+              "address" : 70,
+              "title" : "low_lewel_ch1",
+              "value" : 1000
+            },
+            {
+              "address" : 71,
+              "title" : "low_lewel_ch1",
+              "value" : 3500
+            },
+            {
+              "address" : 50,
+              "title" : "type_load_ch1",
+              "value" : 0
+            },
+            {
+              "address" : 51,
+              "title" : "type_load_ch2",
+              "value" : 1
+            },
+            {
+              "address" : 141,
+              "title" : "up_power_ch2",
+              "value" : 1
+            },
+            {
+              "address" : 151,
+              "title" : "down_power_ch2",
+              "value" : 1
+            }
+          ],
+          "slave_id" : "57"
+        },
+        {
+          "device_type" : "WB-MWAC",
+          "enabled" : true,
+          "slave_id" : "25"
+        },
+        {
+          "device_type" : "WB-M1W2",
+          "enabled" : true,
+          "slave_id" : "30"
+        },
+        {
+          "device_type" : "WB-MRGBW-D",
+          "slave_id" : "39"
+        },
+        {
+          "device_type" : "WB-MSW v.3",
+          "enabled" : true,
+          "slave_id" : "64"
+        },
+        {
+          "device_type" : "WB-MIR v2",
+          "enabled" : true,
+          "slave_id" : "133"
+        }
+      ],
+      "enabled" : true,
+      "parity" : "N",
+      "path" : "/dev/ttyRS485-1",
+      "poll_interval" : 10,
+      "port_type" : "serial",
+      "stop_bits" : 2
+    },
+    {
+      "baud_rate" : 9600,
+      "data_bits" : 8,
+      "devices" : 
+      [
+        {
+          "device_type" : "NEVA MT 124",
+          "enabled" : true,
+          "slave_id" : "00000001"
+        },
+        {
+          "channels" : 
+          [
+            {
+              "device_type" : "phase L1",
+              "name" : "L1"
+            },
+            {
+              "device_type" : "phase L2",
+              "name" : "L2"
+            },
+            {
+              "device_type" : "phase L3",
+              "name" : "L3"
+            },
+            {
+              "device_type" : "channel phase L1",
+              "name" : "Ch 1 L1"
+            },
+            {
+              "device_type" : "channel phase L2",
+              "name" : "Ch 1 L2"
+            },
+            {
+              "device_type" : "channel phase L3",
+              "name" : "Ch 1 L3"
+            },
+            {
+              "device_type" : "channel total",
+              "name" : "Ch 1 Total"
+            },
+            {
+              "device_type" : "channel phase L1",
+              "name" : "Ch 2 L1"
+            },
+            {
+              "device_type" : "channel phase L2",
+              "name" : "Ch 2 L2"
+            },
+            {
+              "device_type" : "channel phase L3",
+              "name" : "Ch 2 L3"
+            },
+            {
+              "device_type" : "channel total",
+              "name" : "Ch 2 Total"
+            },
+            {
+              "device_type" : "channel phase L1",
+              "name" : "Ch 3 L1"
+            },
+            {
+              "device_type" : "channel phase L2",
+              "name" : "Ch 3 L2"
+            },
+            {
+              "device_type" : "channel phase L3",
+              "name" : "Ch 3 L3"
+            },
+            {
+              "device_type" : "channel total",
+              "name" : "Ch 3 Total"
+            },
+            {
+              "device_type" : "channel phase L1",
+              "name" : "Ch 4 L1"
+            },
+            {
+              "device_type" : "channel phase L2",
+              "name" : "Ch 4 L2"
+            },
+            {
+              "device_type" : "channel phase L3",
+              "name" : "Ch 4 L3"
+            },
+            {
+              "device_type" : "channel total",
+              "name" : "Ch 4 Total"
+            }
+          ],
+          "device_type" : "WB-MAP12E fw2",
+          "enabled" : true,
+          "setup" : 
+          [
+            {
+              "address" : "0x4460",
+              "title" : "L1_K_CH4",
+              "value" : 2000
+            },
+            {
+              "address" : "0x4461",
+              "title" : "L2_K_CH4",
+              "value" : 2000
+            },
+            {
+              "address" : "0x4462",
+              "title" : "L3_K_CH4",
+              "value" : 2000
+            },
+            {
+              "address" : "0x4463",
+              "title" : "L1_FI_CH4",
+              "value" : 120
+            },
+            {
+              "address" : "0x4464",
+              "title" : "L2_FI_CH4",
+              "value" : 120
+            },
+            {
+              "address" : "0x4465",
+              "title" : "L3FI_CH4",
+              "value" : 120
+            },
+            {
+              "address" : "0x3460",
+              "title" : "L1_K_CH3",
+              "value" : 2000
+            },
+            {
+              "address" : "0x3461",
+              "title" : "L2_K_CH3",
+              "value" : 1996
+            },
+            {
+              "address" : "0x3463",
+              "title" : "L1_FI_CH3",
+              "value" : 1100
+            },
+            {
+              "address" : "0x3464",
+              "title" : "L2_FI_CH3",
+              "value" : 1518
+            }
+          ],
+          "slave_id" : "35"
+        }
+      ],
+      "enabled" : true,
+      "parity" : "N",
+      "path" : "/dev/ttyRS485-2",
+      "poll_interval" : 10,
+      "stop_bits" : 1
+    },
+    {
+      "baud_rate" : 9600,
+      "data_bits" : 8,
+      "devices" : [],
+      "enabled" : false,
+      "parity" : "N",
+      "path" : "/dev/ttyMOD1",
+      "poll_interval" : 10,
+      "stop_bits" : 2
+    },
+    {
+      "baud_rate" : 9600,
+      "data_bits" : 8,
+      "devices" : [],
+      "enabled" : false,
+      "parity" : "N",
+      "path" : "/dev/ttyMOD2",
+      "poll_interval" : 10,
+      "stop_bits" : 2
+    },
+    {
+      "baud_rate" : 9600,
+      "data_bits" : 8,
+      "devices" : [],
+      "enabled" : false,
+      "parity" : "N",
+      "path" : "/dev/ttyMOD3",
+      "poll_interval" : 10,
+      "stop_bits" : 2
+    }
+  ]
+}

@@ -98,9 +98,8 @@
       "devices" : 
       [
         {
-          "device_type" : "NEVA MT 124",
-          "enabled" : true,
-          "slave_id" : "00000001"
+          "device_type" : "NEVA MT 113/123/124",
+          "slave_id" : "0000001"
         },
         {
           "channels" : 

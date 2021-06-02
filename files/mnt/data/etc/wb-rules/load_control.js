@@ -51,10 +51,11 @@ defineRule("power_fan_from_mdm", {
                 startTimer("delay_fan", 60000);
                 dev["wb-mdm3_57"]["K2"] = true;
             } else {
-                timers.delay_fan.stop();
+;                timers.delay_fan.stop();
                 dev["wb-mdm3_57"]["K2"] = false;
             }
         } else {
+          	timers.delay_fan.stop();
         	dev["load_control"]["power_fan"] = 0;
           	dev["wb-mdm3_57"]["Channel 2"] = 0;
           	dev["wb-mdm3_57"]["K2"] = false;
@@ -123,6 +124,7 @@ defineRule("fan_overload_control", {
     whenChanged: "load_control/fan_overload",
     then: function(newValue, devName, cellName) {
         if(newValue) {
+          	log("fan overload");
         	dev["wb-mdm3_57"]["Channel 2"] = 0;
           	dev["button_light"]["blink2"] = true;
         }

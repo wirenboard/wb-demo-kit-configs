@@ -47,7 +47,7 @@ defineRule("fan_overload_detect", {
         	dev["load_control"]["fan_up_speed"] = true;
         	dev["button_light"]["light2"] = false;
           	timers.up_speed.stop();
-          	startTimer("up_speed", 10000);
+          	startTimer("up_speed", 15000);
 		}
       	// Если не было увеличения скорости вентилятора 
 		if(!dev["load_control"]["fan_up_speed"] && dev["wb-mdm3_57"]["K2"]) {
@@ -56,7 +56,12 @@ defineRule("fan_overload_detect", {
         		calcMeanPower();
             }
           	// И смотрим не превысила ли текущая мощность среднюю
-          	if((dev['wb-map12e_35']['Ch 3 P L1'] - mean_power) > 0.1) {
+          	if(dev["wb-mdm3_57"]["Channel 2"] <= 66) {
+            	alarmPower = 0.1;
+            } else {
+              	alarmPower = 1;
+            }
+          	if((dev['wb-map12e_35']['Ch 3 P L1'] - mean_power) > alarmPower) {
             	load_fail_count++;
               	log("fail count " + load_fail_count);
               	// Если превысила то начинаем считать ошибки

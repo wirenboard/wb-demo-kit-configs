@@ -51,7 +51,7 @@ defineRule("power_fan_from_mdm", {
                 startTimer("delay_fan", 60000);
                 dev["wb-mdm3_57"]["K2"] = true;
             } else {
-;                timers.delay_fan.stop();
+                timers.delay_fan.stop();
                 dev["wb-mdm3_57"]["K2"] = false;
             }
         } else {

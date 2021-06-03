@@ -1,4 +1,4 @@
-wb-demo-kit-configs (1.0.0) unstable; urgency=medium
+wb-demo-kit-configs (1.0.1) unstable; urgency=medium
 
   * added dot before extension in file wb-demo-kit-configs.displace-extension
   * increased time before up speed fan to 15 seconds

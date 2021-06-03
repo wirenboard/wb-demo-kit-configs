@@ -5,10 +5,10 @@ wb-demo-kit-configs (1.0.1) unstable; urgency=medium
   * change name template in serial config for NEVA
   * added extra power overshoots for different fan rpm values
 
- -- Boris <boris@boris-Latitude-5490>  Wed, 02 Jun 2021 16:34:17 +0300
+ -- Boris Marochkin <b.marochkin@wirenboard.ru>  Wed, 02 Jun 2021 16:34:17 +0300
 
 wb-demo-kit-configs (1.0.0) unstable; urgency=medium
 
   * initial release
 
- -- Boris <boris@boris-Latitude-5490>  Mon, 24 May 2021 11:58:41 +0300
+ -- Boris Marochkin <b.marochkin@wirenboard.ru>  Mon, 24 May 2021 11:58:41 +0300

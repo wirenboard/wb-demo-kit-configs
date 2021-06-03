@@ -3,6 +3,6 @@
 #DEBHELPER#
 
 # restart services
-invoke-rc.d wb-mqtt-serial restart
-invoke-rc.d wb-rules restart
+deb-systemd-invoke restart wb-mqtt-serial
+deb-systemd-invoke restart wb-rules
 wb-hwconf-helper config-apply

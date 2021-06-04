@@ -99,7 +99,7 @@
       [
         {
           "device_type" : "NEVA MT 113/123/124",
-          "slave_id" : "0000001"
+          "slave_id" : "00000001"
         },
         {
           "channels" : 

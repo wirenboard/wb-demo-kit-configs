@@ -743,7 +743,7 @@
                         "id": "f17979df6935",
                         "read": {
                             "enable": true,
-                            "channel": "neva124_00000001/Total A energy",
+                            "channel": "neva124_00000001/A energy",
                             "value": "val"
                         },
                         "write": {
@@ -1229,7 +1229,7 @@
                         "id": "f1797a02373c",
                         "read": {
                             "enable": true,
-                            "channel": "neva124_00000001/Voltage",
+                            "channel": "neva124_00000001/Urms",
                             "value": "val+' V'"
                         },
                         "write": {
@@ -1283,7 +1283,7 @@
                         "id": "f1797a0615cf",
                         "read": {
                             "enable": true,
-                            "channel": "neva124_00000001/Total A energy",
+                            "channel": "neva124_00000001/A energy",
                             "value": "val+' kW*h'"
                         },
                         "write": {
@@ -1310,7 +1310,7 @@
                         "id": "f1797a069534",
                         "read": {
                             "enable": true,
-                            "channel": "neva124_00000001/Current",
+                            "channel": "neva124_00000001/Irms",
                             "value": "val+' A'"
                         },
                         "write": {

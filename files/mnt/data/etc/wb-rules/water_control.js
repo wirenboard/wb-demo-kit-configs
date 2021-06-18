@@ -7,7 +7,7 @@ defineVirtualDevice("water_control", {
             readonly: false
         },
         reset_fail: {
-            type: "switch",
+            type: "pushbutton",
             value: false,
             readonly: false
         },
@@ -27,7 +27,6 @@ defineRule("water_alarm_control", {
 defineRule("water_control", {
     whenChanged: "water_control/valve",
     then: function(newValue, devName, cellName) {
-        //dev["wb-mwac_25"]["K1"] = newValue;
         dev["wb-mwac_25"]["K2"] = newValue;
         dev["button_light"]["button1"] = newValue;
     }
@@ -37,7 +36,6 @@ defineRule("water_fail_control", {
     whenChanged: "water_control/reset_fail",
     then: function(newValue, devName, cellName) {
         if (newValue) {
-            dev["water_control"]["reset_fail"] = false;
             dev["wb-mwac_25"]["Alarm"] = false;
         }
     }
@@ -49,7 +47,7 @@ defineRule("water_valve_control", {
         if (newValue) {
             if (dev["wb-mwac_25"]["Alarm"]) {
                 dev["water_control"]["reset_fail"] = true;
-                dev["water_control"]["valve"] = false
+                dev["water_control"]["valve"] = false;
             }
         }
     }

@@ -28,7 +28,6 @@ defineRule("water_control", {
     whenChanged: "water_control/valve",
     then: function(newValue, devName, cellName) {
         dev["wb-mwac_25"]["K2"] = newValue;
-        dev["button_light"]["button1"] = newValue;
     }
 });
 

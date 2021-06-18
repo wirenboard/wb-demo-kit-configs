@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.1.1) unstable; urgency=medium
+
+  * delete write to missing control
+
+ -- Boris Marochkin <b.marochkin@wirenboard.ru>  Fri, 18 Jun 2021 16:06:21 +0300
+
 wb-demo-kit-configs (1.1.0) unstable; urgency=medium
 
   * change conected MAP12E on RS485-1

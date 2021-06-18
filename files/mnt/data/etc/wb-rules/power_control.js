@@ -1,9 +1,4 @@
-var load_fail_count = 0;
-var old_value_power = 0;
-var array_power = [];
-var mean_power = 0;
-var old_value_fan = 0;
-var not_calc_diff = false;
+var not_detect_overload = 0;
 
 defineVirtualDevice("power_control", {
     title: "Power Control",
@@ -17,79 +12,29 @@ defineVirtualDevice("power_control", {
     }
 });
 
-//	Функция вычисляет среднюю мощность
-
-function calcMeanPower() {
-    var power
-    if (array_power.length < 20) {
-        array_power.push(dev['wb-map12e_35']['Ch 3 P L1']);
-    } else {
-        array_power.push(dev['wb-map12e_35']['Ch 3 P L1']);
-        array_power.shift();
-    }
-    power = 0;
-    for (i = 0; i < array_power.length; i++) {
-        power = power + array_power[i];
-        mean_power = power / array_power.length;
-    }
-}
+startTicker("fan_overload_ticker", 200);
 
 defineRule("fan_overload_detect", {
-    when: cron("@every 0h0m1s"),
-    then: function() {
-        // Если произошло изменение скорости вентилятора
-        diff_fan = dev["load_control"]["power_fan"] - old_value_fan;
-        old_value_fan = dev["load_control"]["power_fan"];
-        // То мы 15 секунд не будем смотреть на превышение мощности
-        if (diff_fan != 0) {
-            log('start timeout');
-            array_power = [];
-            dev["load_control"]["fan_up_speed"] = true;
-            dev["button_light"]["light2"] = false;
-            timers.up_speed.stop();
-            startTimer("up_speed", 15000);
-        }
-        // Если не было увеличения скорости вентилятора 
-        if (!dev["load_control"]["fan_up_speed"] && dev["wb-mdm3_57"]["K2"]) {
-            if (load_fail_count == 0) {
-                // То мы вычисляем среднюю мощность
-                calcMeanPower();
-            }
-            // И смотрим не превысила ли текущая мощность среднюю
-            if (dev["wb-mdm3_57"]["Channel 2"] <= 66) {
-                alarmPower = 0.1;
-            } else {
-                alarmPower = 1;
-            }
-            if ((dev['wb-map12e_35']['Ch 3 P L1'] - mean_power) > alarmPower) {
-                load_fail_count++;
-                log("fail count " + load_fail_count);
-                // Если превысила то начинаем считать ошибки
-                if (load_fail_count > 3) {
-                    // Если больше 3 ошибок то вентилятор перегружен и мы делаем аварию
-                    array_power = [];
-                    dev["load_control"]["fan_overload"] = true;
-                    timers.clear_fail.stop();
-                }
-                // Таймер который обнуляет счётчик ошибок через 10 секунд. 
-                // Это на случай если появилось единичное случайное срабатывание
-                startTimer("clear_fail", 10000);
-            }
-            log("mean power " + mean_power);
-            log("current power " + dev['wb-map12e_35']['Ch 3 P L1']);
-        }
-    }
-});
-
-defineRule("timer_up_speed", {
     when: function() {
-        return timers.up_speed.firing;
+        return timers.fan_overload_ticker.firing;
     },
     then: function() {
-        log('end timeout');
-        dev["load_control"]["fan_up_speed"] = false;
-        if (dev["load_control"]["power_fan"] != 0) {
-            dev["button_light"]["light2"] = true;
+        //log("current power " + dev['wb-map12e_35']['Ch 3 P L1'] + " W");
+        if (dev["load_control"]["fan_up_speed"] == false) {
+            not_detect_overload = 0;
+            if (dev["wb-mdm3_57"]["Channel 2"] == 100) {
+                if ((dev['wb-map12e_35']['Ch 3 P L1'] > 18) && (dev["load_control"]["fan_overload"] == false)) {
+                    dev["load_control"]["fan_overload"] = true;
+                    dev["load_control"]["fan_up_speed"] = true;
+                }
+            }
+
+        } else {
+            not_detect_overload++
+            log(not_detect_overload);
+            if (not_detect_overload >= 25) {
+                dev["load_control"]["fan_up_speed"] = false;
+            }
         }
     }
 });

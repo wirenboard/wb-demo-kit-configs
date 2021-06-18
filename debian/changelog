@@ -1,3 +1,12 @@
+wb-demo-kit-configs (1.1.0) unstable; urgency=medium
+
+  * change conected MAP12E on RS485-1
+  * up baud-rate MAP12E to 115200
+  * change logic monitoring overload fan
+  * added dashboard "Cards"
+
+ -- Boris Marochkin <b.marochkin@wirenboard.ru>  Fri, 18 Jun 2021 10:19:02 +0300
+
 wb-demo-kit-configs (1.0.2) unstable; urgency=medium
 
   * corrected adress neva and change bindings in dashboard

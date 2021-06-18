@@ -1,5 +1,5 @@
-var permissionWrite = false;
-var powerFan = 0;
+var fan_buzzer_enabled = false;
+var old_speed = 0;
 
 defineVirtualDevice("load_control", {
     title: "Load control",
@@ -25,7 +25,7 @@ defineVirtualDevice("load_control", {
             readonly: true
         },
         fan_change_speed: {
-            type: "switch",
+            type: "pushbutton",
             value: false,
             readonly: false
         },
@@ -42,40 +42,32 @@ defineVirtualDevice("load_control", {
     }
 });
 
-defineRule("power_fan_from_mdm", {
+defineRule("power_fan_mdm", {
     whenChanged: "wb-mdm3_57/Channel 2",
     then: function(newValue, devName, cellName) {
-        if (!dev["load_control"]["fan_overload"]) {
-            dev["load_control"]["power_fan"] = newValue;
-            if (newValue != 0) {
-                startTimer("delay_fan", 60000);
-                dev["wb-mdm3_57"]["K2"] = true;
-            } else {
-                timers.delay_fan.stop();
-                dev["wb-mdm3_57"]["K2"] = false;
-            }
+        dev["load_control"]["power_fan"] = newValue;
+        if ((dev["wb-mdm3_57"]["Channel 2"] - old_speed) > 30) {
+            dev["load_control"]["fan_up_speed"] = true;
+        }
+        old_speed = dev["wb-mdm3_57"]["Channel 2"];
+    }
+});
+
+defineRule("on_off_fan", {
+    whenChanged: "wb-mdm3_57/K2",
+    then: function(newValue, devName, cellName) {
+        if (newValue) {
+            dev["load_control"]["fan_up_speed"] = true;
         } else {
-            timers.delay_fan.stop();
-            dev["load_control"]["power_fan"] = 0;
-            dev["wb-mdm3_57"]["Channel 2"] = 0;
-            dev["wb-mdm3_57"]["K2"] = false;
+            dev["load_control"]["fan_up_speed"] = false;
         }
     }
 });
 
-defineRule("power_lamp_from_mdm", {
+defineRule("power_lamp_mdm", {
     whenChanged: "wb-mdm3_57/Channel 1",
     then: function(newValue, devName, cellName) {
         dev["load_control"]["power_lamp"] = newValue;
-    }
-});
-
-defineRule("full_power_fan", {
-    when: function() {
-        return timers.delay_fan.firing;
-    },
-    then: function() {
-        dev["wb-mdm3_57"]["Channel 2"] = 100;
     }
 });
 
@@ -93,20 +85,25 @@ defineRule("fan_speed_control", {
     then: function(newValue, devName, cellName) {
         if (newValue) {
             if (!dev["load_control"]["fan_overload"]) {
-                if (dev["wb-mdm3_57"]["Channel 2"] < 33) {
-                    dev["wb-mdm3_57"]["Channel 2"] = 33;
-                } else if (dev["wb-mdm3_57"]["Channel 2"] < 66) {
-                    dev["wb-mdm3_57"]["Channel 2"] = 66;
-                } else if (dev["wb-mdm3_57"]["Channel 2"] < 100) {
-                    dev["wb-mdm3_57"]["Channel 2"] = 100;
-                } else if (dev["wb-mdm3_57"]["Channel 2"] = 100) {
-                    dev["wb-mdm3_57"]["Channel 2"] = 0;
+                if (dev["wb-mdm3_57"]["K2"] == false) {
+                    dev["wb-mdm3_57"]["Channel 2"] = 100
+                    dev["wb-mdm3_57"]["K2"] = true;
+                } else {
+                    if (dev["wb-mdm3_57"]["Channel 2"] == 0) {
+                        dev["wb-mdm3_57"]["Channel 2"] = 100;
+                    } else if (dev["wb-mdm3_57"]["Channel 2"] == 100) {
+                        dev["wb-mdm3_57"]["Channel 2"] = 66;
+                    } else if (dev["wb-mdm3_57"]["Channel 2"] > 66) {
+                        dev["wb-mdm3_57"]["Channel 2"] = 66;
+                    } else if (dev["wb-mdm3_57"]["Channel 2"] > 33) {
+                        dev["wb-mdm3_57"]["Channel 2"] = 33;
+                    } else if (dev["wb-mdm3_57"]["Channel 2"] > 0) {
+                        dev["wb-mdm3_57"]["K2"] = false;
+                    }
                 }
             } else {
-                dev["button_light"]["blink2"] = false;
-                dev["load_control"]["fan_overload"] = false;
+                dev["load_control"]["fan_overload_reset"] = true;
             }
-            dev["load_control"]["fan_change_speed"] = false;
         }
     }
 });
@@ -115,6 +112,8 @@ defineRule("fan_overload_reset", {
     whenChanged: "load_control/fan_overload_reset",
     then: function(newValue, devName, cellName) {
         if (newValue) {
+            log("overload reset");
+            fan_buzzer_enabled = false;
             dev["load_control"]["fan_overload_reset"] = false;
             dev["load_control"]["fan_overload"] = false;
             dev["button_light"]["blink2"] = false;
@@ -127,8 +126,23 @@ defineRule("fan_overload_control", {
     then: function(newValue, devName, cellName) {
         if (newValue) {
             log("fan overload");
-            dev["wb-mdm3_57"]["Channel 2"] = 0;
+            startTicker("buzzer_fan_interval", 2000);
+            fan_buzzer_enabled = true;
             dev["button_light"]["blink2"] = true;
         }
     }
 });
+
+defineRule("buzzer_fan_interval_handler", {
+    when: function() {
+        return timers.buzzer_fan_interval.firing;
+    },
+    then: function() {
+        dev["buzzer"]["enabled"] = !dev["buzzer"]["enabled"];
+        if (fan_buzzer_enabled == false) {
+            dev["buzzer"]["enabled"] = false;
+            timers.buzzer_fan_interval.stop();
+        }
+    }
+});
+

@@ -49,6 +49,13 @@ defineRule("light1_state_rule", {
     }
 });
 
+defineRule("light2_state_rule", {
+    whenChanged: "wb-mdm3_57/K2",
+    then: function(newValue, devName, cellName) {
+        dev["button_light"]["light2"] = newValue;
+    }
+});
+
 defineRule("light3_state_rule", {
     whenChanged: "wb-mdm3_57/K1",
     then: function(newValue, devName, cellName) {

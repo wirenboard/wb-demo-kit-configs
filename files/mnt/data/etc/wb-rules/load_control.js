@@ -1,4 +1,4 @@
-var fun_buzzer_enabled = false;
+var fan_buzzer_enabled = false;
 var old_speed = 0;
 
 defineVirtualDevice("load_control", {
@@ -113,7 +113,7 @@ defineRule("fan_overload_reset", {
     then: function(newValue, devName, cellName) {
         if (newValue) {
             log("overload reset");
-            fun_buzzer_enabled = false;
+            fan_buzzer_enabled = false;
             dev["load_control"]["fan_overload_reset"] = false;
             dev["load_control"]["fan_overload"] = false;
             dev["button_light"]["blink2"] = false;
@@ -126,22 +126,23 @@ defineRule("fan_overload_control", {
     then: function(newValue, devName, cellName) {
         if (newValue) {
             log("fan overload");
-            startTicker("buzer_fun_interval", 2000);
-            fun_buzzer_enabled = true;
+            startTicker("buzzer_fan_interval", 2000);
+            fan_buzzer_enabled = true;
             dev["button_light"]["blink2"] = true;
         }
     }
 });
 
-defineRule("buzer_fun_interval", {
+defineRule("buzzer_fan_interval_handler", {
     when: function() {
-        return timers.buzer_fun_interval.firing;
+        return timers.buzzer_fan_interval.firing;
     },
     then: function() {
         dev["buzzer"]["enabled"] = !dev["buzzer"]["enabled"];
-        if (fun_buzzer_enabled == false) {
+        if (fan_buzzer_enabled == false) {
             dev["buzzer"]["enabled"] = false;
-            timers.buzer_fun_interval.stop();
+            timers.buzzer_fan_interval.stop();
         }
     }
 });
+

@@ -1,6 +1,7 @@
 wb-demo-kit-configs (1.1.2) unstable; urgency=medium
 
   * added monitoring power fan for different voltage
+  * decrease poll interval for neva
 
  -- Boris Marochkin <b.marochkin@wirenboard.ru>  Mon, 21 Jun 2021 11:57:53 +0300
 

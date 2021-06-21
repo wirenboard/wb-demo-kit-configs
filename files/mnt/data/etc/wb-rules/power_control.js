@@ -19,11 +19,13 @@ defineRule("fan_overload_detect", {
         return timers.fan_overload_ticker.firing;
     },
     then: function() {
+        var alarmPower;
         //log("current power " + dev['wb-map12e_35']['Ch 3 P L1'] + " W");
         if (dev["load_control"]["fan_up_speed"] == false) {
             not_detect_overload = 0;
             if (dev["wb-mdm3_57"]["Channel 2"] == 100) {
-                if ((dev['wb-map12e_35']['Ch 3 P L1'] > 18) && (dev["load_control"]["fan_overload"] == false)) {
+                alarmPower = ((dev["wb-map12e_35"]["Urms L1"] - 180) / 6.66) + 10;
+                if ((dev['wb-map12e_35']['Ch 3 P L1'] > alarmPower) && (dev["load_control"]["fan_overload"] == false)) {
                     dev["load_control"]["fan_overload"] = true;
                     dev["load_control"]["fan_up_speed"] = true;
                 }
@@ -73,7 +75,7 @@ defineRule("power_fail", {
 defineRule("power_mdm_fail", {
     whenChanged: "wb-map12e_35/Urms L1",
     then: function(newValue, devName, cellName) {
-        if (newValue < 100) {
+        if (newValue < 181) {
             dev["wb-mdm3_57"]["Channel 1"] = 0;
             dev["wb-mdm3_57"]["Channel 2"] = 0;
         }

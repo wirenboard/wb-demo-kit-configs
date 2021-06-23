@@ -602,7 +602,7 @@
           "device_timeout_ms" : 3000,
           "device_type" : "NEVA MT 113/123/124",
           "enabled" : true,
-          "poll_interval" : 10000,
+          "poll_interval" : 1000,
           "slave_id" : "00000001"
         }
       ],

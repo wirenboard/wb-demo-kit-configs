@@ -1,8 +1,8 @@
-wb-demo-kit-configs (1.1.2ubuntu1) UNRELEASED; urgency=medium
+wb-demo-kit-configs (1.1.3) unstable; urgency=medium
 
   * Fixed wb-hardware.conf file for proper work with WB6.7
 
- -- Dan Kazaryan<d.kazaryan@wirenboard.ru>  Wed, 14 Jul 2021 14:42:27 +0300
+ -- Dan Kazaryan <d.kazaryan@wirenboard.ru>  Wed, 14 Jul 2021 14:54:27 +0300   
 
 wb-demo-kit-configs (1.1.2) unstable; urgency=medium
 

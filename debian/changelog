@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.1.4) unstable; urgency=medium
+
+  * Added modules wb-hardware.conf (forgot last time)
+
+ -- Dan Kazaryan <d.kazaryan@wirenboard.ru>  Wed, 14 Jul 2021 16:39:11 +0300
+
 wb-demo-kit-configs (1.1.3) unstable; urgency=medium
 
   * Fixed wb-hardware.conf file for proper work with WB6.7

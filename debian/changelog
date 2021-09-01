@@ -1,3 +1,10 @@
+wb-demo-kit-configs (1.2.0) unstable; urgency=medium
+
+  * Change wb-mqtt-serial.conf for new release
+  * Bugfix when off QF1 rise alarm fan
+
+ -- Boris Marochkin <b.marochkin@wirenboard.ru>  Wed, 01 Sep 2021 12:09:40 +0300
+
 wb-demo-kit-configs (1.1.4) unstable; urgency=medium
 
   * Added modules wb-hardware.conf (forgot last time)

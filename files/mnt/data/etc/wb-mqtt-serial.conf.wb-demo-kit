@@ -8,69 +8,8 @@
       "devices" : 
       [
         {
-          "device_type" : "WB-MR6C",
-          "enabled" : true,
-          "slave_id" : "46"
-        },
-        {
-          "device_type" : "WB-MDM3",
-          "enabled" : true,
-          "poll_interval" : 20,
-          "setup" : 
-          [
-            {
-              "address" : 60,
-              "title" : "edge_ch1",
-              "value" : 1
-            },
-            {
-              "address" : 61,
-              "title" : "edge_ch2",
-              "value" : 0
-            },
-            {
-              "address" : 70,
-              "title" : "low_lewel_ch1",
-              "value" : 1000
-            },
-            {
-              "address" : 71,
-              "title" : "low_lewel_ch2",
-              "value" : 3500
-            },
-            {
-              "address" : 50,
-              "title" : "type_load_ch1",
-              "value" : 0
-            },
-            {
-              "address" : 51,
-              "title" : "type_load_ch2",
-              "value" : 1
-            },
-            {
-              "address" : 141,
-              "title" : "up_power_ch2",
-              "value" : 1
-            },
-            {
-              "address" : 151,
-              "title" : "down_power_ch2",
-              "value" : 1
-            }
-          ],
-          "slave_id" : "57"
-        },
-        {
           "device_type" : "WB-MWAC",
-          "enabled" : true,
           "slave_id" : "25"
-        },
-        {
-          "device_type" : "WB-M1W2",
-          "enabled" : true,
-          "poll_interval" : 20,
-          "slave_id" : "30"
         },
         {
           "device_type" : "WB-MRGBW-D",
@@ -78,489 +17,470 @@
         },
         {
           "device_type" : "WB-MSW v.3",
-          "enabled" : true,
           "slave_id" : "64"
         },
         {
           "device_type" : "WB-MIR v2",
-          "enabled" : true,
-          "poll_interval" : 20,
           "slave_id" : "133"
+        },
+        {
+          "device_type" : "WB-M1W2",
+          "slave_id" : "30"
+        },
+        {
+          "device_type" : "WB-MR6C",
+          "slave_id" : "46"
         },
         {
           "channels" : 
           [
             {
-              "device_type" : "phase L1",
-              "name" : "L1"
+              "enabled" : false,
+              "name" : "Ch 1 Irms L1"
             },
             {
-              "device_type" : "phase L2",
-              "name" : "L2"
+              "enabled" : false,
+              "name" : "Ch 1 Ipeak L1"
             },
             {
-              "device_type" : "phase L3",
-              "name" : "L3"
+              "enabled" : false,
+              "name" : "Ch 1 P L1"
             },
             {
-              "channels" : 
-              [
-                {
-                  "enabled" : false,
-                  "name" : "Irms"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Ipeak"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "P"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Q"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "S"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "PF"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "AP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "RP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Phase angle"
-                }
-              ],
-              "device_type" : "channel phase L1",
-              "name" : "Ch 1 L1"
+              "enabled" : false,
+              "name" : "Ch 1 Q L1"
             },
             {
-              "channels" : 
-              [
-                {
-                  "enabled" : false,
-                  "name" : "Irms"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Ipeak"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "P"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Q"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "S"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "PF"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "AP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "RP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Phase angle"
-                }
-              ],
-              "device_type" : "channel phase L2",
-              "name" : "Ch 1 L2"
+              "enabled" : false,
+              "name" : "Ch 1 S L1"
             },
             {
-              "channels" : 
-              [
-                {
-                  "enabled" : false,
-                  "name" : "Irms"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Ipeak"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "P"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Q"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "S"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "PF"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "AP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "RP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Phase angle"
-                }
-              ],
-              "device_type" : "channel phase L3",
-              "name" : "Ch 1 L3"
+              "enabled" : false,
+              "name" : "Ch 1 PF L1"
             },
             {
-              "channels" : 
-              [
-                {
-                  "enabled" : false,
-                  "name" : "P"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Q"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "S"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "PF"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "AP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "RP energy"
-                }
-              ],
-              "device_type" : "channel total",
-              "name" : "Ch 1 Total"
+              "enabled" : false,
+              "name" : "Ch 1 AP energy L1"
             },
             {
-              "channels" : 
-              [
-                {
-                  "enabled" : false,
-                  "name" : "Irms"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Ipeak"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "P"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Q"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "S"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "PF"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "AP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "RP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Phase angle"
-                }
-              ],
-              "device_type" : "channel phase L1",
-              "name" : "Ch 2 L1"
+              "enabled" : false,
+              "name" : "Ch 1 RP energy L1"
             },
             {
-              "channels" : 
-              [
-                {
-                  "enabled" : false,
-                  "name" : "Irms"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Ipeak"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "P"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Q"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "S"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "PF"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "AP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "RP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Phase angle"
-                }
-              ],
-              "device_type" : "channel phase L2",
-              "name" : "Ch 2 L2"
+              "enabled" : false,
+              "name" : "Ch 1 Irms L2"
             },
             {
-              "channels" : 
-              [
-                {
-                  "enabled" : false,
-                  "name" : "Irms"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Ipeak"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "P"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Q"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "S"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "PF"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "AP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "RP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Phase angle"
-                }
-              ],
-              "device_type" : "channel phase L3",
-              "name" : "Ch 2 L3"
+              "enabled" : false,
+              "name" : "Ch 1 Ipeak L2"
             },
             {
-              "channels" : 
-              [
-                {
-                  "enabled" : false,
-                  "name" : "P"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Q"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "S"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "PF"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "AP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "RP energy"
-                }
-              ],
-              "device_type" : "channel total",
-              "name" : "Ch 2 Total"
+              "enabled" : false,
+              "name" : "Ch 1 P L2"
             },
             {
-              "device_type" : "channel phase L1",
-              "name" : "Ch 3 L1",
-              "phi" : 500,
-              "turns" : 2000
+              "enabled" : false,
+              "name" : "Ch 1 Q L2"
             },
             {
-              "device_type" : "channel phase L2",
-              "name" : "Ch 3 L2",
-              "phi" : 500,
-              "turns" : 2000
+              "enabled" : false,
+              "name" : "Ch 1 S L2"
             },
             {
-              "channels" : 
-              [
-                {
-                  "enabled" : false,
-                  "name" : "Irms"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Ipeak"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "P"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Q"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "S"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "PF"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "AP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "RP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Phase angle"
-                }
-              ],
-              "device_type" : "channel phase L3",
-              "name" : "Ch 3 L3"
+              "enabled" : false,
+              "name" : "Ch 1 PF L2"
             },
             {
-              "channels" : 
-              [
-                {
-                  "enabled" : false,
-                  "name" : "P"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Q"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "S"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "PF"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "AP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "RP energy"
-                }
-              ],
-              "device_type" : "channel total",
-              "name" : "Ch 3 Total"
+              "enabled" : false,
+              "name" : "Ch 1 AP energy L2"
             },
             {
-              "device_type" : "channel phase L1",
-              "name" : "Ch 4 L1",
-              "phi" : 120,
-              "turns" : 2000
+              "enabled" : false,
+              "name" : "Ch 1 RP energy L2"
             },
             {
-              "device_type" : "channel phase L2",
-              "name" : "Ch 4 L2",
-              "phi" : 120,
-              "turns" : 2000
+              "enabled" : false,
+              "name" : "Ch 1 Irms L3"
             },
             {
-              "device_type" : "channel phase L3",
-              "name" : "Ch 4 L3",
-              "phi" : 120,
-              "turns" : 2000
+              "enabled" : false,
+              "name" : "Ch 1 Ipeak L3"
             },
             {
-              "channels" : 
-              [
-                {
-                  "enabled" : false,
-                  "name" : "P"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "Q"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "S"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "PF"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "AP energy"
-                },
-                {
-                  "enabled" : false,
-                  "name" : "RP energy"
-                }
-              ],
-              "device_type" : "channel total",
-              "name" : "Ch 4 Total"
+              "enabled" : false,
+              "name" : "Ch 1 P L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Q L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 S L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 PF L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 AP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 RP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total P"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total Q"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total S"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total PF"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total AP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total RP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Phase angle L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Phase angle L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Phase angle L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Irms L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Ipeak L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 P L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Q L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 S L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 PF L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 AP energy L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 RP energy L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Irms L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Ipeak L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 P L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Q L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 S L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 PF L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 AP energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 RP energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Irms L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Ipeak L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 P L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Q L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 S L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 PF L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 AP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 RP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total P"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total Q"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total S"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total PF"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total AP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total RP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Phase angle L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Phase angle L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Phase angle L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Irms L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Ipeak L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 P L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Q L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 S L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 PF L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 AP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 RP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total P"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total Q"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total S"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total PF"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total AP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total RP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total P"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total Q"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total S"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total PF"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total AP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total RP energy"
             }
           ],
           "device_type" : "WB-MAP12E fw2",
-          "enabled" : true,
+          "setup" : 
+          [
+            {
+              "address" : "0x3460",
+              "title" : "CH3_L1_TURNS",
+              "value" : "2000"
+            },
+            {
+              "address" : "0x3461",
+              "title" : "CH3_L2_TURNS",
+              "value" : "2000"
+            },
+            {
+              "address" : "0x3463",
+              "title" : "CH3_L1_PHI",
+              "value" : "500"
+            },
+            {
+              "address" : "0x3464",
+              "title" : "CH3_L2_PHI",
+              "value" : "500"
+            },
+            {
+              "address" : "0x4460",
+              "title" : "CH4_L1_TURNS",
+              "value" : "2000"
+            },
+            {
+              "address" : "0x4461",
+              "title" : "CH4_L2_TURNS",
+              "value" : "2000"
+            },
+            {
+              "address" : "0x4462",
+              "title" : "CH4_L3_TURNS",
+              "value" : "2000"
+            },
+            {
+              "address" : "0x4463",
+              "title" : "CH4_L1_PHI",
+              "value" : "120"
+            },
+            {
+              "address" : "0x4464",
+              "title" : "CH4_L2_PHI",
+              "value" : "120"
+            },
+            {
+              "address" : "0x4465",
+              "title" : "CH4_L3_PHI",
+              "value" : "120"
+            }
+          ],
           "slave_id" : "35"
+        },
+        {
+          "device_type" : "WB-MDM3",
+          "setup" : 
+          [
+            {
+              "address" : "60",
+              "title" : "EDGE_CH1",
+              "value" : "1"
+            },
+            {
+              "address" : "61",
+              "title" : "EDGE_CH2",
+              "value" : "0"
+            },
+            {
+              "address" : "70",
+              "title" : "LOW_LEVEL_CH1",
+              "value" : "1000"
+            },
+            {
+              "address" : "71",
+              "title" : "LOW_LEVEL_CH2",
+              "value" : "3500"
+            },
+            {
+              "address" : "50",
+              "title" : "TYPE_LOAD_CH1",
+              "value" : "0"
+            },
+            {
+              "address" : "51",
+              "title" : "TYPE_LOAD_CH2",
+              "value" : "1"
+            },
+            {
+              "address" : "141",
+              "title" : "UP_POWER_CH2",
+              "value" : "1"
+            },
+            {
+              "address" : "151",
+              "title" : "DOWN_POWER_CH2",
+              "value" : "1"
+            }
+          ],
+          "slave_id" : "57"
         }
       ],
       "enabled" : true,
@@ -599,10 +519,7 @@
               "name" : "PF"
             }
           ],
-          "device_timeout_ms" : 3000,
           "device_type" : "NEVA MT 113/123/124",
-          "enabled" : true,
-          "poll_interval" : 1000,
           "slave_id" : "00000001"
         }
       ],

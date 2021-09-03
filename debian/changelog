@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.2.2) unstable; urgency=medium
+
+  * Increased low level lamp
+
+ -- Boris Marochkin <b.marochkin@wirenboard.ru>  Fri, 03 Sep 2021 16:12:54 +0300
+
 wb-demo-kit-configs (1.2.1) unstable; urgency=medium
 
   * Increased alarm power fan

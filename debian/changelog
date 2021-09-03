@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.2.1) unstable; urgency=medium
+
+  * Increased alarm power fan
+
+ -- Boris Marochkin <b.marochkin@wirenboard.ru>  Fri, 03 Sep 2021 10:08:29 +0300
+
 wb-demo-kit-configs (1.2.0) unstable; urgency=medium
 
   * Change wb-mqtt-serial.conf for new release

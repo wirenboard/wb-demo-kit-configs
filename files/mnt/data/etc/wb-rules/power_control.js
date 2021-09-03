@@ -32,7 +32,7 @@ defineRule("fan_overload_detect", {
                 // 10 - аварийная мощность вентилятора при напряжении 180 В
                 if (voltageDiff !== 0) {
                     // Проверяем превышение мощности если только разность напряжений не равна нулю
-                    alarmPower = (voltageDiff / 6.66) + 10;
+                    alarmPower = (voltageDiff / 6.66) + 11;
                     if ((dev['wb-map12e_35']['Ch 3 P L1'] > alarmPower) && (dev["load_control"]["fan_overload"] == false)) {
                         dev["load_control"]["fan_overload"] = true;
                         dev["load_control"]["fan_up_speed"] = true;

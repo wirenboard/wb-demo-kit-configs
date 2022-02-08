@@ -12,7 +12,14 @@
           "slave_id" : "25"
         },
         {
-          "device_type" : "WB-MRGBW-D",
+          "channels" : 
+          [
+            {
+              "device_type" : "rgb_w",
+              "name" : "Mode"
+            }
+          ],
+          "device_type" : "WB-MRGBW-D fw3",
           "slave_id" : "39"
         },
         {
@@ -20,10 +27,28 @@
           "slave_id" : "64"
         },
         {
+          "channels" : 
+          [
+            {
+              "device_type" : "input1_1wire",
+              "name" : "Input 1"
+            }
+          ],
           "device_type" : "WB-MIR v2",
           "slave_id" : "133"
         },
         {
+          "channels" : 
+          [
+            {
+              "device_type" : "input1_1wire",
+              "name" : "Input 1"
+            },
+            {
+              "device_type" : "input2_1wire",
+              "name" : "Input 2"
+            }
+          ],
           "device_type" : "WB-M1W2",
           "slave_id" : "30"
         },
@@ -32,6 +57,16 @@
           "slave_id" : "46"
         },
         {
+          "channel3_l1_phi" : 500,
+          "channel3_l1_turns" : 2000,
+          "channel3_l2_phi" : 500,
+          "channel3_l2_turns" : 2000,
+          "channel4_l1_phi" : 120,
+          "channel4_l1_turns" : 2000,
+          "channel4_l2_phi" : 120,
+          "channel4_l2_turns" : 2000,
+          "channel4_l3_phi" : 120,
+          "channel4_l3_turns" : 2000,
           "channels" : 
           [
             {
@@ -68,6 +103,10 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 1 Phase angle L1"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 1 Irms L2"
             },
             {
@@ -97,6 +136,10 @@
             {
               "enabled" : false,
               "name" : "Ch 1 RP energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Phase angle L2"
             },
             {
               "enabled" : false,
@@ -132,6 +175,10 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 1 Phase angle L3"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 1 Total P"
             },
             {
@@ -153,18 +200,6 @@
             {
               "enabled" : false,
               "name" : "Ch 1 Total RP energy"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 Phase angle L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 Phase angle L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 Phase angle L3"
             },
             {
               "enabled" : false,
@@ -200,6 +235,10 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 2 Phase angle L1"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 2 Irms L2"
             },
             {
@@ -229,6 +268,10 @@
             {
               "enabled" : false,
               "name" : "Ch 2 RP energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Phase angle L2"
             },
             {
               "enabled" : false,
@@ -264,6 +307,10 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 2 Phase angle L3"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 2 Total P"
             },
             {
@@ -285,18 +332,6 @@
             {
               "enabled" : false,
               "name" : "Ch 2 Total RP energy"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Phase angle L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Phase angle L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Phase angle L3"
             },
             {
               "enabled" : false,
@@ -380,59 +415,7 @@
             }
           ],
           "device_type" : "WB-MAP12E fw2",
-          "setup" : 
-          [
-            {
-              "address" : "0x3460",
-              "title" : "CH3_L1_TURNS",
-              "value" : "2000"
-            },
-            {
-              "address" : "0x3461",
-              "title" : "CH3_L2_TURNS",
-              "value" : "2000"
-            },
-            {
-              "address" : "0x3463",
-              "title" : "CH3_L1_PHI",
-              "value" : "500"
-            },
-            {
-              "address" : "0x3464",
-              "title" : "CH3_L2_PHI",
-              "value" : "500"
-            },
-            {
-              "address" : "0x4460",
-              "title" : "CH4_L1_TURNS",
-              "value" : "2000"
-            },
-            {
-              "address" : "0x4461",
-              "title" : "CH4_L2_TURNS",
-              "value" : "2000"
-            },
-            {
-              "address" : "0x4462",
-              "title" : "CH4_L3_TURNS",
-              "value" : "2000"
-            },
-            {
-              "address" : "0x4463",
-              "title" : "CH4_L1_PHI",
-              "value" : "120"
-            },
-            {
-              "address" : "0x4464",
-              "title" : "CH4_L2_PHI",
-              "value" : "120"
-            },
-            {
-              "address" : "0x4465",
-              "title" : "CH4_L3_PHI",
-              "value" : "120"
-            }
-          ],
+          "setup" : [],
           "slave_id" : "35"
         },
         {

@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.3.0) unstable; urgency=medium
+
+  * Change temlate for WB-MRGBWD firmware 3.0.0
+
+ -- Boris Marochkin <b.marochkin@wirenboard.ru>  Tue, 08 Feb 2022 17:31:44 +0300
+
 wb-demo-kit-configs (1.2.2) unstable; urgency=medium
 
   * Increased low level lamp

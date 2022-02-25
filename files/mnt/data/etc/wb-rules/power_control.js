@@ -1,4 +1,5 @@
 var not_detect_overload = 0;
+var old_speed = 0;
 
 defineVirtualDevice("power_control", {
     title: "Power Control",
@@ -20,6 +21,10 @@ defineRule("fan_overload_detect", {
     },
     then: function() {
         var alarmPower;
+        if ((dev["wb-mdm3_57"]["Channel 2"] - old_speed) >= 10) {
+            dev["load_control"]["fan_up_speed"] = true;
+        }
+        old_speed = dev["wb-mdm3_57"]["Channel 2"];
         //log("current power " + dev['wb-map12e_35']['Ch 3 P L1'] + " W");
         if (dev["load_control"]["fan_up_speed"] == false) {
             not_detect_overload = 0;

@@ -1,5 +1,4 @@
 var fan_buzzer_enabled = false;
-var old_speed = 0;
 
 defineVirtualDevice("load_control", {
     title: "Load control",
@@ -46,10 +45,6 @@ defineRule("power_fan_mdm", {
     whenChanged: "wb-mdm3_57/Channel 2",
     then: function(newValue, devName, cellName) {
         dev["load_control"]["power_fan"] = newValue;
-        if ((dev["wb-mdm3_57"]["Channel 2"] - old_speed) > 30) {
-            dev["load_control"]["fan_up_speed"] = true;
-        }
-        old_speed = dev["wb-mdm3_57"]["Channel 2"];
     }
 });
 
@@ -145,4 +140,3 @@ defineRule("buzzer_fan_interval_handler", {
         }
     }
 });
-

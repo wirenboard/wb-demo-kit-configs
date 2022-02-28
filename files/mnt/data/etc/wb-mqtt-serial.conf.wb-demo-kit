@@ -419,50 +419,16 @@
           "slave_id" : "35"
         },
         {
+          "channel1_dimming_curve" : 0,
+          "channel1_dimming_type" : 1,
+          "channel1_min_value" : 1100,
+          "channel2_decrease_rate" : 1,
+          "channel2_dimming_curve" : 1,
+          "channel2_dimming_type" : 0,
+          "channel2_increase_rate" : 1,
+          "channel2_min_value" : 3500,
           "device_type" : "WB-MDM3",
-          "setup" : 
-          [
-            {
-              "address" : "60",
-              "title" : "EDGE_CH1",
-              "value" : "1"
-            },
-            {
-              "address" : "61",
-              "title" : "EDGE_CH2",
-              "value" : "0"
-            },
-            {
-              "address" : "70",
-              "title" : "LOW_LEVEL_CH1",
-              "value" : "1100"
-            },
-            {
-              "address" : "71",
-              "title" : "LOW_LEVEL_CH2",
-              "value" : "3500"
-            },
-            {
-              "address" : "50",
-              "title" : "TYPE_LOAD_CH1",
-              "value" : "0"
-            },
-            {
-              "address" : "51",
-              "title" : "TYPE_LOAD_CH2",
-              "value" : "1"
-            },
-            {
-              "address" : "141",
-              "title" : "UP_POWER_CH2",
-              "value" : "1"
-            },
-            {
-              "address" : "151",
-              "title" : "DOWN_POWER_CH2",
-              "value" : "1"
-            }
-          ],
+          "setup" : [],
           "slave_id" : "57"
         }
       ],

@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.4.0) unstable; urgency=medium
+
+  * Added wb-hardware.conf for WB7
+
+ -- Boris Marochkin <b.marochkin@wirenboard.ru>  Wed, 01 Jun 2022 14:08:22 +0300
+
 wb-demo-kit-configs (1.3.3) unstable; urgency=medium
 
   * Fix false alarm fan power

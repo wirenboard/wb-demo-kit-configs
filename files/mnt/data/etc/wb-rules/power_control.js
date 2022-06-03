@@ -1,5 +1,6 @@
 var not_detect_overload = 0;
 var old_speed = 0;
+var coeff_alarm_power_fan = 0;
 
 defineVirtualDevice("power_control", {
     title: "Power Control",
@@ -14,6 +15,7 @@ defineVirtualDevice("power_control", {
 });
 
 startTicker("fan_overload_ticker", 200);
+coeff_alarm_power_fan = readConfig("/etc/wb-demo-kit-configs.conf").coeff_power_fan
 
 defineRule("fan_overload_detect", {
     when: function() {
@@ -35,9 +37,11 @@ defineRule("fan_overload_detect", {
                 voltageDiff = Math.max((dev["wb-map12e_35"]["Urms L1"] - 180), 0);
                 // 6.66 - коэффециент полученный экспериментально связывающий питающее напряжение и мощность потребляемую вентилятором
                 // 10 - аварийная мощность вентилятора при напряжении 180 В
+                // coeff_alarm_power_fan - коэффециент коррекции аварийной мощности вентилятора, 
+                // введён потому что у вентиляторов разное сопротивление обмоток и соответственно разная потребляемая мощность.
                 if (voltageDiff !== 0) {
                     // Проверяем превышение мощности если только разность напряжений не равна нулю
-                    alarmPower = (voltageDiff / 6.66) + 11;
+                    alarmPower = (voltageDiff / 6.66) + (11 + coeff_alarm_power_fan);
                     if ((dev['wb-map12e_35']['Ch 3 P L1'] > alarmPower) && (dev["load_control"]["fan_overload"] == false)) {
                         dev["load_control"]["fan_overload"] = true;
                         dev["load_control"]["fan_up_speed"] = true;

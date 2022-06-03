@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.4.1) unstable; urgency=medium
+
+  * Replace number pwm on environment variable for compatibility WB7
+
+ -- Boris Marochkin <b.marochkin@wirenboard.ru>  Fri, 03 Jun 2022 09:36:21 +0300
+
 wb-demo-kit-configs (1.4.0) unstable; urgency=medium
 
   * Added wb-hardware.conf for WB7

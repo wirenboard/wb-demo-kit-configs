@@ -1,3 +1,10 @@
+wb-demo-kit-configs (1.5.0) unstable; urgency=medium
+
+  * Added settings in configs fan emergency power correction factor
+  * because fan windings have different resistance and different power consumption
+
+ -- Boris Marochkin <b.marochkin@wirenboard.ru>  Fri, 03 Jun 2022 11:40:42 +0300
+
 wb-demo-kit-configs (1.4.1) unstable; urgency=medium
 
   * Replace number pwm on environment variable for compatibility WB7

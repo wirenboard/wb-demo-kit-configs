@@ -28,7 +28,7 @@ elif [[ $SIGNATURE == "ledG" ]]; then
 	DIM_VER="wb-led"
 fi
 	
-cp "${SERIAL_CONF_DIR}/${SERIAL_CONF_FNAME}.${DIMVER}" "/mnt/data/etc/${SERIAL_CONF_FNAME}"
+cp "${SERIAL_CONF_DIR}/${SERIAL_CONF_FNAME}.${DIM_VER}" "/mnt/data/etc/${SERIAL_CONF_FNAME}"
 
 # restart services
 deb-systemd-invoke restart wb-mqtt-serial

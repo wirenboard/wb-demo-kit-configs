@@ -18,7 +18,7 @@ fi
 
 cp "${HARDWARE_CONF_DIR}/${HARDWARE_CONF_FNAME}.${FVER}" "/mnt/data/etc/${HARDWARE_CONF_FNAME}"
 
-systemctl stop wb-mqtt-serial
+deb-systemd-invoke stop wb-mqtt-serial.service
 
 SIGNATURE=$( echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 39 -t3 -r 290 -c 12 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
 

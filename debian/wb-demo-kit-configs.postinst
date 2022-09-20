@@ -5,10 +5,10 @@
 . /usr/lib/wb-utils/wb_env.sh
 wb_source "of"
 
-HARDWARE_CONF_DIR="/usr/share/wb-demo-kit-configs"
+CONF_DIR="/usr/share/wb-demo-kit-configs"
 HARDWARE_CONF_FNAME="wb-hardware.conf.wb-demo-kit"
-SERIAL_CONF_DIR="/usr/share/wb-demo-kit-configs"
 SERIAL_CONF_FNAME="wb-mqtt-serial.conf.wb-demo-kit"
+WEBUI_CONF_FNAME="wb-webui.conf.wb-demo-kit"
 
 if of_machine_match "allwinner,sun8i-r40"; then
     FVER="sun8i"
@@ -16,7 +16,8 @@ elif of_machine_match "fsl,imx6ul" || of_machine_match "fsl,imx6ull"; then
     FVER="imx6"
 fi
 
-cp "${HARDWARE_CONF_DIR}/${HARDWARE_CONF_FNAME}.${FVER}" "/mnt/data/etc/${HARDWARE_CONF_FNAME}"
+cp "${CONF_DIR}/${HARDWARE_CONF_FNAME}.${FVER}" "/mnt/data/etc/${HARDWARE_CONF_FNAME}"
+cp "${CONF_DIR}/${WEBUI_CONF_FNAME}.${FVER}" "/mnt/data/etc/${WEBUI_CONF_FNAME}"
 
 deb-systemd-invoke stop wb-mqtt-serial.service
 
@@ -30,7 +31,7 @@ else
 	DIM_VER="wb-mrgbwd"
 fi
 	
-cp "${SERIAL_CONF_DIR}/${SERIAL_CONF_FNAME}.${DIM_VER}" "/mnt/data/etc/${SERIAL_CONF_FNAME}"
+cp "${CONF_DIR}/${SERIAL_CONF_FNAME}.${DIM_VER}" "/mnt/data/etc/${SERIAL_CONF_FNAME}"
 
 # restart services
 deb-systemd-invoke restart wb-mqtt-serial

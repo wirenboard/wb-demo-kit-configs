@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.6.0) unstable; urgency=medium
+
+  * Added support device wb-led
+
+ -- Boris Marochkin <b.marochkin@wirenboard.ru>  Mon, 19 Sep 2022 12:30:54 +0300
+
 wb-demo-kit-configs (1.5.0) unstable; urgency=medium
 
   * Added settings in configs fan emergency power correction factor

@@ -1,0 +1,506 @@
+{
+  "debug" : false,
+  "ports" : 
+  [
+    {
+      "baud_rate" : 115200,
+      "data_bits" : 8,
+      "devices" : 
+      [
+        {
+          "device_type" : "WB-MWAC",
+          "slave_id" : "25"
+        },
+        {
+          "device_type" : "WB-LED",
+          "dimmer_mode" : 256,
+          "slave_id" : "39"
+        },
+        {
+          "device_type" : "WB-MSW v.3",
+          "slave_id" : "64"
+        },
+        {
+          "channels" : 
+          [
+            {
+              "device_type" : "input1_1wire",
+              "name" : "Input 1"
+            }
+          ],
+          "device_type" : "WB-MIR v2",
+          "slave_id" : "133"
+        },
+        {
+          "channels" : 
+          [
+            {
+              "device_type" : "input1_1wire",
+              "name" : "Input 1"
+            },
+            {
+              "device_type" : "input2_1wire",
+              "name" : "Input 2"
+            }
+          ],
+          "device_type" : "WB-M1W2",
+          "slave_id" : "30"
+        },
+        {
+          "device_type" : "WB-MR6C",
+          "slave_id" : "46"
+        },
+        {
+          "channel3_l1_phi" : 500,
+          "channel3_l1_turns" : 2000,
+          "channel3_l2_phi" : 500,
+          "channel3_l2_turns" : 2000,
+          "channel4_l1_phi" : 120,
+          "channel4_l1_turns" : 2000,
+          "channel4_l2_phi" : 120,
+          "channel4_l2_turns" : 2000,
+          "channel4_l3_phi" : 120,
+          "channel4_l3_turns" : 2000,
+          "channels" : 
+          [
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Irms L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Ipeak L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Ipeak L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 P L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Q L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total P"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total Q"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total S"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total PF"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 S L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total AP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total RP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 PF L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 AP energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 RP energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Phase angle L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Irms L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Ipeak L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 P L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 P L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Q L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 S L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 PF L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 AP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 RP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Phase angle L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total P"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total Q"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total S"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Q L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total PF"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total AP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total RP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Irms L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Ipeak L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 P L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Q L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 S L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 PF L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 AP energy L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 S L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 RP energy L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Phase angle L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Irms L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Ipeak L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 P L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Q L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 S L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 PF L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 AP energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 RP energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 PF L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Phase angle L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Irms L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Ipeak L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 P L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Q L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 S L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 PF L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 AP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 RP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Phase angle L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 AP energy L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total P"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total Q"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total S"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total PF"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total AP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total RP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 RP energy L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Phase angle L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Irms L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Ipeak L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 P L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Q L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 S L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 PF L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Irms L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 AP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 RP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total P"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total Q"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total S"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total PF"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total AP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total RP energy"
+            }
+          ],
+          "device_type" : "WB-MAP12E fw2",
+          "setup" : [],
+          "slave_id" : "35"
+        },
+        {
+          "channel1_dimming_curve" : 0,
+          "channel1_dimming_type" : 1,
+          "channel1_min_value" : 1100,
+          "channel2_decrease_rate" : 1,
+          "channel2_dimming_curve" : 1,
+          "channel2_dimming_type" : 0,
+          "channel2_increase_rate" : 1,
+          "channel2_min_value" : 3500,
+          "device_type" : "WB-MDM3",
+          "setup" : [],
+          "slave_id" : "57"
+        }
+      ],
+      "enabled" : true,
+      "parity" : "N",
+      "path" : "/dev/ttyRS485-1",
+      "port_type" : "serial",
+      "read_rate_limit_ms" : 10,
+      "stop_bits" : 2
+    },
+    {
+      "baud_rate" : 9600,
+      "data_bits" : 8,
+      "devices" : 
+      [
+        {
+          "channels" : 
+          [
+            {
+              "enabled" : false,
+              "name" : "A energy T1"
+            },
+            {
+              "enabled" : false,
+              "name" : "PF"
+            },
+            {
+              "enabled" : false,
+              "name" : "A energy T2"
+            },
+            {
+              "enabled" : false,
+              "name" : "A energy T3"
+            },
+            {
+              "enabled" : false,
+              "name" : "A energy T4"
+            }
+          ],
+          "device_type" : "NEVA MT 113/123/124",
+          "slave_id" : "00000001"
+        }
+      ],
+      "enabled" : true,
+      "parity" : "N",
+      "path" : "/dev/ttyRS485-2",
+      "read_rate_limit_ms" : 10,
+      "stop_bits" : 1
+    },
+    {
+      "baud_rate" : 9600,
+      "data_bits" : 8,
+      "devices" : [],
+      "enabled" : false,
+      "parity" : "N",
+      "path" : "/dev/ttyMOD1",
+      "read_rate_limit_ms" : 10,
+      "stop_bits" : 2
+    },
+    {
+      "baud_rate" : 9600,
+      "data_bits" : 8,
+      "devices" : [],
+      "enabled" : false,
+      "parity" : "N",
+      "path" : "/dev/ttyMOD2",
+      "read_rate_limit_ms" : 10,
+      "stop_bits" : 2
+    },
+    {
+      "baud_rate" : 9600,
+      "data_bits" : 8,
+      "devices" : [],
+      "enabled" : false,
+      "parity" : "N",
+      "path" : "/dev/ttyMOD3",
+      "read_rate_limit_ms" : 10,
+      "stop_bits" : 2
+    }
+  ]
+}

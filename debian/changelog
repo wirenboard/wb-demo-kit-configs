@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.6.1) unstable; urgency=medium
+
+  * Fix dashboard for wb7
+
+ -- Boris Marochkin <b.marochkin@wirenboard.ru>  Tue, 20 Sep 2022 11:46:26 +0300
+
 wb-demo-kit-configs (1.6.0) unstable; urgency=medium
 
   * Added support device wb-led

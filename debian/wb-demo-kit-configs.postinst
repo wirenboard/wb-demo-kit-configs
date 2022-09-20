@@ -26,6 +26,8 @@ if [[ $SIGNATURE == "mrgbw" ]] || [[ $SIGNATURE == "mrgbwG" ]]; then
 	DIM_VER="wb-mrgbwd"
 elif [[ $SIGNATURE == "ledG" ]]; then
 	DIM_VER="wb-led"
+else
+	DIM_VER="wb-mrgbwd"
 fi
 	
 cp "${SERIAL_CONF_DIR}/${SERIAL_CONF_FNAME}.${DIM_VER}" "/mnt/data/etc/${SERIAL_CONF_FNAME}"

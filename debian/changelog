@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.6.2) unstable; urgency=medium
+
+  * Format source code. No functional changes
+
+ -- Nikolay Korotkiy <nikolay.korotkiy@wirenboard.com>  Fri, 09 Jun 2023 17:30:00 +0400
+
 wb-demo-kit-configs (1.6.1) unstable; urgency=medium
 
   * Fix dashboard for wb7

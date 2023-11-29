@@ -73,278 +73,6 @@
             },
             {
               "enabled" : false,
-              "name" : "Ch 1 Ipeak L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 P L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 Q L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 4 Total P"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 4 Total Q"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 4 Total S"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 4 Total PF"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 S L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 4 Total AP energy"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 4 Total RP energy"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 PF L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 AP energy L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 RP energy L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 Phase angle L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 Irms L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 Ipeak L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 P L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 P L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 Q L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 S L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 PF L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 AP energy L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 RP energy L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 Phase angle L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 Total P"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 Total Q"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 Total S"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 Q L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 Total PF"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 Total AP energy"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 Total RP energy"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Irms L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Ipeak L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 P L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Q L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 S L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 PF L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 AP energy L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 S L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 RP energy L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Phase angle L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Irms L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Ipeak L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 P L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Q L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 S L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 PF L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 AP energy L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 RP energy L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 PF L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Phase angle L2"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Irms L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Ipeak L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 P L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Q L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 S L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 PF L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 AP energy L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 RP energy L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Phase angle L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 AP energy L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Total P"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Total Q"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Total S"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Total PF"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Total AP energy"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 2 Total RP energy"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 RP energy L1"
-            },
-            {
-              "enabled" : false,
               "name" : "Ch 1 Phase angle L1"
             },
             {
@@ -381,7 +109,19 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 3 AN energy L3"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 3 RP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 RN energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Phase angle L3"
             },
             {
               "enabled" : false,
@@ -405,7 +145,359 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 1 Ipeak L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total AN energy"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 3 Total RP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total RN energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 P L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Q L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 S L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total P"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total Q"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total S"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total PF"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 PF L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total AP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total AN energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total RP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total RN energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 AP energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 AN energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 RP energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 P L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 RN energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Phase angle L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Irms L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Ipeak L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 P L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Q L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 S L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 PF L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 AP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 AN energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Q L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 RP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 RN energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Phase angle L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total P"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total Q"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total S"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total PF"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total AP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total AN energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total RP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 S L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total RN energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Irms L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Ipeak L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 P L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Q L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 S L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 PF L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 AP energy L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 AN energy L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 RP energy L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 PF L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 RN energy L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Phase angle L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Irms L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Ipeak L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 P L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Q L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 S L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 PF L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 AP energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 AN energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 AP energy L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 RP energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 RN energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Phase angle L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Irms L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Ipeak L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 P L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Q L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 S L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 PF L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 AP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 AN energy L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 AN energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 RP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 RN energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Phase angle L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total P"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total Q"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total S"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total PF"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total AP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total AN energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 RP energy L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total RP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total RN energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 RN energy L1"
             }
           ],
           "device_type" : "WB-MAP12E fw2",
@@ -422,6 +514,11 @@
           "channel2_increase_rate" : 1,
           "channel2_min_value" : 3500,
           "device_type" : "WB-MDM3",
+          "input_1_long_press_output_action_single" : 5,
+          "input_1_long_press_output_number" : 1,
+          "input_1_single_press_output_action_single" : 2,
+          "input_1_single_press_output_number" : 1,
+          "inputs12_mode" : 3,
           "setup" : [],
           "slave_id" : "57"
         }

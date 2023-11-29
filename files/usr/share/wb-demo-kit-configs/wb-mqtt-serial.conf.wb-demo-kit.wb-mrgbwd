@@ -109,7 +109,19 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 3 AN energy L3"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 3 RP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 RN energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Phase angle L3"
             },
             {
               "enabled" : false,
@@ -137,7 +149,15 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 3 Total AN energy"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 3 Total RP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total RN energy"
             },
             {
               "enabled" : false,
@@ -177,11 +197,23 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 4 Total AN energy"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 4 Total RP energy"
             },
             {
               "enabled" : false,
+              "name" : "Ch 4 Total RN energy"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 1 AP energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 AN energy L2"
             },
             {
               "enabled" : false,
@@ -190,6 +222,10 @@
             {
               "enabled" : false,
               "name" : "Ch 1 P L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 RN energy L2"
             },
             {
               "enabled" : false,
@@ -225,11 +261,19 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 1 AN energy L3"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 1 Q L1"
             },
             {
               "enabled" : false,
               "name" : "Ch 1 RP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 RN energy L3"
             },
             {
               "enabled" : false,
@@ -257,11 +301,19 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 1 Total AN energy"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 1 Total RP energy"
             },
             {
               "enabled" : false,
               "name" : "Ch 1 S L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 Total RN energy"
             },
             {
               "enabled" : false,
@@ -293,11 +345,19 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 2 AN energy L1"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 2 RP energy L1"
             },
             {
               "enabled" : false,
               "name" : "Ch 1 PF L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 RN energy L1"
             },
             {
               "enabled" : false,
@@ -333,11 +393,19 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 2 AN energy L2"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 1 AP energy L1"
             },
             {
               "enabled" : false,
               "name" : "Ch 2 RP energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 RN energy L2"
             },
             {
               "enabled" : false,
@@ -373,7 +441,19 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 1 AN energy L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 AN energy L3"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 2 RP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 RN energy L3"
             },
             {
               "enabled" : false,
@@ -401,11 +481,23 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 2 Total AN energy"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 1 RP energy L1"
             },
             {
               "enabled" : false,
               "name" : "Ch 2 Total RP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 2 Total RN energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 RN energy L1"
             }
           ],
           "device_type" : "WB-MAP12E fw2",

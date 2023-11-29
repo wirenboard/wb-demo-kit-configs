@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.6.3) stable; urgency=medium
+
+  * Corrected serial config for new firmware MDM3
+
+ -- Boris Marochkin <b.marochkin@wirenboard.ru>  Wed, 29 Nov 2023 13:39:46 +0300
+
 wb-demo-kit-configs (1.6.2) unstable; urgency=medium
 
   * Format source code. No functional changes

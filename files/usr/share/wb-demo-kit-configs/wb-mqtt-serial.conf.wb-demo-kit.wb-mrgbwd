@@ -12,14 +12,8 @@
           "slave_id" : "25"
         },
         {
-          "channels" : 
-          [
-            {
-              "device_type" : "rgb_w",
-              "name" : "Mode"
-            }
-          ],
-          "device_type" : "WB-MRGBW-D fw3",
+          "device_type" : "WB-MRGBW-D_fw3_nosubdev",
+          "dimmer_mode" : 256,
           "slave_id" : "39"
         },
         {
@@ -79,31 +73,31 @@
             },
             {
               "enabled" : false,
-              "name" : "Ch 1 P L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 Q L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 S L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 PF L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 AP energy L1"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 1 RP energy L1"
-            },
-            {
-              "enabled" : false,
               "name" : "Ch 1 Phase angle L1"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Irms L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Ipeak L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 P L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Q L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 S L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 PF L3"
             },
             {
               "enabled" : false,
@@ -111,7 +105,39 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 3 AP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 RP energy L3"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total P"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total Q"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total S"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total PF"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total AP energy"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 1 Ipeak L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 3 Total RP energy"
             },
             {
               "enabled" : false,
@@ -127,7 +153,31 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 4 Total P"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total Q"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total S"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total PF"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 1 PF L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total AP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 4 Total RP energy"
             },
             {
               "enabled" : false,
@@ -136,6 +186,10 @@
             {
               "enabled" : false,
               "name" : "Ch 1 RP energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 P L1"
             },
             {
               "enabled" : false,
@@ -171,6 +225,10 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 1 Q L1"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 1 RP energy L3"
             },
             {
@@ -200,6 +258,10 @@
             {
               "enabled" : false,
               "name" : "Ch 1 Total RP energy"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 S L1"
             },
             {
               "enabled" : false,
@@ -235,6 +297,10 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 1 PF L1"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 2 Phase angle L1"
             },
             {
@@ -264,6 +330,10 @@
             {
               "enabled" : false,
               "name" : "Ch 2 AP energy L2"
+            },
+            {
+              "enabled" : false,
+              "name" : "Ch 1 AP energy L1"
             },
             {
               "enabled" : false,
@@ -331,87 +401,11 @@
             },
             {
               "enabled" : false,
+              "name" : "Ch 1 RP energy L1"
+            },
+            {
+              "enabled" : false,
               "name" : "Ch 2 Total RP energy"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 3 Irms L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 3 Ipeak L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 3 P L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 3 Q L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 3 S L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 3 PF L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 3 AP energy L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 3 RP energy L3"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 3 Total P"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 3 Total Q"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 3 Total S"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 3 Total PF"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 3 Total AP energy"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 3 Total RP energy"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 4 Total P"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 4 Total Q"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 4 Total S"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 4 Total PF"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 4 Total AP energy"
-            },
-            {
-              "enabled" : false,
-              "name" : "Ch 4 Total RP energy"
             }
           ],
           "device_type" : "WB-MAP12E fw2",
@@ -428,6 +422,11 @@
           "channel2_increase_rate" : 1,
           "channel2_min_value" : 3500,
           "device_type" : "WB-MDM3",
+          "input_1_long_press_output_action_single" : 5,
+          "input_1_long_press_output_number" : 1,
+          "input_1_single_press_output_action_single" : 2,
+          "input_1_single_press_output_number" : 1,
+          "inputs12_mode" : 3,
           "setup" : [],
           "slave_id" : "57"
         }
@@ -435,8 +434,8 @@
       "enabled" : true,
       "parity" : "N",
       "path" : "/dev/ttyRS485-1",
-      "poll_interval" : 10,
       "port_type" : "serial",
+      "read_rate_limit_ms" : 10,
       "stop_bits" : 2
     },
     {
@@ -453,6 +452,10 @@
             },
             {
               "enabled" : false,
+              "name" : "PF"
+            },
+            {
+              "enabled" : false,
               "name" : "A energy T2"
             },
             {
@@ -462,10 +465,6 @@
             {
               "enabled" : false,
               "name" : "A energy T4"
-            },
-            {
-              "enabled" : false,
-              "name" : "PF"
             }
           ],
           "device_type" : "NEVA MT 113/123/124",
@@ -475,7 +474,7 @@
       "enabled" : true,
       "parity" : "N",
       "path" : "/dev/ttyRS485-2",
-      "poll_interval" : 10,
+      "read_rate_limit_ms" : 10,
       "stop_bits" : 1
     },
     {
@@ -485,7 +484,7 @@
       "enabled" : false,
       "parity" : "N",
       "path" : "/dev/ttyMOD1",
-      "poll_interval" : 10,
+      "read_rate_limit_ms" : 10,
       "stop_bits" : 2
     },
     {
@@ -495,7 +494,7 @@
       "enabled" : false,
       "parity" : "N",
       "path" : "/dev/ttyMOD2",
-      "poll_interval" : 10,
+      "read_rate_limit_ms" : 10,
       "stop_bits" : 2
     },
     {
@@ -505,7 +504,7 @@
       "enabled" : false,
       "parity" : "N",
       "path" : "/dev/ttyMOD3",
-      "poll_interval" : 10,
+      "read_rate_limit_ms" : 10,
       "stop_bits" : 2
     }
   ]

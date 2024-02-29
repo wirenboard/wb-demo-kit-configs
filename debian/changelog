@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.6.4) stable; urgency=medium
+
+  * Fix dashboard (RGB)
+
+ -- Nikolay Korotkiy <nikolay.korotkiy@wirenboard.com>  Thu, 29 Feb 2024 14:10:00 +0400
+
 wb-demo-kit-configs (1.6.3) stable; urgency=medium
 
   * Corrected serial config for new firmware MDM3

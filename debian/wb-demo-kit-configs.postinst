@@ -35,9 +35,9 @@ SIGNATURE_MWAC=$( echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS48
 if [[ $SIGNATURE_MWAC == "wbmwac_042" ]] || [[ $SIGNATURE_MWAC == "wbmwacG" ]] || [[ $SIGNATURE_MWAC == "wbmwac" ]]; then
 	export mwac="MWAC"
 elif [[ $SIGNATURE == "mwac0" ]]; then
-	export led="MWACv2"
+	export mwac="MWACv2"
 else
-	export led="MWACv2"
+	export mwac="MWACv2"
 fi
 	
 j2 ${CONF_DIR}/${SERIAL_CONF_FNAME} > "/mnt/data/etc/${SERIAL_CONF_FNAME}"

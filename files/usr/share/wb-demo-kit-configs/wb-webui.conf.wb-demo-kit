@@ -8,9 +8,9 @@
             "widgets": [],
             "svg": {
             {% if platform == "sun8i" %}
-            {% include 'sun8i.svg' %}
+            {% include '/usr/share/wb-demo-kit-configs/sun8i.svg' %}
             {% elif platform == "imx8" %}
-            {% include 'imx8.svg' %}
+            {% include '/usr/share/wb-demo-kit-configs/imx8.svg' %}
             {% endif %}
                 "params": [
                     {

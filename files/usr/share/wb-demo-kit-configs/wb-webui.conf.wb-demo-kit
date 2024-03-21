@@ -3814,7 +3814,7 @@
                 {
                     {% if led == "LED"%}
                     "id": "wb-led_39/RGB Palette",
-                    {% elif == "MRGBWD" %}
+                    {% elif led == "MRGBWD" %}
                      "id": "wb-mrgbw-d_39/RGB"
                     {% endif %}
                     "extra": {},

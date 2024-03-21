@@ -7,15 +7,30 @@
       "data_bits" : 8,
       "devices" : 
       [
+      	{% if mwac == "MWAC" %}
         {
           "device_type" : "WB-MWAC",
           "slave_id" : "25"
         },
+        {% elif mwac == "MWACv2" %}
+        {
+          "device_type" : "WB-MWAC-v2",
+          "slave_id" : "25"
+        },
+        {% endif %}
+        {% if led == "LED" %}
         {
           "device_type" : "WB-LED",
           "dimmer_mode" : 256,
           "slave_id" : "39"
         },
+        {% elif led == "MRGBWD" %}
+        {
+          "device_type" : "WB-MRGBW-D_fw3_nosubdev",
+          "dimmer_mode" : 256,
+          "slave_id" : "39"
+        },
+        {% endif %}
         {
           "device_type" : "WB-MSW v.3",
           "slave_id" : "64"

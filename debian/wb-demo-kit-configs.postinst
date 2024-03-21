@@ -20,17 +20,27 @@ cp "${CONF_DIR}/${HARDWARE_CONF_FNAME}.${FVER}" "/mnt/data/etc/${HARDWARE_CONF_F
 
 deb-systemd-invoke stop wb-mqtt-serial.service
 
-SIGNATURE=$( echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 39 -t3 -r 290 -c 12 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
+SIGNATURE_LED=$( echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 39 -t3 -r 290 -c 12 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
 
-if [[ $SIGNATURE == "mrgbw" ]] || [[ $SIGNATURE == "mrgbwG" ]]; then
-	DIM_VER="wb-mrgbwd"
-elif [[ $SIGNATURE == "ledG" ]]; then
-	DIM_VER="wb-led"
+if [[ $SIGNATURE_LED == "mrgbw" ]] || [[ $SIGNATURE_LED == "mrgbwG" ]]; then
+	export led="MRGBWD"
+elif [[ $SIGNATURE_LED == "ledG" ]]; then
+	export led="LED"
 else
-	DIM_VER="wb-mrgbwd"
+	export led="MRGBWD"
+fi
+
+SIGNATURE_MWAC=$( echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 39 -t3 -r 290 -c 12 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
+
+if [[ $SIGNATURE_MWAC == "wbmwac_042" ]] || [[ $SIGNATURE_MWAC == "wbmwacG" ]] || [[ $SIGNATURE_MWAC == "wbmwac" ]]; then
+	export mwac="MWAC"
+elif [[ $SIGNATURE == "mwac0" ]]; then
+	export led="MWACv2"
+else
+	export led="MWACv2"
 fi
 	
-cp "${CONF_DIR}/${SERIAL_CONF_FNAME}.${DIM_VER}" "/mnt/data/etc/${SERIAL_CONF_FNAME}"
+j2 ${CONF_DIR}/${SERIAL_CONF_FNAME} > "/mnt/data/etc/${SERIAL_CONF_FNAME}"
 cp "${CONF_DIR}/${WEBUI_CONF_FNAME}.${FVER}.${DIM_VER}" "/mnt/data/etc/${WEBUI_CONF_FNAME}"
 
 # restart services

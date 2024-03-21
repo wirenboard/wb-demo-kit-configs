@@ -2,11 +2,11 @@ Source: wb-demo-kit-configs
 Section: config
 Priority: extra
 Maintainer: Boris <b.marochkin@wirenboard.ru>
-Build-Depends: debhelper (>= 9), config-package-dev (>= 5.0), j2cli
+Build-Depends: debhelper (>= 9), config-package-dev (>= 5.0)
 Standards-Version: 3.9.4
 Homepage: https://github.com/wirenboard/wb-demo-kit-configs
 
 Package: wb-demo-kit-configs
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, wb-mqtt-serial (>= 2.44.1)
+Depends: ${shlibs:Depends}, ${misc:Depends}, wb-mqtt-serial (>= 2.44.1), j2cli
 Description: Default common config files for Wiren Board demo kit

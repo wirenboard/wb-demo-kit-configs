@@ -18,8 +18,6 @@ elif of_machine_match "fsl,imx6ul" || of_machine_match "fsl,imx6ull"; then
     export platform="imx8"
 fi
 
-cp "${CONF_DIR}/${HARDWARE_CONF_FNAME}.${FVER}" "/mnt/data/etc/${HARDWARE_CONF_FNAME}"
-
 deb-systemd-invoke stop wb-mqtt-serial.service
 
 SIGNATURE_LED=$( echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 39 -t3 -r 290 -c 12 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
@@ -41,7 +39,8 @@ elif [[ $SIGNATURE == "mwac0" ]]; then
 else
 	export mwac="MWACv2"
 fi
-	
+
+j2 ${CONF_DIR}/${HARDWARE_CONF_FNAME} > "/mnt/data/etc/${HARDWARE_CONF_FNAME}"	
 j2 ${CONF_DIR}/${SERIAL_CONF_FNAME} > "/mnt/data/etc/${SERIAL_CONF_FNAME}"
 j2 ${CONF_DIR}/${WEBUI_CONF_FNAME} > "/mnt/data/etc/${WEBUI_CONF_FNAME}"
 

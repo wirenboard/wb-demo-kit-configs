@@ -1,7 +1,11 @@
 {
   "slots": [
     {
+      {% if platform == "sun8i" %}
+      "id": "wb72-mod1",
+      {% elif platform == "imx8" %}
       "id": "wb67-mod1",
+      {% endif %}
       "name": "Internal slot 1",
       "compatible": [
         "wbe2",
@@ -11,7 +15,11 @@
       "options": {}
     },
     {
+      {% if platform == "sun8i" %}
+      "id": "wb72-mod2",
+      {% elif platform == "imx8" %}
       "id": "wb67-mod2",
+      {% endif %}
       "name": "Internal slot 2",
       "compatible": [
         "wbe2",
@@ -21,7 +29,11 @@
       "options": {}
     },
     {
+      {% if platform == "sun8i" %}
+      "id": "wb72-mod3",
+      {% elif platform == "imx8" %}
       "id": "wb67-mod3",
+      {% endif %}
       "name": "Internal slot 3",
       "compatible": [
         "wbe2",
@@ -31,7 +43,11 @@
       "options": {}
     },
     {
+      {% if platform == "sun8i" %}
+      "id": "wb72-mod4",
+      {% elif platform == "imx8" %}
       "id": "wb67-mod4",
+      {% endif %}
       "name": "Internal slot 4",
       "compatible": [
         "wbe3",
@@ -41,7 +57,11 @@
       "options": {}
     },
     {
+      {% if platform == "sun8i" %}
+      "id": "wb72-extio1",
+      {% elif platform == "imx8" %}
       "id": "wb6-extio1",
+      {% endif %}
       "name": "External I/O module 1",
       "compatible": [
         "wb5-extio"
@@ -50,7 +70,11 @@
       "options": {}
     },
     {
+      {% if platform == "sun8i" %}
+      "id": "wb72-extio2",
+      {% elif platform == "imx8" %}
       "id": "wb6-extio2",
+      {% endif %}
       "name": "External I/O module 2",
       "compatible": [
         "wb5-extio"
@@ -59,7 +83,11 @@
       "options": {}
     },
     {
+      {% if platform == "sun8i" %}
+      "id": "wb72-extio3",
+      {% elif platform == "imx8" %}
       "id": "wb6-extio3",
+      {% endif %}
       "name": "External I/O module 3",
       "compatible": [
         "wb5-extio"
@@ -68,7 +96,11 @@
       "options": {}
     },
     {
+      {% if platform == "sun8i" %}
+      "id": "wb72-extio4",
+      {% elif platform == "imx8" %}
       "id": "wb6-extio4",
+      {% endif %}
       "name": "External I/O module 4",
       "compatible": [
         "wb5-extio"
@@ -77,7 +109,11 @@
       "options": {}
     },
     {
+      {% if platform == "sun8i" %}
+      "id": "wb72-extio5",
+      {% elif platform == "imx8" %}
       "id": "wb6-extio5",
+      {% endif %}
       "name": "External I/O module 5",
       "compatible": [
         "wb5-extio"
@@ -86,7 +122,11 @@
       "options": {}
     },
     {
+      {% if platform == "sun8i" %}
+      "id": "wb72-extio6",
+      {% elif platform == "imx8" %}
       "id": "wb6-extio6",
+      {% endif %}
       "name": "External I/O module 6",
       "compatible": [
         "wb5-extio"
@@ -95,7 +135,11 @@
       "options": {}
     },
     {
+      {% if platform == "sun8i" %}
+      "id": "wb72-extio7",
+      {% elif platform == "imx8" %}
       "id": "wb6-extio7",
+      {% endif %}
       "name": "External I/O module 7",
       "compatible": [
         "wb5-extio"
@@ -104,7 +148,11 @@
       "options": {}
     },
     {
+      {% if platform == "sun8i" %}
+      "id": "wb72-extio8",
+      {% elif platform == "imx8" %}
       "id": "wb6-extio8",
+      {% endif %}
       "name": "External I/O module 8",
       "compatible": [
         "wb5-extio"
@@ -113,7 +161,11 @@
       "options": {}
     },
     {
+      {% if platform == "sun8i" %}
+      "id": "wb72-rs485-1",
+      {% elif platform == "imx8" %}
       "id": "wb67-rs485-1",
+      {% endif %}
       "name": "RS485-1 interface config",
       "compatible": [
         "wb67-rs485"
@@ -125,7 +177,11 @@
       }
     },
     {
+      {% if platform == "sun8i" %}
+      "id": "wb72-rs485-2",
+      {% elif platform == "imx8" %}
       "id": "wb67-rs485-2",
+      {% endif %}
       "name": "RS485-2/CAN interface config",
       "compatible": [
         "wb67-rs485",
@@ -138,16 +194,28 @@
       }
     },
     {
+      {% if platform == "sun8i" %}
+      "id": "wb72-wbc",
+      "name": "Modem slot",
+      "compatible": [
+        "wbc-usb"
+      ],
+      {% elif platform == "imx8" %}
       "id": "wb67-wbc",
       "name": "Modem slot",
       "compatible": [
         "wbc"
       ],
+      {% endif %}
       "module": "",
       "options": {}
     },
     {
+      {% if platform == "sun8i" %}
+      "id": "wb72-w1",
+      {% elif platform == "imx8" %}
       "id": "wb67-w1",
+      {% endif %}
       "name": "W1 terminal mode",
       "compatible": [
         "wb6-wx"
@@ -156,7 +224,11 @@
       "options": {}
     },
     {
-      "id": "wb67-w2",
+      {% if platform == "sun8i" %}
+      "id": "wb72-w1",
+      {% elif platform == "imx8" %}
+      "id": "wb67-w1",
+      {% endif %}
       "name": "W2 terminal mode",
       "compatible": [
         "wb6-wx"
@@ -165,6 +237,15 @@
       "options": {}
     },
     {
+      {% if platform == "sun8i" %}
+      "id": "wb72-wbmz4",
+      "name": "Backup power supply",
+      "compatible": [
+        "wb72-wbmz4-power"
+      ],
+      "module": "wbmz4-battery",
+      "options": {}
+      {% elif platform == "imx8" %}
       "id": "wb67-wbmz3",
       "name": "Backup power supply",
       "compatible": [
@@ -173,7 +254,7 @@
       "module": "wbmz3-battery",
       "options": {
         "resetButon": "enabled"
-      }
+      {% endif %}
     }
   ]
 }

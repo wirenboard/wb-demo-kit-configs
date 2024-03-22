@@ -15,6 +15,7 @@
         {% elif mwac == "MWACv2" %}
         {
           "device_type" : "WB-MWAC-v2",
+          "outputs_restore_state_after_leakage_fix" : 0,
           "slave_id" : "25"
         },
         {% endif %}

@@ -42,8 +42,17 @@ defineVirtualDevice('button_light', {
   },
 });
 
+obj=readConfig("/etc/wb-mqtt-serial.conf")
+if (obj.ports[0].devices[0].device_type == "WB-MWAC-v2") {
+  device = "wb-mwac-v2_25"
+  out = "Output K2"
+} else if (obj.ports[0].devices[0].device_type == "WB-MWAC") {
+  device = "wb-mwac_25"
+  out = "K2"
+}
+
 defineRule('light1_state_rule', {
-  whenChanged: 'wb-mwac_25/K2',
+  whenChanged: device + '/' + out,
   then: function (newValue, devName, cellName) {
     dev['button_light']['light1'] = newValue;
   },
@@ -102,3 +111,4 @@ var interval = setInterval(function () {
     dev['wb-mr6c_46']['K3'] = dev['button_light']['light3'];
   }
 }, 1000);
+

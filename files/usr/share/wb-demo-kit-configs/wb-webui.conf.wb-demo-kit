@@ -638,7 +638,11 @@
                         "id": "f1796b057adc",
                         "read": {
                             "enable": true,
+                            {% if mwac == "MWAC" %}
                             "channel": "wb-mwac_25/P1 Counter",
+        		    {% elif mwac == "MWACv2" %}
+        		    "channel": "wb-mwac-v2_25/P1 Volume"
+        		    {% endif %}
                             "value": "val"
                         },
                         "write": {

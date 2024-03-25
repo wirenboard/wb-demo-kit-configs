@@ -1020,7 +1020,7 @@
                         "id": "f17979e728fc",
                         "read": {
                             "enable": true,
-                            "channel": "wb-mwac_25/Alarm",
+                            "channel": "water_control/alarm",
                             "value": "(val  == 1) ? 'АВАРИЯ' : 'НОРМА'"
                         },
                         "write": {
@@ -1039,7 +1039,7 @@
                         },
                         "style": {
                             "enable": true,
-                            "channel": "wb-mwac_25/Alarm",
+                            "channel": "water_control/alarm",
                             "value": "(val) ? ';fill: red' : ';fill: green'"
                         }
                     },

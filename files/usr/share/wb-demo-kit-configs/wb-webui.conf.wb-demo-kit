@@ -1132,8 +1132,8 @@
                             "value": "val"
                         },
                         "write": {
-                            "enable": true,
-                            "channel": "water_control/reset_fail",
+                            "enable": false,
+                            "channel": null,
                             "value": {
                                 "on": 1,
                                 "off": 0
@@ -1141,7 +1141,7 @@
                         },
                         "visible": {
                             "enable": true,
-                            "channel": "wb-mwac_25/Alarm",
+                            "channel": "water_control/alarm",
                             "condition": "==",
                             "value": "1"
                         },

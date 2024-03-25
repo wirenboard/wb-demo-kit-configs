@@ -993,12 +993,12 @@
                         "id": "f17979e6bfb9",
                         "read": {
                             "enable": true,
-                            "channel": "wb-mwac_25/K2",
+                            "channel": "water_control/valve",
                             "value": "(val  == 1) ? 'ОТКРЫТ' : 'ЗАКРЫТ'"
                         },
                         "write": {
                             "enable": true,
-                            "channel": "wb-mwac_25/K2",
+                            "channel": "water_control/valve",
                             "value": {
                                 "on": 1,
                                 "off": 0

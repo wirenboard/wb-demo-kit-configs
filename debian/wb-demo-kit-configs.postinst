@@ -30,7 +30,7 @@ else
 	export led="MRGBWD"
 fi
 
-SIGNATURE_MWAC=$( echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 39 -t3 -r 290 -c 12 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
+SIGNATURE_MWAC=$( echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 25 -t3 -r 290 -c 12 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
 
 if [[ $SIGNATURE_MWAC == "wbmwac_042" ]] || [[ $SIGNATURE_MWAC == "wbmwacG" ]] || [[ $SIGNATURE_MWAC == "wbmwac" ]]; then
 	export mwac="MWAC"

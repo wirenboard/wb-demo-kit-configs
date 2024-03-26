@@ -11,7 +11,7 @@
             {% if mwac == "MWACv2" %}
             {% include '/usr/share/wb-demo-kit-configs/mwac_v2.svg' %}
             {% else %}
-            {% include '/usr/share/wb-demo-kit-configs/mvac.svg' %}
+            {% include '/usr/share/wb-demo-kit-configs/mwac.svg' %}
             {% endif %}
             {% elif platform == "imx8" %}
             {% include '/usr/share/wb-demo-kit-configs/imx8.svg' %}

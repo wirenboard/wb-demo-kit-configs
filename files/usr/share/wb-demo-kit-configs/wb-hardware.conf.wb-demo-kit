@@ -254,6 +254,7 @@
       "module": "wbmz3-battery",
       "options": {
         "resetButon": "enabled"
+      }
       {% endif %}
     }
   ]

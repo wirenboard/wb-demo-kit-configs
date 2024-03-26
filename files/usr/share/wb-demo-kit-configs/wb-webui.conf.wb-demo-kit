@@ -8,7 +8,11 @@
             "widgets": [],
             "svg": {
             {% if platform == "sun8i" %}
-            {% include '/usr/share/wb-demo-kit-configs/sun8i.svg' %}
+            {% if mwac == "MWACv2" %}
+            {% include '/usr/share/wb-demo-kit-configs/mwac_v2.svg' %}
+            {% else %}
+            {% include '/usr/share/wb-demo-kit-configs/mvac.svg' %}
+            {% endif %}
             {% elif platform == "imx8" %}
             {% include '/usr/share/wb-demo-kit-configs/imx8.svg' %}
             {% endif %}
@@ -3118,7 +3122,7 @@
                         },
                         "style": {
                             "enable": true,
-                            "channel": "wb-mwac_25/K2",
+                            "channel": "water_control/valve",
                             "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
                         }
                     },

@@ -7,14 +7,14 @@
             "svg_fullwidth": true,
             "widgets": [],
             "svg": {
-            {% if platform == "sun8i" %}
+            {% if platform == "WB7" %}
             {% if mwac == "MWACv2" %}
             {% include '/usr/share/wb-demo-kit-configs/mwac_v2.svg' %}
             {% else %}
             {% include '/usr/share/wb-demo-kit-configs/mwac.svg' %}
             {% endif %}
-            {% elif platform == "imx8" %}
-            {% include '/usr/share/wb-demo-kit-configs/imx8.svg' %}
+            {% elif platform == "WB6" %}
+            {% include '/usr/share/wb-demo-kit-configs/WB6.svg' %}
             {% endif %}
                 "params": [
                     {

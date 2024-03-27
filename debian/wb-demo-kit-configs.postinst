@@ -11,11 +11,9 @@ SERIAL_CONF_FNAME="wb-mqtt-serial.conf.wb-demo-kit"
 WEBUI_CONF_FNAME="wb-webui.conf.wb-demo-kit"
 
 if of_machine_match "allwinner,sun8i-r40"; then
-    FVER="sun8i"
-    export platform="sun8i"
+    PLATFORM="WB7"
 elif of_machine_match "fsl,imx6ul" || of_machine_match "fsl,imx6ull"; then
-    FVER="imx6"
-    export platform="imx8"
+    PLATFORM="WB6"
 fi
 
 deb-systemd-invoke stop wb-mqtt-serial.service
@@ -23,26 +21,49 @@ deb-systemd-invoke stop wb-mqtt-serial.service
 SIGNATURE_LED=$( echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 39 -t3 -r 290 -c 12 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
 
 if [[ $SIGNATURE_LED == "mrgbw" ]] || [[ $SIGNATURE_LED == "mrgbwG" ]]; then
-	export led="MRGBWD"
+	LED="MRGBWD"
 elif [[ $SIGNATURE_LED == "ledG" ]]; then
-	export led="LED"
+	LED="LED"
 else
-	export led="MRGBWD"
+	LED="MRGBWD"
 fi
 
 SIGNATURE_MWAC=$( echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 25 -t3 -r 290 -c 12 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
 
 if [[ $SIGNATURE_MWAC == "wbmwac_042" ]] || [[ $SIGNATURE_MWAC == "wbmwacG" ]] || [[ $SIGNATURE_MWAC == "wbmwac" ]]; then
-	export mwac="MWAC"
+	MWAC="MWAC"
 elif [[ $SIGNATURE == "mwac0" ]]; then
-	export mwac="MWACv2"
+	MWAC="MWACv2"
 else
-	export mwac="MWACv2"
+	MWAC="MWACv2"
 fi
 
-j2 ${CONF_DIR}/${HARDWARE_CONF_FNAME} > "/mnt/data/etc/${HARDWARE_CONF_FNAME}"	
-j2 ${CONF_DIR}/${SERIAL_CONF_FNAME} > "/mnt/data/etc/${SERIAL_CONF_FNAME}"
-j2 ${CONF_DIR}/${WEBUI_CONF_FNAME} > "/mnt/data/etc/${WEBUI_CONF_FNAME}"
+j2 ${CONF_DIR}/${HARDWARE_CONF_FNAME} > "/mnt/data/etc/${HARDWARE_CONF_FNAME}" <<EOF
+{
+  "mwac": "$MWAC",
+  "led": "$LED",
+  "platform": "$PLATFORM"
+  
+}
+EOF
+
+j2 ${CONF_DIR}/${SERIAL_CONF_FNAME} > "/mnt/data/etc/${SERIAL_CONF_FNAME}" <<EOF
+{
+  "mwac": "$MWAC",
+  "led": "$LED",
+  "platform": "$PLATFORM"
+  
+}
+EOF
+
+j2 ${CONF_DIR}/${WEBUI_CONF_FNAME} > "/mnt/data/etc/${WEBUI_CONF_FNAME}" <<EOF
+{
+  "mwac": "$MWAC",
+  "led": "$LED",
+  "platform": "$PLATFORM"
+  
+}
+EOF
 
 # restart services
 deb-systemd-invoke restart wb-mqtt-serial

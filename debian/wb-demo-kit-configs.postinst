@@ -46,9 +46,9 @@ cat <<EOF > ${CONF_DIR}"/vars.json"
 }
 EOF
 
-j2 ${CONF_DIR}/${HARDWARE_CONF_FNAME} ${CONF_DIR}"/vars.json" > "/mnt/data/etc/${HARDWARE_CONF_FNAME}"
-j2 ${CONF_DIR}/${SERIAL_CONF_FNAME} ${CONF_DIR}"/vars.json" > "/mnt/data/etc/${SERIAL_CONF_FNAME}"
-j2 ${CONF_DIR}/${WEBUI_CONF_FNAME} ${CONF_DIR}"/vars.json" > "/mnt/data/etc/${WEBUI_CONF_FNAME}"
+j2 ${CONF_DIR}/${HARDWARE_CONF_FNAME} ${CONF_DIR}"/vars.json" > "/mnt/data/etc/wb-hardware.conf.wb-demo-kit"
+j2 ${CONF_DIR}/${SERIAL_CONF_FNAME} ${CONF_DIR}"/vars.json" > "/mnt/data/etc/wb-mqtt-serial.conf.wb-demo-kit"
+j2 ${CONF_DIR}/${WEBUI_CONF_FNAME} ${CONF_DIR}"/vars.json" > "/mnt/data/etc/wb-webui.conf.wb-demo-kit"
 
 rm ${CONF_DIR}"/vars.json"
 

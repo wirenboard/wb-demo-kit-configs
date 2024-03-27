@@ -38,7 +38,7 @@ else
 	MWAC_DEV="MWACv2"
 fi
 
-cat <<EOF > ${CONF_DIR}"/vars.json"
+cat <<EOF > "/tmp/vars.json"
 {
 	"mwac": "$MWAC_DEV",
 	"led":  "$LED_DEV",
@@ -46,11 +46,11 @@ cat <<EOF > ${CONF_DIR}"/vars.json"
 }
 EOF
 
-j2 ${CONF_DIR}/${HARDWARE_CONF_FNAME} ${CONF_DIR}"/vars.json" > "/mnt/data/etc/wb-hardware.conf.wb-demo-kit"
-j2 ${CONF_DIR}/${SERIAL_CONF_FNAME} ${CONF_DIR}"/vars.json" > "/mnt/data/etc/wb-mqtt-serial.conf.wb-demo-kit"
-j2 ${CONF_DIR}/${WEBUI_CONF_FNAME} ${CONF_DIR}"/vars.json" > "/mnt/data/etc/wb-webui.conf.wb-demo-kit"
+j2 ${CONF_DIR}/${HARDWARE_CONF_FNAME} "/tmp/vars.json" > "/mnt/data/etc/wb-hardware.conf.wb-demo-kit"
+j2 ${CONF_DIR}/${SERIAL_CONF_FNAME} "/tmp/vars.json" > "/mnt/data/etc/wb-mqtt-serial.conf.wb-demo-kit"
+j2 ${CONF_DIR}/${WEBUI_CONF_FNAME} "/tmp/vars.json" > "/mnt/data/etc/wb-webui.conf.wb-demo-kit"
 
-rm ${CONF_DIR}"/vars.json"
+rm "/tmp/vars.json"
 
 # restart services
 deb-systemd-invoke restart wb-mqtt-serial

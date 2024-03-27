@@ -7,15 +7,15 @@
             "svg_fullwidth": true,
             "widgets": [],
             "svg": {
-            {% if platform == "WB7" %}
-            {% if mwac == "MWACv2" %}
+            {% if platform == "WB7" -%}
+            {% if mwac == "MWACv2" -%}
             {% include '/usr/share/wb-demo-kit-configs/mwac_v2.svg' %}
-            {% else %}
+            {% else -%}
             {% include '/usr/share/wb-demo-kit-configs/mwac.svg' %}
-            {% endif %}
-            {% elif platform == "WB6" %}
+            {% endif -%}
+            {% elif platform == "WB6" -%}
             {% include '/usr/share/wb-demo-kit-configs/WB6.svg' %}
-            {% endif %}
+            {% endif -%}
                 "params": [
                     {
                         "id": "f1796b05a66a",
@@ -642,11 +642,11 @@
                         "id": "f1796b057adc",
                         "read": {
                             "enable": true,
-                            {% if mwac == "MWAC" %}
+                            {% if mwac == "MWAC" -%}
                             "channel": "wb-mwac_25/P1 Counter",
-        		    {% elif mwac == "MWACv2" %}
+        		    {% elif mwac == "MWACv2" -%}
         		    "channel": "wb-mwac-v2_25/P1 Volume",
-        		    {% endif %}
+        		    {% endif -%}
                             "value": "val"
                         },
                         "write": {
@@ -3820,11 +3820,11 @@
             "compact": false,
             "cells": [
                 {
-                    {% if led == "LED"%}
+                    {% if led == "LED" -%}
                     "id": "wb-led_39/RGB Palette",
-                    {% elif led == "MRGBWD" %}
+                    {% elif led == "MRGBWD" -%}
                      "id": "wb-mrgbw-d-fw3_39/RGB Palette",
-                    {% endif %}
+                    {% endif -%}
                     "extra": {},
                     "type": "rgb",
                     "name": "Цвет подсветки"

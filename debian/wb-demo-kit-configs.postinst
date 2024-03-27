@@ -38,32 +38,18 @@ else
 	MWAC="MWACv2"
 fi
 
-j2 ${CONF_DIR}/${HARDWARE_CONF_FNAME} > "/mnt/data/etc/${HARDWARE_CONF_FNAME}" <<EOF
+cat <<EOF > ${CONF_DIR}"/vars.json"
 {
-  "mwac": "$MWAC",
-  "led": "$LED",
-  "platform": "$PLATFORM"
-  
-}
-EOF
+	"mwac": "$MWAC",
+	"led":  "$LED",
+	"platform": "$PLATFORM"
+}EOF	
 
-j2 ${CONF_DIR}/${SERIAL_CONF_FNAME} > "/mnt/data/etc/${SERIAL_CONF_FNAME}" <<EOF
-{
-  "mwac": "$MWAC",
-  "led": "$LED",
-  "platform": "$PLATFORM"
-  
-}
-EOF
+j2 ${CONF_DIR}/${HARDWARE_CONF_FNAME} ${CONF_DIR}"/vars.json" > "/mnt/data/etc/${HARDWARE_CONF_FNAME}"
+j2 ${CONF_DIR}/${SERIAL_CONF_FNAME} ${CONF_DIR}"/vars.json" > "/mnt/data/etc/${SERIAL_CONF_FNAME}"
+j2 ${CONF_DIR}/${WEBUI_CONF_FNAME} ${CONF_DIR}"/vars.json" > "/mnt/data/etc/${WEBUI_CONF_FNAME}"
 
-j2 ${CONF_DIR}/${WEBUI_CONF_FNAME} > "/mnt/data/etc/${WEBUI_CONF_FNAME}" <<EOF
-{
-  "mwac": "$MWAC",
-  "led": "$LED",
-  "platform": "$PLATFORM"
-  
-}
-EOF
+rm ${CONF_DIR}"/vars.json"
 
 # restart services
 deb-systemd-invoke restart wb-mqtt-serial

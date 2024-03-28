@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.7.0) stable; urgency=medium
+
+  * Support MWAC v2 was added
+
+ -- Boris Marochkin <b.marochkin@wirenboard.ru>  Tue, 26 Mar 2024 11:20:04 +0300
+
 wb-demo-kit-configs (1.6.4) stable; urgency=medium
 
   * Fix dashboard (RGB)

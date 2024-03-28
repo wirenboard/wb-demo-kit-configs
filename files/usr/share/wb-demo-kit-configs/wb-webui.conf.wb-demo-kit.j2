@@ -1,0 +1,3849 @@
+{
+    "dashboards": [
+        {
+            "name": "Demo-kit",
+            "isSvg": true,
+            "svg_url": "local",
+            "svg_fullwidth": true,
+            "widgets": [],
+            "svg": {
+            {% if platform == "WB7" -%}
+            {% if mwac == "MWACv2" -%}
+            {% include '/usr/share/wb-demo-kit-configs/mwac_v2.svg' %}
+            {% else -%}
+            {% include '/usr/share/wb-demo-kit-configs/mwac.svg' %}
+            {% endif -%}
+            {% elif platform == "WB6" -%}
+            {% include '/usr/share/wb-demo-kit-configs/WB6.svg' %}
+            {% endif -%}
+                "params": [
+                    {
+                        "id": "f1796b05a66a",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "water_control/valve",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1796b065a64",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": "button_light/button1",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": "wb-mr6c_46/K1",
+                            "condition": "==",
+                            "value": "true"
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mr6c_46/K1",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f1796b07e924",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "load_control/fan_change_speed",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1796b08381a",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": "button_light/button2",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": "wb-mr6c_46/K2",
+                            "condition": "==",
+                            "value": "true"
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mr6c_46/K2",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f1797975ef6e",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-map12e_35/Ch 3 P L1",
+                            "value": "val.toFixed(0)+\" W\""
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979784510",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-map12e_35/Urms L1",
+                            "value": "val.toFixed(0)+\" V\""
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1797978a1c4",
+                        "read": {
+                            "enable": true,
+                            "channel": "neva124_00000001/Irms",
+                            "value": "val+' A'"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f179797920ad",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-map12e_35/Ch 4 P L1",
+                            "value": "val.toFixed(0)+\" W\""
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979796e64",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-map12e_35/Ch 4 P L2",
+                            "value": "val.toFixed(0)+\" W\""
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1797979a836",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-map12e_35/Ch 4 P L3",
+                            "value": "val.toFixed(0)+\" W\""
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f179797a0e2e",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/K1",
+                            "condition": "==",
+                            "value": "true"
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979cba25c",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979d465d5",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-msw-v3_64/Temperature",
+                            "value": "val.toFixed(1)+' °C'"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979d4c313",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-msw-v3_64/Humidity",
+                            "value": "val+' %'"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979d52c2b",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-msw-v3_64/Air Quality (VOC)",
+                            "value": "val+' ppm'"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979d5658d",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-msw-v3_64/CO2",
+                            "value": "val+' ppm'"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979d69ad4",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-msw-v3_64/Sound Level",
+                            "value": "val+' dbA'"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979d6e575",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-msw-v3_64/Illuminance",
+                            "value": "val+' lux'"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979d71cb3",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-msw-v3_64/Max Motion",
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979d74e84",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-msw-v3_64/Current Motion",
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979d79ad2",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-msw-v3_64/Buzzer",
+                            "value": "(val  == 1) ? 'ВКЛ' : 'ВЫКЛ'"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-msw-v3_64/Buzzer",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-msw-v3_64/Buzzer",
+                            "value": "(val) ? ';fill: red' : ';fill: black'"
+                        }
+                    },
+                    {
+                        "id": "f17979d82a24",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": "wb-msw-v3_64/Buzzer",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": true,
+                            "channel": "wb-msw-v3_64/Buzzer",
+                            "condition": "==",
+                            "value": "1"
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979d8b883",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": "wb-msw-v3_64/Green LED",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-msw-v3_64/Red LED",
+                            "value": "(val) ? ';fill: #f76f6f' : ';fill: #6ff793'"
+                        }
+                    },
+                    {
+                        "id": "f1796b057adc",
+                        "read": {
+                            "enable": true,
+                            {% if mwac == "MWAC" -%}
+                            "channel": "wb-mwac_25/P1 Counter",
+        		    {% elif mwac == "MWACv2" -%}
+        		    "channel": "wb-mwac-v2_25/P1 Volume",
+        		    {% endif -%}
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979dc7730",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": "wb-mr6c_46/K3",
+                            "condition": "==",
+                            "value": "true"
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mr6c_46/K3",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f17979ddaa14",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": true,
+                            "channel": "water_control/valve",
+                            "condition": "==",
+                            "value": "true"
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979de7fbc",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/K2",
+                            "condition": "==",
+                            "value": "true"
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979df6935",
+                        "read": {
+                            "enable": true,
+                            "channel": "neva124_00000001/A energy",
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979e0b4b4",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-m1w2_30/External Sensor 1",
+                            "value": "val.toFixed(0)+' °C'"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979e0f3dc",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-m1w2_30/External Sensor 2",
+                            "value": "val.toFixed(0)+' °C'"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979e3979d",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": "wb-mr6c_46/K1",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mr6c_46/K1",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f17979e46eec",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mr6c_46/K4",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mr6c_46/K4",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f17979e48da5",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mr6c_46/K5",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mr6c_46/K5",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f17979e4b794",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mr6c_46/K6",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mr6c_46/K6",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f17979e4eaba",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/K1",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/K1",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f17979e50dec",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/K2",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/K2",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f17979e6bfb9",
+                        "read": {
+                            "enable": true,
+                            "channel": "water_control/valve",
+                            "value": "(val  == 1) ? 'ОТКРЫТ' : 'ЗАКРЫТ'"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "water_control/valve",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": "wb-mwac_25/K2",
+                            "value": "(val) ? ';fill: black' : ';fill: green'"
+                        }
+                    },
+                    {
+                        "id": "f17979e728fc",
+                        "read": {
+                            "enable": true,
+                            "channel": "water_control/alarm",
+                            "value": "(val  == 1) ? 'АВАРИЯ' : 'НОРМА'"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "water_control/alarm",
+                            "value": "(val) ? ';fill: red' : ';fill: green'"
+                        }
+                    },
+                    {
+                        "id": "f17979ecd085",
+                        "read": {
+                            "enable": true,
+                            "channel": "network/Ethernet IP",
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979ed1c05",
+                        "read": {
+                            "enable": true,
+                            "channel": "network/Ethernet 2 IP",
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979ed3bbd",
+                        "read": {
+                            "enable": true,
+                            "channel": "network/Wi-Fi IP",
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979edaa0c",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": true,
+                            "channel": "water_control/alarm",
+                            "condition": "==",
+                            "value": "1"
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979f6611c",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": true,
+                            "channel": "water_control/alarm",
+                            "condition": "==",
+                            "value": "false"
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17979f75f73",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/K2",
+                            "value": "(val  == 1) ? 'ВКЛ' : 'ВЫКЛ'"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/K2",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/K2",
+                            "value": "(val) ? ';fill: green' : ';fill: black'"
+                        }
+                    },
+                    {
+                        "id": "f17979f815f4",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-map12e_35/Ch 3 P L1",
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1797a02373c",
+                        "read": {
+                            "enable": true,
+                            "channel": "neva124_00000001/Urms",
+                            "value": "val+' V'"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1797a02af4c",
+                        "read": {
+                            "enable": true,
+                            "channel": "neva124_00000001/Frequency",
+                            "value": "val+' Hz'"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1797a0615cf",
+                        "read": {
+                            "enable": true,
+                            "channel": "neva124_00000001/A energy",
+                            "value": "val+' kW*h'"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1797a069534",
+                        "read": {
+                            "enable": true,
+                            "channel": "neva124_00000001/Irms",
+                            "value": "val+' A'"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1797a07859b",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/K1",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f178ccb72d28",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "10",
+                                "off": "10"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f178ccb8224f",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f178ccb79088",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "20",
+                                "off": "20"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f178ccb85c37",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "30",
+                                "off": "30"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f178ccb8f9c7",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "40",
+                                "off": "40"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e41b731",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "50",
+                                "off": "50"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e4205a0",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "60",
+                                "off": "60"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e424599",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "70",
+                                "off": "70"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e4286aa",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "80",
+                                "off": "80"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e42dde1",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "90",
+                                "off": "90"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f178ccb85358",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "100",
+                                "off": "100"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e482c97",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "0",
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e6d346d",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "10",
+                                "off": "10"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e6d6cc5",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "20",
+                                "off": "20"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e6dd376",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "30",
+                                "off": "30"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e6e05f4",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "40",
+                                "off": "40"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e770c36",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e7841ec",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "50",
+                                "off": "50"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e788c6b",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "60",
+                                "off": "60"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e78cbc4",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "70",
+                                "off": "70"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e790df4",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "80",
+                                "off": "80"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e793f4b",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "90",
+                                "off": "90"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e7972d3",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "100",
+                                "off": "100"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e7a0924",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "0",
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e89f7a3",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "10",
+                                "off": "10"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e8ac18c",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "20",
+                                "off": "20"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e8b79e4",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "30",
+                                "off": "30"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e8badfc",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "40",
+                                "off": "40"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e8be2c4",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "50",
+                                "off": "50"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e8c277d",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "60",
+                                "off": "60"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e8c66ce",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "70",
+                                "off": "70"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e8c9a7b",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "80",
+                                "off": "80"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e8d0d9c",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "90",
+                                "off": "90"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e8d50dc",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "100",
+                                "off": "100"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e8d8afd",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "0",
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e8dd25c",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e9db290",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798e9df56c",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 1",
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798ea0cb43",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 1",
+                            "value": {
+                                "on": "10",
+                                "off": "10"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798ea11f45",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 1",
+                            "value": {
+                                "on": "20",
+                                "off": "20"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798ea21586",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "20",
+                                "off": "20"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798ec4f532",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/K1",
+                            "value": {
+                                "on": "1",
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": "wb-mdm3_57/K1",
+                            "condition": "==",
+                            "value": "1"
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/K1",
+                            "value": "(val == 1) ? ';fill: #ffe680ff' : ';fill: #4f4f4dff'"
+                        }
+                    },
+                    {
+                        "id": "f1798f21cb6b",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "30",
+                                "off": "30"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798f222604",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "40",
+                                "off": "40"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798f236276",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "50",
+                                "off": "50"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798f23d0c3",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "60",
+                                "off": "60"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798f2403bc",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "70",
+                                "off": "70"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798f246c70",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "80",
+                                "off": "80"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798f24c82b",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "90",
+                                "off": "90"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798f251263",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "100",
+                                "off": "100"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798f25e7f4",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 1",
+                            "value": {
+                                "on": "30",
+                                "off": "30"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798f265b1f",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 1",
+                            "value": {
+                                "on": "40",
+                                "off": "40"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798f26a253",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 1",
+                            "value": {
+                                "on": "50",
+                                "off": "50"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798f26db83",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 1",
+                            "value": {
+                                "on": "60",
+                                "off": "60"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798f27262c",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 1",
+                            "value": {
+                                "on": "70",
+                                "off": "70"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798f2771ab",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 1",
+                            "value": {
+                                "on": "80",
+                                "off": "80"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798f27a543",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 1",
+                            "value": {
+                                "on": "90",
+                                "off": "90"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798f27d533",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 1",
+                            "value": {
+                                "on": "100",
+                                "off": "100"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f1798f28e973",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/K2",
+                            "value": {
+                                "on": "1",
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/K2",
+                            "value": "(val) ? ';fill: #ff9e66' : ';fill: #4f4f4dff'"
+                        }
+                    },
+                    {
+                        "id": "f1798f2a0799",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": "load_control/fan_overload_reset",
+                            "value": {
+                                "on": 1,
+                                "off": "1"
+                            }
+                        },
+                        "visible": {
+                            "enable": true,
+                            "channel": "load_control/fan_overload",
+                            "condition": "==",
+                            "value": "1"
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17a14a14498",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": "wb-mr6c_46/K2",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mr6c_46/K2",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f17a14a197c0",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": "wb-mr6c_46/K3",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mr6c_46/K3",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f17a14a51d40",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/K3",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/K3",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f17a14b2de22",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mwac_25/K1",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f17a14b330c9",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "water_control/valve",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f17a14b36091",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mwac_25/Alarm",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f17a14b39b6a",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mwac_25/F1",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f17a14b3d499",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mwac_25/F2",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f17a14b40f5a",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mwac_25/F3",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f17a14b4d8b9",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": true,
+                            "channel": "wb-msw-v3_64/Buzzer",
+                            "condition": "==",
+                            "value": "1"
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17a14b5332b",
+                        "read": {
+                            "enable": true,
+                            "channel": "power_status/Vin",
+                            "value": "val.toFixed(2) + \" V\""
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17a14b57e01",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "power_status/Vin",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
+                        }
+                    },
+                    {
+                        "id": "f17a14b6b86a",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "network/Ethernet IP",
+                            "value": "(val) ? ';fill: green' : ';fill: black'"
+                        }
+                    },
+                    {
+                        "id": "f17a14b77a22",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "network/Ethernet 2 IP",
+                            "value": "(val) ? ';fill: green' : ';fill: black'"
+                        }
+                    },
+                    {
+                        "id": "f17a14b79d12",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "network/Wi-Fi IP",
+                            "value": "(val) ? ';fill: green' : ';fill: black'"
+                        }
+                    },
+                    {
+                        "id": "f17a14c867c5",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mir_v2_133/Learn to RAM",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-mir_v2_133/Learn to RAM",
+                            "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.5'"
+                        }
+                    },
+                    {
+                        "id": "f17a14c9de1e",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mir_v2_133/Play from RAM",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17a1a0b4ff4",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-msw-v3_64/Learn to RAM",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": true,
+                            "channel": "wb-msw-v3_64/Learn to RAM",
+                            "value": "(val) ? ';fill: red' : ';fill: #eeeeee'"
+                        }
+                    },
+                    {
+                        "id": "f17a1a0bf0bc",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-msw-v3_64/Play from RAM",
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {
+                        "id": "f17a1a8fba72",
+                        "read": {
+                            "enable": false,
+                            "channel": null,
+                            "value": "val"
+                        },
+                        "write": {
+                            "enable": true,
+                            "channel": "wb-mdm3_57/Channel 2",
+                            "value": {
+                                "on": "10",
+                                "off": "10"
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    }
+                ]
+            },
+            "id": "dashboard3"
+        },
+        {
+            "name": "Cards",
+            "widgets": [
+                "widget5",
+                "widget10",
+                "widget11",
+                "widget12",
+                "widget1",
+                "widget7",
+                "widget8"
+            ],
+            "isSvg": false,
+            "id": "dashboard1"
+        }
+    ],
+    "widgets": [
+        {
+            "name": "Вентиляция",
+            "description": "Обороты вентилятора",
+            "compact": false,
+            "cells": [
+                {
+                    "id": "wb-mdm3_57/K2",
+                    "name": "Вентилятор",
+                    "extra": {},
+                    "type": "switch"
+                },
+                {
+                    "id": "wb-mdm3_57/Channel 2",
+                    "extra": {},
+                    "type": "range",
+                    "name": "Обороты вентилятора"
+                },
+                {
+                    "id": "load_control/fan_overload",
+                    "extra": {},
+                    "type": "switch",
+                    "name": "Перегрузка вентилятора"
+                },
+                {
+                    "id": "wb-map12e_35/Ch 3 P L1",
+                    "name": "Мощность потребляемая вентилятором",
+                    "extra": {},
+                    "type": "power"
+                },
+                {
+                    "id": "load_control/fan_overload_reset",
+                    "name": "Сброс аварии вентилятора",
+                    "extra": {},
+                    "type": "switch"
+                }
+            ],
+            "id": "widget1"
+        },
+        {
+            "name": "Температуры",
+            "description": "",
+            "compact": false,
+            "cells": [
+                {
+                    "id": "wb-msw-v3_64/Temperature",
+                    "name": "MSW v3",
+                    "extra": {},
+                    "type": "temperature"
+                },
+                {
+                    "id": "wb-mir_v2_133/Internal Temperature Sensor",
+                    "name": "WB-MIR внутренний",
+                    "extra": {},
+                    "type": "temperature"
+                },
+                {
+                    "id": "wb-m1w2_30/Internal Temperature",
+                    "name": "WB-M1W2 внутренний",
+                    "extra": {},
+                    "type": "temperature"
+                },
+                {
+                    "id": "wb-m1w2_30/External Sensor 1",
+                    "name": "M1W2 датчик № 1",
+                    "extra": {},
+                    "type": "temperature"
+                },
+                {
+                    "id": "wb-m1w2_30/External Sensor 2",
+                    "name": "M1W2 датчик № 2",
+                    "extra": {},
+                    "type": "temperature"
+                },
+                {
+                    "id": "hwmon/Board Temperature",
+                    "name": "Температура внутри контроллера",
+                    "extra": {},
+                    "type": "temperature"
+                },
+                {
+                    "id": "hwmon/CPU Temperature",
+                    "name": "Температура CPU",
+                    "extra": {},
+                    "type": "temperature"
+                }
+            ],
+            "id": "widget7"
+        },
+        {
+            "name": "Сенсоры WB-MSW v3",
+            "description": "",
+            "compact": false,
+            "cells": [
+                {
+                    "id": "wb-msw-v3_64/Temperature",
+                    "extra": {},
+                    "type": "temperature",
+                    "name": "Температура"
+                },
+                {
+                    "id": "wb-msw-v3_64/Humidity",
+                    "extra": {},
+                    "type": "rel_humidity",
+                    "name": "Влажность"
+                },
+                {
+                    "id": "wb-msw-v3_64/Air Quality (VOC)",
+                    "extra": {},
+                    "type": "concentration",
+                    "name": "Качество воздуха"
+                },
+                {
+                    "id": "wb-msw-v3_64/CO2",
+                    "extra": {},
+                    "type": "concentration",
+                    "name": "Содержание CO2"
+                },
+                {
+                    "id": "wb-msw-v3_64/Sound Level",
+                    "extra": {},
+                    "type": "value",
+                    "name": "Уровень шума"
+                },
+                {
+                    "id": "wb-msw-v3_64/Illuminance",
+                    "extra": {},
+                    "type": "value",
+                    "name": "Освещённсть"
+                },
+                {
+                    "id": "wb-msw-v3_64/Max Motion",
+                    "extra": {},
+                    "type": "value",
+                    "name": "Максимальное показание датчика движения"
+                },
+                {
+                    "id": "wb-msw-v3_64/Current Motion",
+                    "extra": {},
+                    "type": "value",
+                    "name": "Датчик движения"
+                }
+            ],
+            "id": "widget8"
+        },
+        {
+            "name": "Климат",
+            "description": "",
+            "compact": false,
+            "cells": [
+                {
+                    "id": "wb-m1w2_30/External Sensor 1",
+                    "name": "Температура",
+                    "extra": {},
+                    "type": "temperature"
+                },
+                {
+                    "id": "wb-msw-v3_64/Humidity",
+                    "name": "Влажность",
+                    "extra": {},
+                    "type": "rel_humidity"
+                },
+                {
+                    "id": "wb-msw-v3_64/CO2",
+                    "extra": {},
+                    "type": "concentration"
+                },
+                {
+                    "id": "wb-msw-v3_64/Air Quality (VOC)",
+                    "name": "VOC",
+                    "extra": {},
+                    "type": "concentration"
+                },
+                {
+                    "id": "wb-msw-v3_64/Sound Level",
+                    "name": "Уровень шума",
+                    "extra": {},
+                    "type": "value"
+                },
+                {
+                    "id": "wb-msw-v3_64/Illuminance",
+                    "name": "Освещённость",
+                    "extra": {},
+                    "type": "value"
+                }
+            ],
+            "id": "widget5"
+        },
+        {
+            "name": "Водоснабжение",
+            "description": "",
+            "compact": false,
+            "cells": [
+                {
+                    "id": "water_control/valve",
+                    "name": "Кран",
+                    "extra": {},
+                    "type": "switch"
+                },
+                {
+                    "id": "wb-mwac_25/P1 Counter",
+                    "name": "Счётчик",
+                    "extra": {},
+                    "type": "value"
+                },
+                {
+                    "id": "wb-mwac_25/Alarm",
+                    "name": "Протечка",
+                    "extra": {},
+                    "type": "switch"
+                },
+                {
+                    "id": "water_control/reset_fail",
+                    "extra": {},
+                    "type": "pushbutton",
+                    "name": "Сброс аварии"
+                }
+            ],
+            "id": "widget10"
+        },
+        {
+            "name": "Энергоснабжение",
+            "description": "",
+            "compact": false,
+            "cells": [
+                {
+                    "id": "wb-map12e_35/Urms L1",
+                    "extra": {},
+                    "type": "voltage",
+                    "name": "Напряжение сети"
+                },
+                {
+                    "id": "wb-map12e_35/Frequency",
+                    "extra": {},
+                    "type": "value",
+                    "name": "Частота"
+                },
+                {
+                    "id": "wb-map12e_35/Ch 4 P L1",
+                    "name": "Общая мощность",
+                    "extra": {},
+                    "type": "power"
+                },
+                {
+                    "id": "wb-map12e_35/Ch 4 P L2",
+                    "name": "Мощность потребляемая нагрузками",
+                    "extra": {},
+                    "type": "power"
+                },
+                {
+                    "id": "wb-map12e_35/Ch 3 P L1",
+                    "name": "Вентилятор",
+                    "extra": {},
+                    "type": "power"
+                },
+                {
+                    "id": "neva124_00000001/A energy",
+                    "name": "Счётчик",
+                    "extra": {},
+                    "type": "power_consumption"
+                }
+            ],
+            "id": "widget11"
+        },
+        {
+            "name": "Освещение",
+            "description": "",
+            "compact": false,
+            "cells": [
+                {
+                    {% if led == "LED" -%}
+                    "id": "wb-led_39/RGB Palette",
+                    {% elif led == "MRGBWD" -%}
+                     "id": "wb-mrgbw-d-fw3_39/RGB Palette",
+                    {% endif -%}
+                    "extra": {},
+                    "type": "rgb",
+                    "name": "Цвет подсветки"
+                },
+                {
+                    "id": "wb-mdm3_57/K1",
+                    "extra": {},
+                    "type": "switch",
+                    "name": "Лампа"
+                },
+                {
+                    "id": "wb-mdm3_57/Channel 1",
+                    "name": "Яркость лампы",
+                    "extra": {},
+                    "type": "range"
+                }
+            ],
+            "id": "widget12"
+        }
+    ],
+    "defaultDashboardId": "dashboard1"
+}

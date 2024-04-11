@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.7.1) stable; urgency=medium
+
+  * Bugfix name template WB6
+
+ -- Boris Marochkin <b.marochkin@wirenboard.ru>  Thu, 11 Apr 2024 14:53:06 +0300
+
 wb-demo-kit-configs (1.7.0) stable; urgency=medium
 
   * Support MWAC v2 was added

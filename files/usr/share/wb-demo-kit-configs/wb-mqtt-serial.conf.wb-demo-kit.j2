@@ -1,31 +1,31 @@
 {
   "debug" : false,
-  "ports" : 
+  "ports" :
   [
     {
       "baud_rate" : 115200,
       "data_bits" : 8,
-      "devices" : 
+      "devices" :
       [
-	{% if mwac == "MWAC" -%}
+        {% if MWAC_DEV == "MWAC" -%}
         {
           "device_type" : "WB-MWAC",
           "slave_id" : "25"
         },
-        {% elif mwac == "MWACv2" -%}
+        {% elif MWAC_DEV == "MWACv2" -%}
         {
           "device_type" : "WB-MWAC-v2",
           "outputs_restore_state_after_leakage_fix" : 0,
           "slave_id" : "25"
         },
         {% endif -%}
-        {% if led == "LED" -%}
+        {% if LED_DEV == "LED" -%}
         {
           "device_type" : "WB-LED",
           "dimmer_mode" : 256,
           "slave_id" : "39"
         },
-        {% elif led == "MRGBWD" -%}
+        {% elif LED_DEV == "MRGBWD" -%}
         {
           "device_type" : "WB-MRGBW-D_fw3_nosubdev",
           "dimmer_mode" : 256,
@@ -37,7 +37,7 @@
           "slave_id" : "64"
         },
         {
-          "channels" : 
+          "channels" :
           [
             {
               "device_type" : "input1_1wire",
@@ -48,7 +48,7 @@
           "slave_id" : "133"
         },
         {
-          "channels" : 
+          "channels" :
           [
             {
               "device_type" : "input1_1wire",
@@ -77,7 +77,7 @@
           "channel4_l2_turns" : 2000,
           "channel4_l3_phi" : 120,
           "channel4_l3_turns" : 2000,
-          "channels" : 
+          "channels" :
           [
             {
               "enabled" : false,
@@ -549,10 +549,10 @@
     {
       "baud_rate" : 9600,
       "data_bits" : 8,
-      "devices" : 
+      "devices" :
       [
         {
-          "channels" : 
+          "channels" :
           [
             {
               "enabled" : false,

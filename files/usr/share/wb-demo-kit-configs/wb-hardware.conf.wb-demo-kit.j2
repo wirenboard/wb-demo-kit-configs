@@ -1,9 +1,9 @@
 {
   "slots": [
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-mod1",
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb67-mod1",
       {% endif -%}
       "name": "Internal slot 1",
@@ -15,9 +15,9 @@
       "options": {}
     },
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-mod2",
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb67-mod2",
       {% endif -%}
       "name": "Internal slot 2",
@@ -29,9 +29,9 @@
       "options": {}
     },
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-mod3",
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb67-mod3",
       {% endif -%}
       "name": "Internal slot 3",
@@ -43,9 +43,9 @@
       "options": {}
     },
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-mod4",
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb67-mod4",
       {% endif -%}
       "name": "Internal slot 4",
@@ -57,9 +57,9 @@
       "options": {}
     },
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-extio1",
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb6-extio1",
       {% endif -%}
       "name": "External I/O module 1",
@@ -70,9 +70,9 @@
       "options": {}
     },
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-extio2",
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb6-extio2",
       {% endif -%}
       "name": "External I/O module 2",
@@ -83,9 +83,9 @@
       "options": {}
     },
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-extio3",
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb6-extio3",
       {% endif -%}
       "name": "External I/O module 3",
@@ -96,9 +96,9 @@
       "options": {}
     },
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-extio4",
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb6-extio4",
       {% endif -%}
       "name": "External I/O module 4",
@@ -109,9 +109,9 @@
       "options": {}
     },
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-extio5",
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb6-extio5",
       {% endif -%}
       "name": "External I/O module 5",
@@ -122,9 +122,9 @@
       "options": {}
     },
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-extio6",
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb6-extio6",
       {% endif -%}
       "name": "External I/O module 6",
@@ -135,9 +135,9 @@
       "options": {}
     },
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-extio7",
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb6-extio7",
       {% endif -%}
       "name": "External I/O module 7",
@@ -148,9 +148,9 @@
       "options": {}
     },
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-extio8",
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb6-extio8",
       {% endif -%}
       "name": "External I/O module 8",
@@ -161,9 +161,9 @@
       "options": {}
     },
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-rs485-1",
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb67-rs485-1",
       {% endif -%}
       "name": "RS485-1 interface config",
@@ -177,9 +177,9 @@
       }
     },
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-rs485-2",
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb67-rs485-2",
       {% endif -%}
       "name": "RS485-2/CAN interface config",
@@ -194,13 +194,13 @@
       }
     },
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-wbc",
       "name": "Modem slot",
       "compatible": [
         "wbc-usb"
       ],
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb67-wbc",
       "name": "Modem slot",
       "compatible": [
@@ -211,9 +211,9 @@
       "options": {}
     },
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-w1",
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb67-w1",
       {% endif -%}
       "name": "W1 terminal mode",
@@ -224,9 +224,9 @@
       "options": {}
     },
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-w1",
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb67-w1",
       {% endif -%}
       "name": "W2 terminal mode",
@@ -237,7 +237,7 @@
       "options": {}
     },
     {
-      {% if platform == "WB7" -%}
+      {% if PLATFORM_DEV == "WB7" -%}
       "id": "wb72-wbmz4",
       "name": "Backup power supply",
       "compatible": [
@@ -245,7 +245,7 @@
       ],
       "module": "wbmz4-battery",
       "options": {}
-      {% elif platform == "WB6" -%}
+      {% elif PLATFORM_DEV == "WB6" -%}
       "id": "wb67-wbmz3",
       "name": "Backup power supply",
       "compatible": [

@@ -1,3 +1,18 @@
+{% if PLATFORM_DEV == "WB7" -%}
+    {% if MWAC_DEV == "MWACv2" -%}
+        {% set svg_content -%}
+            {% include '/usr/share/wb-demo-kit-configs/mwac_v2.svg' -%}
+        {% endset -%}
+    {% else -%}
+        {% set svg_content -%}
+            {% include '/usr/share/wb-demo-kit-configs/mwac.svg' -%}
+        {% endset -%}
+    {% endif -%}
+{% elif PLATFORM_DEV == "WB6" -%}
+    {% set svg_content -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB6.svg' -%}
+    {% endset -%}
+{% endif -%}
 {
     "dashboards": [
         {
@@ -7,15 +22,8 @@
             "svg_fullwidth": true,
             "widgets": [],
             "svg": {
-            {% if platform == "WB7" -%}
-            {% if mwac == "MWACv2" -%}
-            {% include '/usr/share/wb-demo-kit-configs/mwac_v2.svg' %}
-            {% else -%}
-            {% include '/usr/share/wb-demo-kit-configs/mwac.svg' %}
-            {% endif -%}
-            {% elif platform == "WB6" -%}
-            {% include '/usr/share/wb-demo-kit-configs/WB6.svg' %}
-            {% endif -%}
+                "original": "{{ svg_content | replace('\\', '\\\\') | replace('"', '\\"') }}",
+                "current": "{{ svg_content | replace('\\', '\\\\') | replace('"', '\\"') }}",
                 "params": [
                     {
                         "id": "f1796b05a66a",
@@ -642,11 +650,11 @@
                         "id": "f1796b057adc",
                         "read": {
                             "enable": true,
-                            {% if mwac == "MWAC" -%}
+                            {% if MWAC_DEV == "MWAC" -%}
                             "channel": "wb-mwac_25/P1 Counter",
-        		    {% elif mwac == "MWACv2" -%}
-        		    "channel": "wb-mwac-v2_25/P1 Volume",
-        		    {% endif -%}
+                            {% elif MWAC_DEV == "MWACv2" -%}
+                            "channel": "wb-mwac-v2_25/P1 Volume",
+                            {% endif -%}
                             "value": "val"
                         },
                         "write": {
@@ -3820,10 +3828,10 @@
             "compact": false,
             "cells": [
                 {
-                    {% if led == "LED" -%}
+                    {% if LED_DEV == "LED" -%}
                     "id": "wb-led_39/RGB Palette",
-                    {% elif led == "MRGBWD" -%}
-                     "id": "wb-mrgbw-d-fw3_39/RGB Palette",
+                    {% elif LED_DEV == "MRGBWD" -%}
+                    "id": "wb-mrgbw-d-fw3_39/RGB Palette",
                     {% endif -%}
                     "extra": {},
                     "type": "rgb",

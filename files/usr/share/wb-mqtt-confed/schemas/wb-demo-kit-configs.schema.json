@@ -9,18 +9,19 @@
     },
     "properties": {
         "coeff_power_fan": {
-	    "type": "number",
+            "type": "number",
             "title": "Fan emergency power correction factor",
             "default": 0,
             "propertyOrder": 1
         }
     },
-    "required": ["coeff_power_fan"],
-    
+    "required": [
+        "coeff_power_fan"
+    ],
     "translations": {
         "ru": {
             "Settings for wb demo kit": "Настройки для wb demo kit",
-            "Fan emergency power correction factor": "Коэффециент коррекции аварийной мощности вентилятора",
+            "Fan emergency power correction factor": "Коэффециент коррекции аварийной мощности вентилятора"
         }
     }
 }

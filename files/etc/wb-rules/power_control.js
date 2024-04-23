@@ -80,12 +80,12 @@ defineRule('power_fail', {
         dev['wb-mdm3_57']['Channel 2'] = 0;
         dev['water_control']['valve'] = false;
         dev['power_control']['power_fail'] = true;
-        runShellCommand('./root/fail.sh');
+        runShellCommand('/usr/lib/wb-demo-kit-configs/fail.sh');
       }
     } else {
       if (dev['power_control']['power_fail']) {
         runShellCommand('killall -9 fail.sh');
-        runShellCommand('./root/not_fail.sh');
+        runShellCommand('/usr/lib/wb-demo-kit-configs/not_fail.sh');
         dev['power_control']['power_fail'] = false;
       }
     }

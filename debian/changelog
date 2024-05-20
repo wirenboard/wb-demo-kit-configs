@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.7.2) stable; urgency=medium
+
+  * Improve webui config template, extract SVG files
+
+ -- Nikolay Korotkiy <nikolay.korotkiy@wirenboard.com>  Tue, 23 Apr 2024 16:22:00 +0400
+
 wb-demo-kit-configs (1.7.1) stable; urgency=medium
 
   * Bugfix name template WB6

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-. /etc/wb_env.sh
+. /usr/lib/wb-utils/wb_env.sh
 
 wb_source hardware
 led_blink red

@@ -8,5 +8,5 @@ Homepage: https://github.com/wirenboard/wb-demo-kit-configs
 
 Package: wb-demo-kit-configs
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, wb-mqtt-serial (>= 2.44.1), j2cli
+Depends: ${shlibs:Depends}, ${misc:Depends}, wb-mqtt-serial (>= 2.44.1), j2cli, wb-utils
 Description: Default common config files for Wiren Board demo kit

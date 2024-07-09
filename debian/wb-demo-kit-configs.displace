@@ -1,3 +1,4 @@
-/etc/wb-hardware.conf.wb-demo-kit
-/etc/wb-mqtt-serial.conf.wb-demo-kit
-/etc/wb-webui.conf.wb-demo-kit
+# displacement in /mnt/data is intentional as we don't want to interfere with wb-configs
+/mnt/data/etc/wb-hardware.conf.wb-demo-kit
+/mnt/data/etc/wb-mqtt-serial.conf.wb-demo-kit
+/mnt/data/etc/wb-webui.conf.wb-demo-kit

@@ -46,9 +46,10 @@ cat <<EOF > "/tmp/vars.json"
 }
 EOF
 
-j2 ${CONF_DIR}/${HARDWARE_CONF_FNAME} "/tmp/vars.json" > /etc/wb-hardware.conf.wb-demo-kit
-j2 ${CONF_DIR}/${SERIAL_CONF_FNAME} "/tmp/vars.json" > /etc/wb-mqtt-serial.conf.wb-demo-kit
-j2 ${CONF_DIR}/${WEBUI_CONF_FNAME} "/tmp/vars.json" > /etc/wb-webui.conf.wb-demo-kit
+# /mnt/data is intentional here, as we don't want to interfere with wb-configs scripts
+j2 ${CONF_DIR}/${HARDWARE_CONF_FNAME} "/tmp/vars.json" > /mnt/data/etc/wb-hardware.conf.wb-demo-kit
+j2 ${CONF_DIR}/${SERIAL_CONF_FNAME} "/tmp/vars.json" > /mnt/data/etc/wb-mqtt-serial.conf.wb-demo-kit
+j2 ${CONF_DIR}/${WEBUI_CONF_FNAME} "/tmp/vars.json" > /mnt/data/etc/wb-webui.conf.wb-demo-kit
 
 # restart services
 deb-systemd-invoke restart wb-mqtt-serial

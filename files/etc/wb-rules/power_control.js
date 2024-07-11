@@ -84,8 +84,12 @@ defineRule('power_fail', {
       }
     } else {
       if (dev['power_control']['power_fail']) {
-        runShellCommand('killall -9 fail.sh');
-        runShellCommand('/usr/lib/wb-demo-kit-configs/not_fail.sh');
+        runShellCommand('pkill -f fail.sh', {
+          captureOutput: true,
+          exitCallback: function (exitCode, capturedOutput) {
+            runShellCommand('/usr/lib/wb-demo-kit-configs/not_fail.sh')
+          }
+        });
         dev['power_control']['power_fail'] = false;
       }
     }
@@ -101,3 +105,4 @@ defineRule('power_mdm_fail', {
     }
   },
 });
+

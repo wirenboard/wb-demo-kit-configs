@@ -73,8 +73,6 @@ defineRule('timer_clear_fail', {
 defineRule('power_fail', {
   whenChanged: 'power_status/working on battery',
   then: function (newValue, devName, cellName) {
-    var pids_str = '';
-    var pids, i;
     if (newValue) {
       if (!dev['power_control']['power_fail']) {
         log('power fail');

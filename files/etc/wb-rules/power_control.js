@@ -86,15 +86,9 @@ defineRule('power_fail', {
       }
     } else {
       if (dev['power_control']['power_fail']) {
-        runShellCommand('pgrep -f -d , fail.sh', {
+        runShellCommand('pkill -f fail.sh', {
           captureOutput: true,
           exitCallback: function (exitCode, capturedOutput) {
-            pids_str = capturedOutput;
-            pids = pids_str.split(',');
-            for (i = 1; i < pids.length; i++) {
-              log(pids[i])
-              runShellCommand('kill ' + pids[i]);  
-            }
             runShellCommand('/usr/lib/wb-demo-kit-configs/not_fail.sh')
           }
         });

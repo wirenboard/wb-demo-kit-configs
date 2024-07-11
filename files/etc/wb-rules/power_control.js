@@ -73,6 +73,8 @@ defineRule('timer_clear_fail', {
 defineRule('power_fail', {
   whenChanged: 'power_status/working on battery',
   then: function (newValue, devName, cellName) {
+    var pids_str = '';
+    var pids, i;
     if (newValue) {
       if (!dev['power_control']['power_fail']) {
         log('power fail');
@@ -84,8 +86,18 @@ defineRule('power_fail', {
       }
     } else {
       if (dev['power_control']['power_fail']) {
-        runShellCommand('killall -9 fail.sh');
-        runShellCommand('/usr/lib/wb-demo-kit-configs/not_fail.sh');
+        runShellCommand('pgrep -f -d , fail.sh', {
+          captureOutput: true,
+          exitCallback: function (exitCode, capturedOutput) {
+            pids_str = capturedOutput;
+            pids = pids_str.split(',');
+            for (i = 1; i < pids.length; i++) {
+              log(pids[i])
+              runShellCommand('kill ' + pids[i]);  
+            }
+            runShellCommand('/usr/lib/wb-demo-kit-configs/not_fail.sh')
+          }
+        });
         dev['power_control']['power_fail'] = false;
       }
     }
@@ -101,3 +113,4 @@ defineRule('power_mdm_fail', {
     }
   },
 });
+

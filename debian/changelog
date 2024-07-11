@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.7.6) stable; urgency=medium
+
+  * Fix configs location in /mnt/data/etc still broken in 1.7.4
+
+ -- Nikita Maslov <nikita.maslov@wirenboard.com>  Thu, 11 Jul 2024 17:46:40 +0500
+
 wb-demo-kit-configs (1.7.5) stable; urgency=medium
 
   * Fixed the termination of the fail.sh script

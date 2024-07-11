@@ -15,7 +15,7 @@ defineVirtualDevice('power_control', {
 });
 
 startTicker('fan_overload_ticker', 200);
-coeff_alarm_power_fan = readConfig('/etc/wb-demo-kit-configs.conf').coeff_power_fan;
+coeff_alarm_power_fan = readConfig('/mnt/data/etc/wb-demo-kit-configs.conf').coeff_power_fan;
 
 defineRule('fan_overload_detect', {
   when: function () {

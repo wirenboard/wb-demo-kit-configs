@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.8.0) stable; urgency=medium
+
+  * Add Energomera CE102
+
+ -- Petr Krasnoshchekov <petr.krasnoshchekov@wirenboard.com>  Mon, 15 Jul 2024 10:42:39 +0500
+
 wb-demo-kit-configs (1.7.6) stable; urgency=medium
 
   * Fix configs location in /mnt/data/etc still broken in 1.7.4

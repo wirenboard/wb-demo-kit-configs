@@ -551,6 +551,7 @@
       "data_bits" : 8,
       "devices" :
       [
+        {% if ENERGY_METER_DEV == "NEVA" -%}
         {
           "channels" :
           [
@@ -575,9 +576,40 @@
               "name" : "A energy T4"
             }
           ],
+          "id": "energy_meter",
           "device_type" : "NEVA MT 113/123/124",
           "slave_id" : "00000001"
         }
+        {% elif ENERGY_METER_DEV == "ENERGOMERA_CE102" -%}
+        {
+          "channels" :
+          [
+            {
+              "enabled" : false,
+              "name" : "A Energy T1"
+            },
+            {
+              "enabled" : false,
+              "name" : "A Energy T2"
+            },
+            {
+              "enabled" : false,
+              "name" : "A Energy T3"
+            },
+            {
+              "enabled" : false,
+              "name" : "A Energy T4"
+            },
+            {
+              "enabled" : false,
+              "name" : "A Energy T5"
+            }
+          ],
+          "id": "energy_meter",
+          "device_type" : "energomera_ce102",
+          "slave_id" : "1"
+        },
+        {% endif -%}
       ],
       "enabled" : true,
       "parity" : "N",

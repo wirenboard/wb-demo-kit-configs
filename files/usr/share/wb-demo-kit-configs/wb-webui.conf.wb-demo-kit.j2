@@ -190,7 +190,7 @@
                         "id": "f1797978a1c4",
                         "read": {
                             "enable": true,
-                            "channel": "neva124_00000001/Irms",
+                            "channel": "energy_meter/Irms",
                             "value": "val+' A'"
                         },
                         "write": {
@@ -761,7 +761,11 @@
                         "id": "f17979df6935",
                         "read": {
                             "enable": true,
-                            "channel": "neva124_00000001/A energy",
+                            {% if ENERGY_METER_DEV == "NEVA" -%}
+                            "channel": "energy_meter/A energy",
+                            {% elif ENERGY_METER_DEV == "ENERGOMERA_CE102" -%}
+                            "channel": "energy_meter/A Energy",
+                            {% endif -%}
                             "value": "val"
                         },
                         "write": {
@@ -1247,7 +1251,7 @@
                         "id": "f1797a02373c",
                         "read": {
                             "enable": true,
-                            "channel": "neva124_00000001/Urms",
+                            "channel": "energy_meter/Urms",
                             "value": "val+' V'"
                         },
                         "write": {
@@ -1270,11 +1274,12 @@
                             "value": null
                         }
                     },
+                    {% if ENERGY_METER_DEV == "NEVA" -%}
                     {
                         "id": "f1797a02af4c",
                         "read": {
                             "enable": true,
-                            "channel": "neva124_00000001/Frequency",
+                            "channel": "energy_meter/Frequency",
                             "value": "val+' Hz'"
                         },
                         "write": {
@@ -1297,11 +1302,44 @@
                             "value": null
                         }
                     },
+                    {% elif ENERGY_METER_DEV == "ENERGOMERA_CE102" -%}
+                    {
+                        "id": "f1797a02af4c",
+                        "read": {
+                            "enable": true,
+                            "channel": "wb-map12e_35/Frequency",
+                            "value": "val+' Hz'"
+                        },
+                        "write": {
+                            "enable": false,
+                            "channel": null,
+                            "value": {
+                                "on": 1,
+                                "off": 0
+                            }
+                        },
+                        "visible": {
+                            "enable": false,
+                            "channel": null,
+                            "condition": "==",
+                            "value": null
+                        },
+                        "style": {
+                            "enable": false,
+                            "channel": null,
+                            "value": null
+                        }
+                    },
+                    {% endif -%}
                     {
                         "id": "f1797a0615cf",
                         "read": {
                             "enable": true,
-                            "channel": "neva124_00000001/A energy",
+                            {% if ENERGY_METER_DEV == "NEVA" -%}
+                            "channel": "energy_meter/A energy",
+                            {% elif ENERGY_METER_DEV == "ENERGOMERA_CE102" -%}
+                            "channel": "energy_meter/A Energy",
+                            {% endif -%}
                             "value": "val+' kW*h'"
                         },
                         "write": {
@@ -1328,7 +1366,7 @@
                         "id": "f1797a069534",
                         "read": {
                             "enable": true,
-                            "channel": "neva124_00000001/Irms",
+                            "channel": "energy_meter/Irms",
                             "value": "val+' A'"
                         },
                         "write": {
@@ -3813,7 +3851,11 @@
                     "type": "power"
                 },
                 {
-                    "id": "neva124_00000001/A energy",
+                    {% if ENERGY_METER_DEV == "NEVA" -%}
+                    "id": "energy_meter/A energy",
+                    {% elif ENERGY_METER_DEV == "ENERGOMERA_CE102" -%}
+                    "id": "energy_meter/A Energy",
+                    {% endif -%}
                     "name": "Счётчик",
                     "extra": {},
                     "type": "power_consumption"

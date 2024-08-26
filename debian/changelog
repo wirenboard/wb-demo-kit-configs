@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.8.1) stable; urgency=medium
+
+  * Fix incorrect json in energomera ce_102 case
+
+ -- Vladimir Romanov <v.romanov@wirenboard.com>  Mon, 26 Aug 2024 17:32:11 +0300
+
 wb-demo-kit-configs (1.8.0) stable; urgency=medium
 
   * Add Energomera CE102

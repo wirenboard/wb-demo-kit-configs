@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.8.2) stable; urgency=medium
+
+  * Fix path for wb-demo-kit-configs.conf
+
+ -- Boris Marochkin <b.marochkin@wirenboard.ru>  Wed, 28 Aug 2024 16:42:22 +0300
+
 wb-demo-kit-configs (1.8.1) stable; urgency=medium
 
   * Fix incorrect json in energomera ce_102 case

@@ -2,9 +2,9 @@
     "type": "object",
     "title": "Settings for wb demo kit",
     "description": "Settings for wb demo kit",
-    "configPath": "/etc/wb-demo-kit-configs.conf",
+    "configPath": "/mnt/data/etc/wb-demo-kit-configs.conf",
     "configFile": {
-        "path": "/etc/wb-demo-kit-configs.conf",
+        "path": "/mnt/data/etc/wb-demo-kit-configs.conf",
         "service": "wb-rules"
     },
     "properties": {

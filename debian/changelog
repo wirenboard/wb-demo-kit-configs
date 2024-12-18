@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.8.3) stable; urgency=medium
+
+  * Add wb8 support
+
+ -- Nikolay Korotkiy <nikolay.korotkiy@wirenboard.com>  Wed, 18 Dec 2024 16:01:00 +0400
+
 wb-demo-kit-configs (1.8.2) stable; urgency=medium
 
   * Fix path for wb-demo-kit-configs.conf

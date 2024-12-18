@@ -1,4 +1,8 @@
-{% if PLATFORM_DEV == "WB7" -%}
+{% if PLATFORM_DEV == "WB85" -%}
+    {% set svg_content -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB85.svg' -%}
+    {% endset -%}
+{% elif PLATFORM_DEV == "WB7" -%}
     {% if MWAC_DEV == "MWACv2" -%}
         {% set svg_content -%}
             {% include '/usr/share/wb-demo-kit-configs/mwac_v2.svg' -%}

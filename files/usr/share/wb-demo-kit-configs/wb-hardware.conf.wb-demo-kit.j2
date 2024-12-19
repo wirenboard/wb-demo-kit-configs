@@ -2,13 +2,15 @@
   "extio1": {
     "module": "wbio-di-wd-14",
     "options": {}
-  },
+  }
   {% if PLATFORM_DEV == "WB7" -%}
+  ,
   "wbmz": {
     "module": "wbmz4-battery",
     "options": {}
   }
   {% elif PLATFORM_DEV == "WB6" -%}
+  ,
   "wbmz": {
     "module": "wbmz3-battery",
     "options": {

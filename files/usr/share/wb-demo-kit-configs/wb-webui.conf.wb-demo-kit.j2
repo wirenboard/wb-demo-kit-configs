@@ -2,6 +2,60 @@
     {% include '/usr/share/wb-demo-kit-configs/MAIN.svg' -%}
 {% endset -%}
 
+{% if M1W2_DEV == "M1W2" -%}
+    {% set svg_m1w2 -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB-M1W2.j2' -%}
+    {% endset -%}
+{% elif M1W2_DEV == "M1W2v3" -%}
+    {% set svg_m1w2 -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB-M1W2 v3.j2' -%}
+    {% endset -%}
+{% endif -%}
+
+{% if MWAC_DEV == "MWAC" -%}
+    {% set svg_mwac -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB-MWAC.j2' -%}
+    {% endset -%}
+{% elif MWAC_DEV == "MWACv2" -%}
+    {% set svg_mwac -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB-MWAC v2.j2' -%}
+    {% endset -%}
+{% endif -%}
+
+{% if MIR_DEV == "WBMIR3" -%}
+    {% set svg_mir -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB-MIR v2.j2' -%}
+    {% endset -%}
+{% elif MIR_DEV == "WB-MIR v.3" -%}
+    {% set svg_mir -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB-MIR v3.j2' -%}
+    {% endset -%}
+{% endif -%}
+
+{% if LED_DEV == "LED" -%}
+    {% set svg_led -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB-LED.j2' -%}
+    {% endset -%}
+{% elif LED_DEV == "MRGBWD" -%}
+    {% set svg_led -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB-MRGBW-D.j2' -%}
+    {% endset -%}
+{% endif -%}
+
+{% if PLATFORM_DEV == "WB8" -%}
+    {% set svg_wb -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB8.j2' -%}
+    {% endset -%}
+{% elif PLATFORM_DEV == "WB7" -%}
+    {% set svg_wb -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB7.j2' -%}
+    {% endset -%}
+{% elif PLATFORM_DEV == "WB6" -%}
+    {% set svg_wb -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB6.j2' -%}
+    {% endset -%}
+{% endif -%}
+
 {
     "dashboards": [
         {

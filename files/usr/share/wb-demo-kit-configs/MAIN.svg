@@ -828,11 +828,7 @@
             <path d="m824.73 78.82h-10.8a2 2 0 00-2 2v17.31a2 2 0 002 2h10.8a2 2 0 002-2V80.78a2 2 0 00-2-1.96zm-5.4 19.59a3.2 3.2.0 113.2-3.2 3.2 3.2.0 01-3.2 3.2z" transform="translate(-1.35,0.58)" style="fill:url(#Tin)" id="path1520" data-svg-param-id="f17a14c9de1e" />
          </g>
       </g>
-      {% if M1W2_DEV == "M1W2" -%}
-         {% include '/usr/share/wb-demo-kit-configs/WB-M1W2.j2' -%}
-      {% elif M1W2_DEV == "M1W2v3" -%}
-         {% include '/usr/share/wb-demo-kit-configs/WB-M1W2 v3.j2' -%}
-      {% endif -%}
+      {{ svg_m1w2 }}
       <g id="g4594" transform="translate(-26,2)">
          <g id="Слой_12" data-name="Слой 12">
             <rect x="806.89001" y="215.85001" width="67.980003" height="168.17" style="fill:#ddd;stroke:#b6b5b5;stroke-width:.394819px;stroke-miterlimit:22.9256" id="rect3345" />
@@ -913,16 +909,8 @@
             <polygon points="866.65,343.56 866.65,384.01 874.51,384.01 874.51,216.03 866.04,216.03 866.08,260.72 869.15,260.72 869.15,343.56" style="opacity:.6;mix-blend-mode:multiply;fill:#ddd" id="polygon3481" transform="matrix(0.61187084,0,0,1,339.42283,0)" />
          </g>
       </g>
-      {% if MWAC_DEV == "MWAC" -%}
-         {% include '/usr/share/wb-demo-kit-configs/WB-MWAC.j2' -%}
-      {% elif MWAC_DEV == "MWACv2" -%}
-         {% include '/usr/share/wb-demo-kit-configs/WB-MWAC v2.j2' -%}
-      {% endif -%}
-      {% if MIR_DEV == "WBMIR3" -%}
-         {% include '/usr/share/wb-demo-kit-configs/WB-MIR v2.j2' -%}
-      {% elif MIR_DEV == "WB-MIR v.3" -%}
-         {% include '/usr/share/wb-demo-kit-configs/WB-MIR v3.j2' -%}
-      {% endif -%}
+      {{ svg_mwac }}
+      {{ svg_mir }}
       <g id="g5328" transform="translate(-6,-10)">
          <g id="Слой_16" data-name="Слой 16" transform="translate(-0.09993946,-0.16118971)" style="display:inline">
             <rect x="958.04999" y="477.45001" width="99.629997" height="167.98" style="fill:#ddd;stroke:#b6b5b5;stroke-width:.397803px;stroke-miterlimit:22.9256" id="rect3901" />
@@ -1178,11 +1166,7 @@
          <path d="m402.23 791.74s14.51-1.35 15.87 1.55-.39 6.39-1.55 6.19c-1.16-.2 3.87-4.06-14.32-7.74z" transform="translate(-1.35,0.58)" style="fill:#474747" id="path4608" />
          <path d="m379.47 796.85s10 3.74 6.36 6.07c0 0 8.56-5.27-6.36-6.07z" transform="translate(-1.35,0.58)" style="fill:#5e5e5e" id="path4610" />
       </g>
-      {% if LED_DEV == "LED" -%}
-         {% include '/usr/share/wb-demo-kit-configs/WB-LED.j2' -%}
-      {% elif LED_DEV == "MRGBWD" -%}
-         {% include '/usr/share/wb-demo-kit-configs/WB-MRGBW-D.j2' -%}
-      {% endif -%}
+      {{ svg_led }}
       <g id="g5206" transform="translate(-6,-10)">
          <g id="Слой_8" data-name="Слой 8">
             <rect x="754.28998" y="477.13" width="200.75999" height="168.31" style="fill:#ddd" id="rect1253" />
@@ -1580,13 +1564,7 @@
             <tspan sodipodi:role="line" x="702.07239" y="568.95441" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:8.4px;font-family:Arial-BoldMT,Arial;-inkscape-font-specification:'Arial-BoldMT, Arial';text-align:center;text-anchor:middle" id="tspan3367-5">Relay</tspan>
          </text>
       </g>
-      {% if PLATFORM_DEV == "WB8" -%}
-         {% include '/usr/share/wb-demo-kit-configs/WB8.j2' -%}
-      {% elif PLATFORM_DEV == "WB7" -%}
-         {% include '/usr/share/wb-demo-kit-configs/WB7.j2' -%}
-      {% elif PLATFORM_DEV == "WB6" -%}
-         {% include '/usr/share/wb-demo-kit-configs/WB6.j2' -%}
-      {% endif -%}
+      {{ svg_wb }}
       <g id="g3366" transform="translate(-10.985505,-14.468737)">
          <rect style="opacity:.997;fill:#dcdcdc;fill-opacity:1;stroke-width:4.16501;stroke-linecap:round;stroke-linejoin:round" id="rect3361" width="52" height="18.804565" x="539.98053" y="711.52472" ry="2" />
          <text style="font-style:normal;font-weight:400;font-size:16px;line-height:1.25;font-family:sans-serif;fill:#383838;fill-opacity:1;stroke:none" x="565.63678" y="726.57935" id="text3359" data-svg-param-id="f179797920ad">

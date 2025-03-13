@@ -65,7 +65,7 @@
             "svg_fullwidth": true,
             "widgets": [],
             "svg": {
-                "current": "{{ svg_content | replace('\\', '\\\\') | replace('"', '\\"') }}",
+                "current": "{{ svg_content | replace('\\', '\\\\') | replace('"', '\\"') | replace('\n', '')}}",
                 "params": [
                     {
                         "id": "f1796b05a66a",

@@ -73,6 +73,8 @@ cat <<EOF > "/tmp/vars.json"
 {
 	"MWAC_DEV": "$MWAC_DEV",
 	"LED_DEV": "$LED_DEV",
+	"M1W2_DEV": "$M1W2_DEV",
+	"MIR_DEV": "$MIR_DEV",
 	"PLATFORM_DEV": "$PLATFORM_DEV",
 	"ENERGY_METER_DEV": "$ENERGY_METER_DEV"
 }

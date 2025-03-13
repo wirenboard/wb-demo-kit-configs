@@ -57,9 +57,9 @@ MODEL_MIR=$(echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a
 if [[ $MODEL_MIR == "WBMIR3"]]; then
 	MIR_DEV="MIR"
 elif [[ $MIR_M1W2 == "WB-MIR v.3" ]]; then
-	MIR_DEV="M1W2v3"
+	MIR_DEV="MIRv3"
 else
-	MIR_DEV="M1W2v3"
+	MIR_DEV="MIRv3"
 fi
 
 ENERGY_METER_DEV="NEVA"

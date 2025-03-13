@@ -22,14 +22,14 @@ fi
 
 deb-systemd-invoke stop wb-mqtt-serial.service
 
-SIGNATURE_LED=$( echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 39 -t3 -r 290 -c 12 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
+MODEL_LED=$(echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 39 -t3 -r 200 -c 20 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
 
-if [[ $SIGNATURE_LED == "mrgbw" ]] || [[ $SIGNATURE_LED == "mrgbwG" ]]; then
+if [[ $MODEL_LED == "WB-MRGBW-D" ]]; then
 	LED_DEV="MRGBWD"
-elif [[ $SIGNATURE_LED == "ledG" ]]; then
+elif [[ $MODEL_LED == "WB-LED" ]]; then
 	LED_DEV="LED"
 else
-	LED_DEV="MRGBWD"
+	LED_DEV="LED"
 fi
 
 SIGNATURE_MWAC=$( echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 25 -t3 -r 290 -c 12 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))

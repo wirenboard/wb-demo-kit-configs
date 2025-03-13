@@ -32,11 +32,11 @@ else
 	LED_DEV="LED"
 fi
 
-SIGNATURE_MWAC=$( echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 25 -t3 -r 290 -c 12 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
+MODEL_MWAC=$(echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 25 -t3 -r 200 -c 20 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
 
-if [[ $SIGNATURE_MWAC == "wbmwac_042" ]] || [[ $SIGNATURE_MWAC == "wbmwacG" ]] || [[ $SIGNATURE_MWAC == "wbmwac" ]]; then
+if [[ $MODEL_MWAC == "WB-MWAC" ]]; then
 	MWAC_DEV="MWAC"
-elif [[ $SIGNATURE == "mwac0" ]]; then
+elif [[ $MODEL_MWAC == "WBMWAC-v2" ]]; then
 	MWAC_DEV="MWACv2"
 else
 	MWAC_DEV="MWACv2"

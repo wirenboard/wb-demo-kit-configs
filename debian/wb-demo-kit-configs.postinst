@@ -11,9 +11,9 @@ SERIAL_CONF_FNAME="wb-mqtt-serial.conf.wb-demo-kit.j2"
 WEBUI_CONF_FNAME="wb-webui.conf.wb-demo-kit.j2"
 
 if of_machine_match "wirenboard,wirenboard-85x"; then
-    PLATFORM_DEV="WB85"
+    PLATFORM_DEV="WB8"
 elif of_machine_match "wirenboard,wirenboard-84x"; then
-    PLATFORM_DEV="WB85"
+    PLATFORM_DEV="WB8"
 elif of_machine_match "allwinner,sun8i-r40"; then
     PLATFORM_DEV="WB7"
 elif of_machine_match "fsl,imx6ul" || of_machine_match "fsl,imx6ull"; then

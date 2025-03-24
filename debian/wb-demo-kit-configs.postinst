@@ -22,10 +22,8 @@ deb-systemd-invoke stop wb-mqtt-serial.service
 
 MODEL_LED=$(echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 39 -t3 -r 200 -c 20 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
 
-if [[ "$MODEL_LED" == "WB-MRGBW-D" ]]; then
+if [[ $MODEL_LED == "WB-MRGBW-D" ]]; then
 	LED_DEV="MRGBWD"
-elif [[ $MODEL_LED == "WB-LED" ]]; then
-	LED_DEV="LED"
 else
 	LED_DEV="LED"
 fi
@@ -34,8 +32,6 @@ MODEL_MWAC=$(echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -
 
 if [[ $MODEL_MWAC == "WBMWAC" ]]; then
 	MWAC_DEV="MWAC"
-elif [[ $MODEL_MWAC == "WBMWAC-v2" ]]; then
-	MWAC_DEV="MWACv2"
 else
 	MWAC_DEV="MWACv2"
 fi
@@ -52,8 +48,6 @@ MODEL_MIR=$(echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a
 
 if [[ $MODEL_MIR == "WBMIR3" ]]; then
 	MIR_DEV="MIR"
-elif [[ $MODEL_MIR == "WB-MIR v.3" ]]; then
-	MIR_DEV="MIRv3"
 else
 	MIR_DEV="MIRv3"
 fi

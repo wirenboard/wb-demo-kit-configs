@@ -1,22 +1,61 @@
-{% if PLATFORM_DEV == "WB85" -%}
-    {% set svg_content -%}
-        {% include '/usr/share/wb-demo-kit-configs/WB85.svg' -%}
+{% if M1W2_DEV == "M1W2" -%}
+    {% set svg_m1w2 -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB-M1W2.j2' -%}
     {% endset -%}
-{% elif PLATFORM_DEV == "WB7" -%}
-    {% if MWAC_DEV == "MWACv2" -%}
-        {% set svg_content -%}
-            {% include '/usr/share/wb-demo-kit-configs/mwac_v2.svg' -%}
-        {% endset -%}
-    {% else -%}
-        {% set svg_content -%}
-            {% include '/usr/share/wb-demo-kit-configs/mwac.svg' -%}
-        {% endset -%}
-    {% endif -%}
-{% elif PLATFORM_DEV == "WB6" -%}
-    {% set svg_content -%}
-        {% include '/usr/share/wb-demo-kit-configs/WB6.svg' -%}
+{% elif M1W2_DEV == "M1W2v3" -%}
+    {% set svg_m1w2 -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB-M1W2_v3.j2' -%}
     {% endset -%}
 {% endif -%}
+
+{% if MWAC_DEV == "MWAC" -%}
+    {% set svg_mwac -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB-MWAC.j2' -%}
+    {% endset -%}
+{% elif MWAC_DEV == "MWACv2" -%}
+    {% set svg_mwac -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB-MWAC_v2.j2' -%}
+    {% endset -%}
+{% endif -%}
+
+{% if MIR_DEV == "MIR" -%}
+    {% set svg_mir -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB-MIR_v2.j2' -%}
+    {% endset -%}
+{% elif MIR_DEV == "MIRv3" -%}
+    {% set svg_mir -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB-MIR_v3.j2' -%}
+    {% endset -%}
+{% endif -%}
+
+{% if LED_DEV == "LED" -%}
+    {% set svg_led -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB-LED.j2' -%}
+    {% endset -%}
+{% elif LED_DEV == "MRGBWD" -%}
+    {% set svg_led -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB-MRGBW-D.j2' -%}
+    {% endset -%}
+{% endif -%}
+
+{% if PLATFORM_DEV == "WB8" -%}
+    {% set svg_wb -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB8.j2' -%}
+    {% endset -%}
+{% elif PLATFORM_DEV == "WB7" -%}
+    {% set svg_wb -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB7.j2' -%}
+    {% endset -%}
+{% elif PLATFORM_DEV == "WB6" -%}
+    {% set svg_wb -%}
+        {% include '/usr/share/wb-demo-kit-configs/WB6.j2' -%}
+    {% endset -%}
+{% endif -%}
+
+{% set svg_content -%}
+    {% include '/usr/share/wb-demo-kit-configs/MAIN.svg' -%}
+{% endset -%}
+
 {
     "dashboards": [
         {
@@ -26,7 +65,7 @@
             "svg_fullwidth": true,
             "widgets": [],
             "svg": {
-                "current": "{{ svg_content | replace('\\', '\\\\') | replace('"', '\\"') }}",
+                "current": "{{ svg_content | replace('\\', '\\\\') | replace('"', '\\"') | replace('\n', '')}}",
                 "params": [
                     {
                         "id": "f1796b05a66a",

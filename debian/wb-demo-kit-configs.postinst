@@ -10,10 +10,8 @@ HARDWARE_CONF_FNAME="wb-hardware.conf.wb-demo-kit.j2"
 SERIAL_CONF_FNAME="wb-mqtt-serial.conf.wb-demo-kit.j2"
 WEBUI_CONF_FNAME="wb-webui.conf.wb-demo-kit.j2"
 
-if of_machine_match "wirenboard,wirenboard-85x"; then
-    PLATFORM_DEV="WB85"
-elif of_machine_match "wirenboard,wirenboard-84x"; then
-    PLATFORM_DEV="WB85"
+if of_machine_match "wirenboard,wirenboard-8xx"; then
+    PLATFORM_DEV="WB8"
 elif of_machine_match "allwinner,sun8i-r40"; then
     PLATFORM_DEV="WB7"
 elif of_machine_match "fsl,imx6ul" || of_machine_match "fsl,imx6ull"; then
@@ -22,24 +20,36 @@ fi
 
 deb-systemd-invoke stop wb-mqtt-serial.service
 
-SIGNATURE_LED=$( echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 39 -t3 -r 290 -c 12 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
+MODEL_LED=$(echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 39 -t3 -r 200 -c 20 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
 
-if [[ $SIGNATURE_LED == "mrgbw" ]] || [[ $SIGNATURE_LED == "mrgbwG" ]]; then
+if [[ $MODEL_LED == "WB-MRGBW-D" ]]; then
 	LED_DEV="MRGBWD"
-elif [[ $SIGNATURE_LED == "ledG" ]]; then
-	LED_DEV="LED"
 else
-	LED_DEV="MRGBWD"
+	LED_DEV="LED"
 fi
 
-SIGNATURE_MWAC=$( echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 25 -t3 -r 290 -c 12 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
+MODEL_MWAC=$(echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 25 -t3 -r 200 -c 20 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
 
-if [[ $SIGNATURE_MWAC == "wbmwac_042" ]] || [[ $SIGNATURE_MWAC == "wbmwacG" ]] || [[ $SIGNATURE_MWAC == "wbmwac" ]]; then
+if [[ $MODEL_MWAC == "WBMWAC" ]]; then
 	MWAC_DEV="MWAC"
-elif [[ $SIGNATURE == "mwac0" ]]; then
-	MWAC_DEV="MWACv2"
 else
 	MWAC_DEV="MWACv2"
+fi
+
+MODEL_M1W2=$(echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 30 -t3 -r 200 -c 20 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
+
+if [[ $MODEL_M1W2 == "WBM1W2" ]]; then
+	M1W2_DEV="M1W2"
+else
+	M1W2_DEV="M1W2v3"
+fi
+
+MODEL_MIR=$(echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 133 -t3 -r 200 -c 20 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
+
+if [[ $MODEL_MIR == "WBMIR3" ]]; then
+	MIR_DEV="MIR"
+else
+	MIR_DEV="MIRv3"
 fi
 
 ENERGY_METER_DEV="NEVA"
@@ -53,6 +63,8 @@ cat <<EOF > "/tmp/vars.json"
 {
 	"MWAC_DEV": "$MWAC_DEV",
 	"LED_DEV": "$LED_DEV",
+	"M1W2_DEV": "$M1W2_DEV",
+	"MIR_DEV": "$MIR_DEV",
 	"PLATFORM_DEV": "$PLATFORM_DEV",
 	"ENERGY_METER_DEV": "$ENERGY_METER_DEV"
 }

@@ -1,3 +1,10 @@
+wb-demo-kit-configs (1.10.0) stable; urgency=medium
+
+  * Update deprecated templates
+  * Made an assembly of SVG dashboard from pieces of devices
+
+ -- Boris Marochkin <b.marochkin@wirenboard.com>  Wed, 12 Mar 2025 15:08:07 +0300
+
 wb-demo-kit-configs (1.9.1) stable; urgency=medium
 
   * Add wb8.4 support

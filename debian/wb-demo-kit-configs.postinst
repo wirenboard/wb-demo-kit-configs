@@ -38,7 +38,7 @@ fi
 
 MODEL_M1W2=$(echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 30 -t3 -r 200 -c 20 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
 
-if [[ "$MODEL_M1W2" == "WBM1W2" ]]; then
+if [[ $MODEL_M1W2 == "WBM1W2" ]]; then
 	M1W2_DEV="M1W2"
 else
 	M1W2_DEV="M1W2v3"

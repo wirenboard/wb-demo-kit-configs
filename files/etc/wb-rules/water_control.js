@@ -20,7 +20,7 @@ defineVirtualDevice('water_control', {
 });
 
 obj=readConfig("/etc/wb-mqtt-serial.conf")
-if (obj.ports[0].devices[0].device_type == "WB-MWAC-v2") {
+if (obj.ports[0].devices[0].device_type == "WB-MWAC-v2 ver2") {
   device = "wb-mwac-v2_25"
   out = "Output K2"
   alarm = "Leakage Mode"
@@ -52,7 +52,12 @@ defineRule('water_fail_control', {
   whenChanged: 'water_control/reset_fail',
   then: function (newValue, devName, cellName) {
     if (newValue) {
-      dev[device][alarm] = false;
+      // Нужно для совместительства со старым WB-MWAC
+      if(device == "wb-mwac-v2_25") {
+        dev[device]["Leakage Mode Reset"] = true;  
+      } else {
+        dev[device][alarm] = false;
+      }
     }
   },
 });
@@ -77,4 +82,5 @@ defineRule('water_button_control', {
     }
   },
 });
+
 

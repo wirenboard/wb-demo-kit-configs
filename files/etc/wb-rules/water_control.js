@@ -52,7 +52,11 @@ defineRule('water_fail_control', {
   whenChanged: 'water_control/reset_fail',
   then: function (newValue, devName, cellName) {
     if (newValue) {
-      dev[device][alarm] = false;
+      if(device == "wb-mwac-v2_25") {
+        dev[device]["Leakage Mode Reset"] = true;  
+      } else {
+        dev[device][alarm] = false;
+      }
     }
   },
 });
@@ -77,4 +81,5 @@ defineRule('water_button_control', {
     }
   },
 });
+
 

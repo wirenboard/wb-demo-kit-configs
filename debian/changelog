@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.10.1) stable; urgency=medium
+
+  * Bugfix template name WB-MWAC
+
+ -- Boris Marochkin <b.marochkin@wirenboard.com>  Wed, 17 Sep 2025 13:59:26 +0300
+
 wb-demo-kit-configs (1.10.0) stable; urgency=medium
 
   * Update deprecated templates

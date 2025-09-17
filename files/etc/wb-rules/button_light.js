@@ -43,7 +43,7 @@ defineVirtualDevice('button_light', {
 });
 
 obj=readConfig("/etc/wb-mqtt-serial.conf")
-if (obj.ports[0].devices[0].device_type == "WB-MWAC-v2") {
+if (obj.ports[0].devices[0].device_type == "WB-MWAC-v2 ver2") {
   device = "wb-mwac-v2_25"
   out = "Output K2"
 } else if (obj.ports[0].devices[0].device_type == "WB-MWAC") {

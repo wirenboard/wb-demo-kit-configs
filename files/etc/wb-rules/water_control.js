@@ -52,6 +52,7 @@ defineRule('water_fail_control', {
   whenChanged: 'water_control/reset_fail',
   then: function (newValue, devName, cellName) {
     if (newValue) {
+      // Нужно для совместительства со старым WB-MWAC
       if(device == "wb-mwac-v2_25") {
         dev[device]["Leakage Mode Reset"] = true;  
       } else {

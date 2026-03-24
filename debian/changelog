@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.10.2) stable; urgency=medium
+
+  * Add missed dependencies
+
+ -- Nikolay Korotkiy <nikolay.korotkiy@wirenboard.com>  Tue, 24 Mar 2026 11:01:00 +0400
+
 wb-demo-kit-configs (1.10.1) stable; urgency=medium
 
   * Bugfix template name WB-MWAC

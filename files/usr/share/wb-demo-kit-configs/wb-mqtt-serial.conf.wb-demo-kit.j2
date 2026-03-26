@@ -32,10 +32,22 @@
           "slave_id" : "39"
         },
         {% endif -%}
+        {% if MSW_DEV == "MSW3" -%}
         {
           "device_type" : "WB-MSW v.3",
           "slave_id" : "64"
         },
+        {% elif MSW_DEV == "MSW4" -%}
+        {
+          "baud_rate" : 1152,
+          "co2_baseline_calibration" : 0,
+          "device_type" : "WB-MSW v.4",
+          "rs485_response_delay_ms" : 0,
+          "selfheating_compensation_deg" : 0,
+          "slave_id" : "64",
+          "sound_filter_time_const_ms" : 200
+        },
+        {% endif -%}
         {
           "device_type" : "WB-MIR v.3",
           "slave_id" : "133"

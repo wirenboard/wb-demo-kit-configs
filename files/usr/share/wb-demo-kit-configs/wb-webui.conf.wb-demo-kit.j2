@@ -1070,7 +1070,11 @@
                         },
                         "style": {
                             "enable": false,
+                            {% if MWAC_DEV == "MWAC" -%}
                             "channel": "WB-MWAC/K2",
+                            {% elif MWAC_DEV == "MWACv2" -%}
+                            "channel": "WB-MWAC/Output K2",
+                            {% endif -%}
                             "value": "(val) ? ';fill: black' : ';fill: green'"
                         }
                     },
@@ -3183,7 +3187,11 @@
                         },
                         "style": {
                             "enable": true,
+                            {% if MWAC_DEV == "MWAC" -%}
                             "channel": "WB-MWAC/K1",
+                            {% elif MWAC_DEV == "MWACv2" -%}
+                            "channel": "WB-MWAC/Output K1",
+                            {% endif -%}
                             "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
                         }
                     },
@@ -3237,7 +3245,11 @@
                         },
                         "style": {
                             "enable": true,
+                            {% if MWAC_DEV == "MWAC" -%}
                             "channel": "WB-MWAC/Alarm",
+                            {% elif MWAC_DEV == "MWACv2" -%}
+                            "channel": "WB-MWAC/Leakage Mode",
+                            {% endif -%}
                             "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
                         }
                     },
@@ -3264,7 +3276,11 @@
                         },
                         "style": {
                             "enable": true,
+                            {% if MWAC_DEV == "MWAC" -%}
                             "channel": "WB-MWAC/F1",
+                            {% elif MWAC_DEV == "MWACv2" -%}
+                            "channel": "WB-MWAC/Input F1",
+                            {% endif -%}
                             "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
                         }
                     },
@@ -3291,7 +3307,11 @@
                         },
                         "style": {
                             "enable": true,
+                            {% if MWAC_DEV == "MWAC" -%}
                             "channel": "WB-MWAC/F2",
+                            {% elif MWAC_DEV == "MWACv2" -%}
+                            "channel": "WB-MWAC/Input F2",
+                            {% endif -%}
                             "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
                         }
                     },
@@ -3318,7 +3338,11 @@
                         },
                         "style": {
                             "enable": true,
+                            {% if MWAC_DEV == "MWAC" -%}
                             "channel": "WB-MWAC/F3",
+                            {% elif MWAC_DEV == "MWACv2" -%}
+                            "channel": "WB-MWAC/Input F3",
+                            {% endif -%}
                             "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
                         }
                     },
@@ -3838,13 +3862,21 @@
                     "type": "switch"
                 },
                 {
+                    {% if MWAC_DEV == "MWAC" -%}
                     "id": "WB-MWAC/P1 Counter",
+                    {% elif MWAC_DEV == "MWACv2" -%}
+                    "id": "WB-MWAC/P1 Volume",
+                    {% endif -%}
                     "name": "Счётчик",
                     "extra": {},
                     "type": "value"
                 },
                 {
-                    "id": "WB-MWAC/Alarm",
+                    {% if MWAC_DEV == "MWAC" -%}
+                    "channel": "WB-MWAC/Alarm",
+                    {% elif MWAC_DEV == "MWACv2" -%}
+                    "channel": "WB-MWAC/Leakage Mode",
+                    {% endif -%}
                     "name": "Протечка",
                     "extra": {},
                     "type": "switch"

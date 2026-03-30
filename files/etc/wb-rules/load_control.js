@@ -42,14 +42,14 @@ defineVirtualDevice('load_control', {
 });
 
 defineRule('power_fan_mdm', {
-  whenChanged: 'wb-mdm3_57/Channel 2',
+  whenChanged: 'WB-MDM3/Channel 2',
   then: function (newValue, devName, cellName) {
     dev['load_control']['power_fan'] = newValue;
   },
 });
 
 defineRule('on_off_fan', {
-  whenChanged: 'wb-mdm3_57/K2',
+  whenChanged: 'WB-MDM3/K2',
   then: function (newValue, devName, cellName) {
     if (newValue) {
       dev['load_control']['fan_up_speed'] = true;
@@ -60,7 +60,7 @@ defineRule('on_off_fan', {
 });
 
 defineRule('power_lamp_mdm', {
-  whenChanged: 'wb-mdm3_57/Channel 1',
+  whenChanged: 'WB-MDM3/Channel 1',
   then: function (newValue, devName, cellName) {
     dev['load_control']['power_lamp'] = newValue;
   },
@@ -80,20 +80,20 @@ defineRule('fan_speed_control', {
   then: function (newValue, devName, cellName) {
     if (newValue) {
       if (!dev['load_control']['fan_overload']) {
-        if (dev['wb-mdm3_57']['K2'] == false) {
-          dev['wb-mdm3_57']['Channel 2'] = 100;
-          dev['wb-mdm3_57']['K2'] = true;
+        if (dev['WB-MDM3']['K2'] == false) {
+          dev['WB-MDM3']['Channel 2'] = 100;
+          dev['WB-MDM3']['K2'] = true;
         } else {
-          if (dev['wb-mdm3_57']['Channel 2'] == 0) {
-            dev['wb-mdm3_57']['Channel 2'] = 100;
-          } else if (dev['wb-mdm3_57']['Channel 2'] == 100) {
-            dev['wb-mdm3_57']['Channel 2'] = 66;
-          } else if (dev['wb-mdm3_57']['Channel 2'] > 66) {
-            dev['wb-mdm3_57']['Channel 2'] = 66;
-          } else if (dev['wb-mdm3_57']['Channel 2'] > 33) {
-            dev['wb-mdm3_57']['Channel 2'] = 33;
-          } else if (dev['wb-mdm3_57']['Channel 2'] > 0) {
-            dev['wb-mdm3_57']['K2'] = false;
+          if (dev['WB-MDM3']['Channel 2'] == 0) {
+            dev['WB-MDM3']['Channel 2'] = 100;
+          } else if (dev['WB-MDM3']['Channel 2'] == 100) {
+            dev['WB-MDM3']['Channel 2'] = 66;
+          } else if (dev['WB-MDM3']['Channel 2'] > 66) {
+            dev['WB-MDM3']['Channel 2'] = 66;
+          } else if (dev['WB-MDM3']['Channel 2'] > 33) {
+            dev['WB-MDM3']['Channel 2'] = 33;
+          } else if (dev['WB-MDM3']['Channel 2'] > 0) {
+            dev['WB-MDM3']['K2'] = false;
           }
         }
       } else {

@@ -395,7 +395,7 @@
                         "id": "f17979d465d5",
                         "read": {
                             "enable": true,
-                            "channel": "wb-msw-v3_64/Temperature",
+                            "channel": "MSW/Temperature",
                             "value": "val.toFixed(1)+' °C'"
                         },
                         "write": {
@@ -422,7 +422,7 @@
                         "id": "f17979d4c313",
                         "read": {
                             "enable": true,
-                            "channel": "wb-msw-v3_64/Humidity",
+                            "channel": "MSW/Humidity",
                             "value": "val+' %'"
                         },
                         "write": {
@@ -449,7 +449,7 @@
                         "id": "f17979d52c2b",
                         "read": {
                             "enable": true,
-                            "channel": "wb-msw-v3_64/Air Quality (VOC)",
+                            "channel": "MSW/Air Quality (VOC)",
                             "value": "val+' ppm'"
                         },
                         "write": {
@@ -476,7 +476,7 @@
                         "id": "f17979d5658d",
                         "read": {
                             "enable": true,
-                            "channel": "wb-msw-v3_64/CO2",
+                            "channel": "MSW/CO2",
                             "value": "val+' ppm'"
                         },
                         "write": {
@@ -503,7 +503,7 @@
                         "id": "f17979d69ad4",
                         "read": {
                             "enable": true,
-                            "channel": "wb-msw-v3_64/Sound Level",
+                            "channel": "MSW/Sound Level",
                             "value": "val+' dbA'"
                         },
                         "write": {
@@ -530,7 +530,7 @@
                         "id": "f17979d6e575",
                         "read": {
                             "enable": true,
-                            "channel": "wb-msw-v3_64/Illuminance",
+                            "channel": "MSW/Illuminance",
                             "value": "val+' lux'"
                         },
                         "write": {
@@ -557,7 +557,7 @@
                         "id": "f17979d71cb3",
                         "read": {
                             "enable": true,
-                            "channel": "wb-msw-v3_64/Max Motion",
+                            "channel": "MSW/Max Motion",
                             "value": "val"
                         },
                         "write": {
@@ -584,7 +584,7 @@
                         "id": "f17979d74e84",
                         "read": {
                             "enable": true,
-                            "channel": "wb-msw-v3_64/Current Motion",
+                            "channel": "MSW/Current Motion",
                             "value": "val"
                         },
                         "write": {
@@ -611,12 +611,12 @@
                         "id": "f17979d79ad2",
                         "read": {
                             "enable": true,
-                            "channel": "wb-msw-v3_64/Buzzer",
+                            "channel": "MSW/Buzzer",
                             "value": "(val  == 1) ? 'ВКЛ' : 'ВЫКЛ'"
                         },
                         "write": {
                             "enable": true,
-                            "channel": "wb-msw-v3_64/Buzzer",
+                            "channel": "MSW/Buzzer",
                             "value": {
                                 "on": 1,
                                 "off": 0
@@ -630,7 +630,7 @@
                         },
                         "style": {
                             "enable": true,
-                            "channel": "wb-msw-v3_64/Buzzer",
+                            "channel": "MSW/Buzzer",
                             "value": "(val) ? ';fill: red' : ';fill: black'"
                         }
                     },
@@ -643,7 +643,7 @@
                         },
                         "write": {
                             "enable": false,
-                            "channel": "wb-msw-v3_64/Buzzer",
+                            "channel": "MSW/Buzzer",
                             "value": {
                                 "on": 1,
                                 "off": 0
@@ -651,7 +651,7 @@
                         },
                         "visible": {
                             "enable": true,
-                            "channel": "wb-msw-v3_64/Buzzer",
+                            "channel": "MSW/Buzzer",
                             "condition": "==",
                             "value": "1"
                         },
@@ -670,7 +670,7 @@
                         },
                         "write": {
                             "enable": false,
-                            "channel": "wb-msw-v3_64/Green LED",
+                            "channel": "MSW/Green LED",
                             "value": {
                                 "on": 1,
                                 "off": 0
@@ -684,7 +684,7 @@
                         },
                         "style": {
                             "enable": true,
-                            "channel": "wb-msw-v3_64/Red LED",
+                            "channel": "MSW/Red LED",
                             "value": "(val) ? ';fill: #f76f6f' : ';fill: #6ff793'"
                         }
                     },
@@ -3339,7 +3339,7 @@
                         },
                         "visible": {
                             "enable": true,
-                            "channel": "wb-msw-v3_64/Buzzer",
+                            "channel": "MSW/Buzzer",
                             "condition": "==",
                             "value": "1"
                         },
@@ -3547,7 +3547,7 @@
                         },
                         "write": {
                             "enable": true,
-                            "channel": "wb-msw-v3_64/Learn to RAM",
+                            "channel": "MSW/Learn to RAM",
                             "value": {
                                 "on": 1,
                                 "off": 0
@@ -3561,7 +3561,7 @@
                         },
                         "style": {
                             "enable": true,
-                            "channel": "wb-msw-v3_64/Learn to RAM",
+                            "channel": "MSW/Learn to RAM",
                             "value": "(val) ? ';fill: red' : ';fill: #eeeeee'"
                         }
                     },
@@ -3574,7 +3574,7 @@
                         },
                         "write": {
                             "enable": true,
-                            "channel": "wb-msw-v3_64/Play from RAM",
+                            "channel": "MSW/Play from RAM",
                             "value": {
                                 "on": 1,
                                 "off": 0
@@ -3683,7 +3683,7 @@
             "compact": false,
             "cells": [
                 {
-                    "id": "wb-msw-v3_64/Temperature",
+                    "id": "MSW/Temperature",
                     "name": "MSW v3",
                     "extra": {},
                     "type": "temperature"
@@ -3733,49 +3733,49 @@
             "compact": false,
             "cells": [
                 {
-                    "id": "wb-msw-v3_64/Temperature",
+                    "id": "MSW/Temperature",
                     "extra": {},
                     "type": "temperature",
                     "name": "Температура"
                 },
                 {
-                    "id": "wb-msw-v3_64/Humidity",
+                    "id": "MSW/Humidity",
                     "extra": {},
                     "type": "rel_humidity",
                     "name": "Влажность"
                 },
                 {
-                    "id": "wb-msw-v3_64/Air Quality (VOC)",
+                    "id": "MSW/Air Quality (VOC)",
                     "extra": {},
                     "type": "concentration",
                     "name": "Качество воздуха"
                 },
                 {
-                    "id": "wb-msw-v3_64/CO2",
+                    "id": "MSW/CO2",
                     "extra": {},
                     "type": "concentration",
                     "name": "Содержание CO2"
                 },
                 {
-                    "id": "wb-msw-v3_64/Sound Level",
+                    "id": "MSW/Sound Level",
                     "extra": {},
                     "type": "value",
                     "name": "Уровень шума"
                 },
                 {
-                    "id": "wb-msw-v3_64/Illuminance",
+                    "id": "MSW/Illuminance",
                     "extra": {},
                     "type": "value",
                     "name": "Освещённсть"
                 },
                 {
-                    "id": "wb-msw-v3_64/Max Motion",
+                    "id": "MSW/Max Motion",
                     "extra": {},
                     "type": "value",
                     "name": "Максимальное показание датчика движения"
                 },
                 {
-                    "id": "wb-msw-v3_64/Current Motion",
+                    "id": "MSW/Current Motion",
                     "extra": {},
                     "type": "value",
                     "name": "Датчик движения"
@@ -3795,30 +3795,30 @@
                     "type": "temperature"
                 },
                 {
-                    "id": "wb-msw-v3_64/Humidity",
+                    "id": "MSW/Humidity",
                     "name": "Влажность",
                     "extra": {},
                     "type": "rel_humidity"
                 },
                 {
-                    "id": "wb-msw-v3_64/CO2",
+                    "id": "MSW/CO2",
                     "extra": {},
                     "type": "concentration"
                 },
                 {
-                    "id": "wb-msw-v3_64/Air Quality (VOC)",
+                    "id": "MSW/Air Quality (VOC)",
                     "name": "VOC",
                     "extra": {},
                     "type": "concentration"
                 },
                 {
-                    "id": "wb-msw-v3_64/Sound Level",
+                    "id": "MSW/Sound Level",
                     "name": "Уровень шума",
                     "extra": {},
                     "type": "value"
                 },
                 {
-                    "id": "wb-msw-v3_64/Illuminance",
+                    "id": "MSW/Illuminance",
                     "name": "Освещённость",
                     "extra": {},
                     "type": "value"

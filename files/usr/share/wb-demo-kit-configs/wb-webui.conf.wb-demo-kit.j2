@@ -693,9 +693,9 @@
                         "read": {
                             "enable": true,
                             {% if MWAC_DEV == "MWAC" -%}
-                            "channel": "wb-mwac_25/P1 Counter",
+                            "channel": "WB-MWAC/P1 Counter",
                             {% elif MWAC_DEV == "MWACv2" -%}
-                            "channel": "wb-mwac-v2_25/P1 Volume",
+                            "channel": "WB-MWAC/P1 Volume",
                             {% endif -%}
                             "value": "val"
                         },
@@ -1070,7 +1070,7 @@
                         },
                         "style": {
                             "enable": false,
-                            "channel": "wb-mwac_25/K2",
+                            "channel": "WB-MWAC/K2",
                             "value": "(val) ? ';fill: black' : ';fill: green'"
                         }
                     },
@@ -3183,7 +3183,7 @@
                         },
                         "style": {
                             "enable": true,
-                            "channel": "wb-mwac_25/K1",
+                            "channel": "WB-MWAC/K1",
                             "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
                         }
                     },
@@ -3237,7 +3237,7 @@
                         },
                         "style": {
                             "enable": true,
-                            "channel": "wb-mwac_25/Alarm",
+                            "channel": "WB-MWAC/Alarm",
                             "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
                         }
                     },
@@ -3264,7 +3264,7 @@
                         },
                         "style": {
                             "enable": true,
-                            "channel": "wb-mwac_25/F1",
+                            "channel": "WB-MWAC/F1",
                             "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
                         }
                     },
@@ -3291,7 +3291,7 @@
                         },
                         "style": {
                             "enable": true,
-                            "channel": "wb-mwac_25/F2",
+                            "channel": "WB-MWAC/F2",
                             "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
                         }
                     },
@@ -3318,7 +3318,7 @@
                         },
                         "style": {
                             "enable": true,
-                            "channel": "wb-mwac_25/F3",
+                            "channel": "WB-MWAC/F3",
                             "value": "(val) ? 'fill-opacity: 1.0' : 'fill-opacity: 0.3'"
                         }
                     },
@@ -3838,13 +3838,13 @@
                     "type": "switch"
                 },
                 {
-                    "id": "wb-mwac_25/P1 Counter",
+                    "id": "WB-MWAC/P1 Counter",
                     "name": "Счётчик",
                     "extra": {},
                     "type": "value"
                 },
                 {
-                    "id": "wb-mwac_25/Alarm",
+                    "id": "WB-MWAC/Alarm",
                     "name": "Протечка",
                     "extra": {},
                     "type": "switch"

@@ -1,3 +1,10 @@
+wb-demo-kit-configs (1.10.3) stable; urgency=medium
+
+  * Replace template for MSW
+  * Rename MQTT topics devices
+
+ -- Boris Marochkin <b.marochkin@wirenboard.com>  Tue, 31 Mar 2026 16:36:15 +0300
+
 wb-demo-kit-configs (1.10.2) stable; urgency=medium
 
   * Add missed dependencies

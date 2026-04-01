@@ -76,14 +76,12 @@ j2 ${CONF_DIR}/${SERIAL_CONF_FNAME} "/tmp/vars.json" > /mnt/data/etc/wb-mqtt-ser
 j2 ${CONF_DIR}/${WEBUI_CONF_FNAME} "/tmp/vars.json" > /mnt/data/etc/wb-webui.conf.wb-demo-kit
 
 # fix issue with default config creation after wb-configs-early run at the first boot (symlinks not created)
-if ! [ -f "/etc/wb-mqtt-serial.conf" ]; then
-	touch "/etc/wb-mqtt-serial.conf"
+if ! [[ -L "/etc/wb-mqtt-serial.conf" ]]; then
+	ln -s "/mnt/data/etc/wb-mqtt-serial.conf" "/etc/wb-mqtt-serial.conf"
 fi
-if ! [ -f "/etc/wb-webui.conf" ]; then
-	touch "/etc/wb-webui.conf"
+if ! [[ -L "/etc/wb-webui.conf" ]]; then
+	ln -s "/mnt/data/etc/wb-webui.conf" "/etc/wb-webui.conf"
 fi
-wb_move "/etc/wb-mqtt-serial.conf"
-wb_move "/etc/wb-webui.conf"
 
 # restart services
 deb-systemd-invoke restart wb-mqtt-serial

@@ -1,4 +1,4 @@
-defineRule('msw3_co2', {
+defineRule('msw_co2', {
   whenChanged: 'WB-MSW/CO2',
   then: function (newValue, devName, cellName) {
     var co2_good = newValue < 650;

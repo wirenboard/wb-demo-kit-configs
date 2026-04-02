@@ -27,7 +27,7 @@ defineRule('fan_overload_detect', {
       dev['load_control']['fan_up_speed'] = true;
     }
     old_speed = dev['WB-MDM3']['Channel 2'];
-    //log("current power " + dev['wb-map12e_35']['Ch 3 P L1'] + " W");
+    //log("current power " + dev['WB-MAP12']['Ch 3 P L1'] + " W");
     if (dev['load_control']['fan_up_speed'] == false) {
       not_detect_overload = 0;
       if (dev['WB-MDM3']['Channel 2'] == 100) {

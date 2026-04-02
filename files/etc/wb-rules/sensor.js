@@ -1,5 +1,5 @@
-defineRule('msw3_co2', {
-  whenChanged: 'wb-msw-v3_64/CO2',
+defineRule('msw_co2', {
+  whenChanged: 'WB-MSW/CO2',
   then: function (newValue, devName, cellName) {
     var co2_good = newValue < 650;
     var co2_middle = newValue < 1000 && newValue > 651;

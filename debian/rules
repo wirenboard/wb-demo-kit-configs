@@ -5,5 +5,5 @@
 	dh $@ --with config-package
 
 override_dh_auto_install:
-	$(MAKE) install DESTDIR=$(CURDIR)/debian/wb-demo-kit-configs
-
+	$(MAKE) install-wb-demo-kit-configs DESTDIR=$(CURDIR)/debian/wb-demo-kit-configs
+	$(MAKE) install-wb-demo-kit-configs-installer DESTDIR=$(CURDIR)/debian/wb-demo-kit-configs-installer

@@ -1,6 +1,8 @@
 PREFIX = /usr
 
-install:
+install: install-wb-demo-kit-configs install-wb-demo-kit-configs-installer
+
+install-wb-demo-kit-configs:
 	mkdir -p $(DESTDIR)/mnt/data/etc
 	cp -r files/etc $(DESTDIR)/mnt/data
 	install -Dm0755 files/usr/lib/wb-demo-kit-configs/*.sh -t $(DESTDIR)$(PREFIX)/lib/wb-demo-kit-configs
@@ -9,3 +11,6 @@ install:
 	    minify $${svg} -o $(DESTDIR)$(PREFIX)/share/wb-demo-kit-configs/$${svg##*/}; \
 	done
 	install -Dm0644 files/usr/share/wb-mqtt-confed/schemas/*.json -t $(DESTDIR)$(PREFIX)/share/wb-mqtt-confed/schemas
+
+install-wb-demo-kit-configs-installer:
+	install -Dm0755 files/usr/lib/install-demo-kit-configs.sh -t $(DESTDIR)$(PREFIX)/lib/wb-demo-kit-configs-installer

@@ -1,0 +1,13 @@
+[Unit]
+Description=Install wb-demo-kit-configs if not present
+After=network-online.target
+Wants=network-online.target
+ConditionPathExists=!/usr/share/wb-demo-kit-configs/
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/wb-demo-kit-configs-installer/install-demo-kit-configs.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

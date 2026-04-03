@@ -77,13 +77,9 @@ j2 ${CONF_DIR}/${WEBUI_CONF_FNAME} "/tmp/vars.json" > /mnt/data/etc/wb-webui.con
 
 # fix issue with default config creation after wb-configs-early run at the first boot (symlinks not created)
 fix_symlinks() {
-	if [[ -e "${1}" ]]; then
-		if [[ ! -L "${1}" ]]; then
-			rm "${1}"
-			ln -s "/mnt/data${1}" "${1}"
-		fi
-	else
-		touch "${1}"
+	if [[ -e "${1}" ]] && [[ ! -L "${1}" ]]; then
+		rm "${1}"
+		ln -s "/mnt/data${1}" "${1}"
 	fi
 }
 

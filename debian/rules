@@ -4,3 +4,6 @@
 %:
 	dh $@ --with config-package
 
+override_dh_auto_install:
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/wb-demo-kit-configs
+

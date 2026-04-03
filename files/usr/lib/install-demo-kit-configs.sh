@@ -9,3 +9,4 @@ fi
 echo "Installing wb-demo-kit-configs..."
 apt-get update
 apt-get install -y wb-demo-kit-configs
+reboot

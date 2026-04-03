@@ -3,6 +3,8 @@ Description=Install wb-demo-kit-configs if not present
 After=network-online.target
 Wants=network-online.target
 ConditionPathExists=!/usr/share/wb-demo-kit-configs/
+ConditionPathExists=/etc/wb-mqtt-serial.conf
+ConditionPathExists=/etc/wb-webui.conf
 
 [Service]
 Type=oneshot

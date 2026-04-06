@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.10.3) stable; urgency=medium
+
+  * Add installing into fit
+
+ -- Ekaterina Volkova <ekaterina.volkova@wirenboard.com>  Mon, 06 Apr 2026 11:56:14 +0300
+
 wb-demo-kit-configs (1.10.2) stable; urgency=medium
 
   * Add missed dependencies

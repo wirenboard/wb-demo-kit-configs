@@ -88,3 +88,6 @@ j2 ${CONF_DIR}/${WEBUI_CONF_FNAME} "/tmp/vars.json" > /mnt/data/etc/wb-webui.con
 deb-systemd-invoke restart wb-mqtt-serial
 deb-systemd-invoke restart wb-rules
 wb-hwconf-helper config-apply
+
+echo "The device will reboot in 5 seconds to apply the new configuration..."
+(sleep 5 && reboot) &

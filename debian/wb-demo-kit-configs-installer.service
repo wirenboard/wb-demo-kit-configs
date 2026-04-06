@@ -1,0 +1,14 @@
+[Unit]
+Description=Install wb-demo-kit-configs if not present
+After=network-online.target
+Wants=network-online.target
+ConditionPathExists=!/usr/share/wb-demo-kit-configs/
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sh -ec 'until [ -e /etc/wb-mqtt-serial.conf ] && [ -e /etc/wb-webui.conf ]; do sleep 1; done'
+ExecStart=/usr/lib/wb-demo-kit-configs-installer/install-demo-kit-configs.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

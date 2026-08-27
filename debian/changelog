@@ -1,3 +1,9 @@
+wb-demo-kit-configs (1.12.0) stable; urgency=medium
+
+  * Add WB-DALI gateway (slave 118) to the serial config template
+
+ -- Ekaterina Volkova <ekaterina.volkova@wirenboard.com>  Thu, 27 Aug 2026 12:47:55 +0000
+
 wb-demo-kit-configs (1.11.0) stable; urgency=medium
 
   * Replace template for MSW

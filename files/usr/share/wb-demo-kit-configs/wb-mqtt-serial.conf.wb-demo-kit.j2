@@ -550,6 +550,17 @@
           "slave_id" : "57",
           "id" : "WB-MDM3"
         }
+        {% if DALI_DEV == "DALI" -%}
+        ,
+        {
+          "baud_rate" : 1152,
+          "bus_1_power_supply" : 1,
+          "bus_2_power_supply" : 1,
+          "bus_3_power_supply" : 1,
+          "device_type" : "WB-DALI",
+          "slave_id" : "118"
+        }
+        {% endif -%}
       ],
       "enabled" : true,
       "parity" : "N",

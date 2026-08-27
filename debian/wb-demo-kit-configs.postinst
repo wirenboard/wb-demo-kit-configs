@@ -60,6 +60,15 @@ else
 	MSW_DEV="MSW4"
 fi
 
+# WB-DALI gateway is not present on every demo bench: keep it out of the config
+# when nothing answers at slave 118 (signatures come from the wb-mqtt-serial template).
+MODEL_DALI=$(echo -e $(modbus_client -mrtu -pnone -s2 -b115200 /dev/ttyRS485-1 -a 118 -t3 -r 200 -c 20 | grep Data | sed -e 's/.*Data://' -e 's/ 0x00/\\x/g' -e 's/\\x00//g'))
+
+DALI_DEV=""
+if [[ $MODEL_DALI == "WB-DALI" || $MODEL_DALI == "WB-MDALI" ]]; then
+	DALI_DEV="DALI"
+fi
+
 ENERGY_METER_DEV="NEVA"
 TEST_ENERGOMERA=$(serial_tool --batch "C0 48 FF FF FD 00 00 00 00 00 D0 00 01 B6 C0" /dev/ttyRS485-2)
 
@@ -74,6 +83,7 @@ cat <<EOF > "/tmp/vars.json"
 	"M1W2_DEV": "$M1W2_DEV",
 	"MIR_DEV": "$MIR_DEV",
 	"MSW_DEV": "$MSW_DEV",
+	"DALI_DEV": "$DALI_DEV",
 	"PLATFORM_DEV": "$PLATFORM_DEV",
 	"ENERGY_METER_DEV": "$ENERGY_METER_DEV"
 }

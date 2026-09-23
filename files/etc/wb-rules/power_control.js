@@ -61,15 +61,6 @@ defineRule('fan_overload_detect', {
   },
 });
 
-defineRule('timer_clear_fail', {
-  when: function () {
-    return timers.clear_fail.firing;
-  },
-  then: function () {
-    load_fail_count = 0;
-  },
-});
-
 defineRule('power_fail', {
   whenChanged: 'power_status/working on battery',
   then: function (newValue, devName, cellName) {

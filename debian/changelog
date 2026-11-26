@@ -1,3 +1,11 @@
+wb-demo-kit-configs (1.12.2) stable; urgency=medium
+
+  * Update LICENSE: Wiren Board as the copyright holder,
+    2021 as the first publication year
+  * Fill debian/copyright in the DEP-5 format
+
+ -- Ekaterina Volkova <ekaterina.volkova@wirenboard.com>  Thu, 12 Nov 2026 15:46:43 +0300
+
 wb-demo-kit-configs (1.12.1) stable; urgency=medium
 
   * Remove obsolete timer_clear_fail rule
